@@ -1,1367 +1,271 @@
-<!doctype html>
-<html class="scroll-smooth" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <link href="favicon.png" rel="icon" type="image/png" />
-    <title>Diyari | Luxury Real Estate</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-      rel="stylesheet"
-    />
-    <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "surface-container": "#f0eded",
-              "on-background": "#1c1b1b",
-              "inverse-surface": "#313030",
-              "primary-container": "#2c3b32",
-              tertiary: "#421300",
-              "on-primary-container": "#94a599",
-              "secondary-container": "#e5e2dd",
-              "tertiary-fixed": "#ffdbce",
-              "surface-container-highest": "#e5e2e1",
-              "surface-container-low": "#f6f3f2",
-              error: "#ba1a1a",
-              primary: "#17251d",
-              "tertiary-fixed-dim": "#ffb599",
-              surface: "#fcf9f8",
-              "outline-variant": "#c3c8c2",
-              "on-surface-variant": "#434844",
-              "on-error-container": "#93000a",
-              "surface-container-high": "#eae7e7",
-              secondary: "#5f5e5b",
-              outline: "#737874",
-              "primary-fixed-dim": "#bacbbe",
-              "on-tertiary": "#ffffff",
-              "on-secondary-fixed-variant": "#474743",
-              "surface-dim": "#dcd9d9",
-              "on-tertiary-fixed": "#370e00",
-              "surface-bright": "#fcf9f8",
-              "on-primary-fixed-variant": "#3b4a41",
-              "on-primary-fixed": "#101f17",
-              "on-primary": "#ffffff",
-              "surface-container-lowest": "#ffffff",
-              "tertiary-container": "#662100",
-              "on-error": "#ffffff",
-              "primary-fixed": "#d5e7da",
-              background: "#fcf9f8",
-              "surface-variant": "#e5e2e1",
-              "surface-tint": "#526258",
-              "on-secondary-container": "#656461",
-              "secondary-fixed": "#e5e2dd",
-              "inverse-primary": "#bacbbe",
-              "on-secondary": "#ffffff",
-              "on-tertiary-container": "#f5814f",
-              "on-tertiary-fixed-variant": "#7f2b00",
-              "on-surface": "#1c1b1b",
-              "on-secondary-fixed": "#1c1c19",
-              "inverse-on-surface": "#f3f0ef",
-              "secondary-fixed-dim": "#c8c6c2",
-              "error-container": "#ffdad6",
-              terracotta: "#c65d3b" /* Custom accent for CTA as per guidance */,
-            },
-            borderRadius: {
-              DEFAULT: "0.25rem",
-              lg: "8px",
-              xl: "12px",
-              full: "9999px",
-            },
-            spacing: {
-              gutter: "24px",
-              "stack-sm": "8px",
-              "stack-md": "16px",
-              "stack-xs": "4px",
-              "margin-desktop": "64px",
-              "container-max": "1280px",
-              "stack-lg": "32px",
-              "margin-mobile": "20px",
-              "section-gap": "120px",
-            },
-            fontFamily: {
-              "label-md": ["Work Sans"],
-              "display-hero": ["Fraunces"],
-              "headline-h1": ["Fraunces"],
-              "headline-h2": ["Fraunces"],
-              "headline-h3": ["Fraunces"],
-              "body-md": ["Work Sans"],
-              "body-lg": ["Work Sans"],
-              button: ["Work Sans"],
-            },
-            fontSize: {
-              "label-md": [
-                "14px",
-                {
-                  lineHeight: "1.2",
-                  letterSpacing: "0.05em",
-                  fontWeight: "500",
-                },
-              ],
-              "display-hero": [
-                "72px",
-                {
-                  lineHeight: "1.1",
-                  letterSpacing: "-0.02em",
-                  fontWeight: "700",
-                },
-              ],
-              "headline-h1": [
-                "56px",
-                {
-                  lineHeight: "1.2",
-                  letterSpacing: "-0.02em",
-                  fontWeight: "600",
-                },
-              ],
-              "headline-h2": ["36px", { lineHeight: "1.3", fontWeight: "600" }],
-              "headline-h3": ["24px", { lineHeight: "1.4", fontWeight: "600" }],
-              "body-md": ["16px", { lineHeight: "1.7", fontWeight: "400" }],
-              "body-lg": ["18px", { lineHeight: "1.7", fontWeight: "400" }],
-              button: ["16px", { lineHeight: "1", fontWeight: "500" }],
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="favicon.png" rel="icon" type="image/png"><title>Diyari | Luxury Real Estate</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container": "#f0eded",
+                      "on-background": "#1c1b1b",
+                      "inverse-surface": "#313030",
+                      "primary-container": "#2c3b32",
+                      "tertiary": "#421300",
+                      "on-primary-container": "#94a599",
+                      "secondary-container": "#e5e2dd",
+                      "tertiary-fixed": "#ffdbce",
+                      "surface-container-highest": "#e5e2e1",
+                      "surface-container-low": "#f6f3f2",
+                      "error": "#ba1a1a",
+                      "primary": "#17251d",
+                      "tertiary-fixed-dim": "#ffb599",
+                      "surface": "#fcf9f8",
+                      "outline-variant": "#c3c8c2",
+                      "on-surface-variant": "#434844",
+                      "on-error-container": "#93000a",
+                      "surface-container-high": "#eae7e7",
+                      "secondary": "#5f5e5b",
+                      "outline": "#737874",
+                      "primary-fixed-dim": "#bacbbe",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-fixed-variant": "#474743",
+                      "surface-dim": "#dcd9d9",
+                      "on-tertiary-fixed": "#370e00",
+                      "surface-bright": "#fcf9f8",
+                      "on-primary-fixed-variant": "#3b4a41",
+                      "on-primary-fixed": "#101f17",
+                      "on-primary": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary-container": "#662100",
+                      "on-error": "#ffffff",
+                      "primary-fixed": "#d5e7da",
+                      "background": "#fcf9f8",
+                      "surface-variant": "#e5e2e1",
+                      "surface-tint": "#526258",
+                      "on-secondary-container": "#656461",
+                      "secondary-fixed": "#e5e2dd",
+                      "inverse-primary": "#bacbbe",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary-container": "#f5814f",
+                      "on-tertiary-fixed-variant": "#7f2b00",
+                      "on-surface": "#1c1b1b",
+                      "on-secondary-fixed": "#1c1c19",
+                      "inverse-on-surface": "#f3f0ef",
+                      "secondary-fixed-dim": "#c8c6c2",
+                      "error-container": "#ffdad6",
+                      "terracotta": "#c65d3b" /* Custom accent for CTA as per guidance */
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "8px",
+                      "xl": "12px",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "stack-sm": "8px",
+                      "stack-md": "16px",
+                      "stack-xs": "4px",
+                      "margin-desktop": "64px",
+                      "container-max": "1280px",
+                      "stack-lg": "32px",
+                      "margin-mobile": "20px",
+                      "section-gap": "120px"
+              },
+              "fontFamily": {
+                      "label-md": ["Work Sans"],
+                      "display-hero": ["Fraunces"],
+                      "headline-h1": ["Fraunces"],
+                      "headline-h2": ["Fraunces"],
+                      "headline-h3": ["Fraunces"],
+                      "body-md": ["Work Sans"],
+                      "body-lg": ["Work Sans"],
+                      "button": ["Work Sans"]
+              },
+              "fontSize": {
+                      "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                      "display-hero": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-h1": ["56px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                      "headline-h2": ["36px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "headline-h3": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "1.7", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "1.7", "fontWeight": "400"}],
+                      "button": ["16px", {"lineHeight": "1", "fontWeight": "500"}]
+              }
             },
           },
-        },
-      };
-    </script>
-    <style>
-      .material-symbols-outlined {
-        font-variation-settings:
-          "FILL" 0,
-          "wght" 300,
-          "GRAD" 0,
-          "opsz" 24;
-        vertical-align: middle;
-      }
-
-      .scroll-reveal {
-        opacity: 0;
-        transform: translateY(24px);
-        transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-      }
-      .reveal-visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      .stagger-1 {
-        transition-delay: 0.1s;
-      }
-      .stagger-2 {
-        transition-delay: 0.2s;
-      }
-      .stagger-3 {
-        transition-delay: 0.3s;
-      }
-
-      .property-card:hover img {
-        transform: scale(1.05);
-      }
-
-      .nav-scrolled {
-        background-color: #f6f3ee !important;
-        border-bottom: 0.5px solid #e5e1d8;
-      }
-
-      /* Testimonial Dot Style */
-      .dot-active {
-        background-color: #fcf9f8;
-      }
-      .dot-inactive {
-        background-color: rgba(252, 249, 248, 0.3);
-      }
-    </style>
-    <meta content="web_standard" name="shell-type" />
-  </head>
-  <body
-    class="bg-surface text-on-surface font-body-md selection:bg-[#c05634] selection:text-white"
-  >
-    <!-- TopNavBar -->
-    <nav
-      class="fixed top-0 w-full z-50 transition-all duration-300 bg-transparent"
-      id="top-nav"
-    >
-      <div
-        class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto"
-      >
-        <a class="flex items-center space-x-3 group cursor-pointer" href="#"
-          ><img
-            alt="Diyari Real Estate Logo"
-            class="h-10 w-10 object-contain rounded-md"
-            src="https://lh3.googleusercontent.com/aida/ALJJyrDMrlKBAQ8SG5l9mv6_OwvXLK-bi8XQ3IIamu-c9mVOWsxzDEu0htb9RFT9-7EnYI2CdUQalm9-pxfqgoR9TwTZWCn9d2MzZiQquYVjIeTGipRLG8qFlUAM1niN1qBIqOA0HWenjOYAQ-ven1QPMOmSx1R2FZkQ183MkCEHbWyHb3LriBSRF3vsCgNxvP-9PgYqsnxc9H8IvobLsF3auhR1N45fujAM75XgGRy4CdTJHw"
-          /><span
-            class="font-headline-h2 text-headline-h2 text-primary tracking-tight"
-            >Diyari</span
-          ></a
-        >
-        <div class="hidden md:flex items-center space-x-8">
-          <a
-            class="text-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md"
-            href="#"
-            >Home</a
-          >
-          <a
-            class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md"
-            href="#"
-            >Properties</a
-          >
-          <a
-            class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md"
-            href="#"
-            >About</a
-          >
-          <a
-            class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md"
-            href="#"
-            >Contact</a
-          >
-        </div>
-        <button
-          class="bg-primary text-on-primary px-6 py-3 rounded-lg font-button text-button hover:scale-95 transition-transform duration-150"
-        >
-          List your property
-        </button>
-      </div>
-    </nav>
-    <main>
-      <div class="flex flex-col w-full">
-        <!-- Editorial Hero Section -->
-        <section
-          class="relative w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-8 pb-16 md:pb-24"
-        >
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-end">
-            <div class="lg:col-span-8 flex flex-col space-y-6">
-              <div
-                class="inline-flex items-center space-x-3 w-fit bg-surface-container-high px-4 py-1.5 rounded-full"
-              >
-                <span class="w-2 h-2 rounded-full bg-terracotta"></span>
-                <span
-                  class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-medium"
-                  >Careers at Diyari</span
-                >
-              </div>
-              <h1
-                class="font-headline-h1 text-headline-h1 text-primary tracking-tight"
-              >
-                Shape the Future of Regional Architectural Living
-              </h1>
-              <p
-                class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed"
-              >
-                Join a dedicated team of architects, researchers, client
-                advisors, and technologists redefining luxury real estate
-                through the lens of heritage, craftsmanship, and climate
-                intelligence.
-              </p>
-              <!-- Stats Bar -->
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6">
-                <div class="bg-surface-container-low p-5 rounded-xl shadow-sm">
-                  <span
-                    class="font-label-md text-label-md uppercase tracking-widest text-secondary block mb-1"
-                    >Global Hubs</span
-                  >
-                  <div class="font-headline-h3 text-headline-h3 text-primary">
-                    3 Studios
-                  </div>
-                  <p
-                    class="font-body-md text-body-md text-on-surface-variant text-sm mt-0.5"
-                  >
-                    Amman • Beirut • Dubai
-                  </p>
-                </div>
-                <div class="bg-surface-container-low p-5 rounded-xl shadow-sm">
-                  <span
-                    class="font-label-md text-label-md uppercase tracking-widest text-secondary block mb-1"
-                    >Work Rhythm</span
-                  >
-                  <div class="font-headline-h3 text-headline-h3 text-primary">
-                    Hybrid Culture
-                  </div>
-                  <p
-                    class="font-body-md text-body-md text-on-surface-variant text-sm mt-0.5"
-                  >
-                    Studio presence &amp; remote focus
-                  </p>
-                </div>
-                <div class="bg-surface-container-low p-5 rounded-xl shadow-sm">
-                  <span
-                    class="font-label-md text-label-md uppercase tracking-widest text-secondary block mb-1"
-                    >Immersion</span
-                  >
-                  <div class="font-headline-h3 text-headline-h3 text-primary">
-                    Sabbaticals
-                  </div>
-                  <p
-                    class="font-body-md text-body-md text-on-surface-variant text-sm mt-0.5"
-                  >
-                    Annual funded field research
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="lg:col-span-4 relative mt-8 lg:mt-0">
-              <div
-                class="relative rounded-xl overflow-hidden shadow-xl aspect-[4/5] bg-surface-container"
-              >
-                <img
-                  class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                  data-alt="An elegant architectural studio in the Mediterranean or Levantine region with warm limestone walls, arched doorways, deep green olive plants in terracotta pots, and natural afternoon light casting gentle shadows across walnut desks and architectural blueprints."
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtahj9MXxaUapZzXJQeL-5kyabWzITTjPK3niEMbRb66ICgsEn1iUDPPaK0DHixumpNq-gDX3iuot158Q0b-wB_VTIHg0tiNrIpvadtXdFctiPAyTxejisAp7VBM5vB8UBjV3BhcTlttPLvKBVz1XC3RxDhCTiNlRHqQO04YwbNS8PYrdYz9ngxePw-k-Ceqjjwecl1GT4nEpGkW0eRXi0MdUedrf_YG5ZWJbWnCbj"
-                />
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex flex-col justify-end p-6 text-on-primary"
-                >
-                  <span
-                    class="font-label-md text-label-md uppercase tracking-widest text-primary-fixed-dim"
-                    >Studio Amman</span
-                  >
-                  <p
-                    class="font-headline-h3 text-headline-h3 text-on-primary mt-1"
-                  >
-                    Jabal Amman Heritage Quarter
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- Editorial Image Strip / Spatial Break -->
-        <section class="w-full bg-surface-container-low py-12">
-          <div
-            class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter items-center"
-          >
-            <div class="relative h-64 rounded-xl overflow-hidden shadow-md">
-              <img
-                class="w-full h-full object-cover"
-                data-alt="A master stonemason in an open-air workshop near Byblos carefully chisel-dressing a hand-cut regional yellow limestone block, bathed in crisp morning sunlight with stone dust floating softly in the air."
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvORofIL7pgxIhHygMr1pYelCj0jHPhr2gLg7W0E-6kUkM3-TCVSEgFVGtqnqrO4IlFVEOeSvpy8830eZRBKHicMtH8Az_1KBHUy3ckgjmuSoRkbJ412pfSYqq4HgDGVvd9fRVcaR9KZrdP3JyHi1xRwXFUtmrQRqXkNzGkNqlKwk4Aer--g810oaYVQ2aC-J32puDZRVHr-P9gYwIfIiRkYp3JzHIW7JB_NnPYD7k"
-              />
-              <div
-                class="absolute bottom-4 left-4 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-md text-xs font-label-md text-primary font-medium"
-              >
-                Material Provenance
-              </div>
-            </div>
-            <div
-              class="relative h-64 rounded-xl overflow-hidden shadow-md md:-mt-6"
-            >
-              <img
-                class="w-full h-full object-cover"
-                data-alt="Contemporary interior of a modern minimalist salon in Dubai with high ceilings, polished microcement floors, textured ivory plaster walls, and custom deep forest green upholstered armchairs facing a private courtyard garden."
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCirJYuCTwazkY_RZ96isl4QeUc_v7TDxehpa2u0J_FsVjLL5LndKqJstFds-C_T06LjC9paNEXnE08RWwfJ9-FI5k2DNZUZUgNsxkotSzjIAbxow7WGsLQVcil0A1KVEawscwCxBe4lT8JhL7aRAcjZ72ib2tAFyEf0UrssPBRuLDt2BfHTFeRjYrHLwjRF3XxPCfUoLK9H-HgCJ5nB9gEwUvm3sH1P47jpmaGtGeR"
-              />
-              <div
-                class="absolute bottom-4 left-4 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-md text-xs font-label-md text-primary font-medium"
-              >
-                Living Archives
-              </div>
-            </div>
-            <div class="relative h-64 rounded-xl overflow-hidden shadow-md">
-              <img
-                class="w-full h-full object-cover"
-                data-alt="Archival library table illuminated by an art deco bronze lamp with historical hand-drawn blueprints of Levantine modernist residences, vintage architectural monographs, and brass drafting dividers laid out carefully."
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6aXgrzI9Vju9oiYD-YAmwaFNr-zcUjOHykEUC6qxHnUZBtEIIBII730TU25zAxjsyN3YsXZCLTQGVppIcFI9XBWxidsTUXrdUgnJ1VwdxgdtMJm-ZKLaro5U7uw3yopf-Zq097zvhoyjptRs7RYS4dUPKTMIyCIOKGXFbUx8N7BpzDyUTLTamU-IXYjAWxjllcdhG0tKo2uLDea9E85489MBwWu6Ga2vbuWfkB1pR"
-              />
-              <div
-                class="absolute bottom-4 left-4 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-md text-xs font-label-md text-primary font-medium"
-              >
-                Archival Research
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- Culture & Values -->
-        <section
-          class="w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap"
-        >
-          <div
-            class="flex flex-col md:flex-row md:items-end justify-between mb-16"
-          >
-            <div>
-              <span
-                class="font-label-md text-label-md uppercase tracking-widest text-terracotta font-semibold"
-                >Our Ethos</span
-              >
-              <h2 class="font-headline-h2 text-headline-h2 text-primary mt-2">
-                Culture Founded on Architectural Stewardship
-              </h2>
-            </div>
-            <p
-              class="font-body-md text-body-md text-on-surface-variant max-w-md mt-4 md:mt-0"
-            >
-              We reject transactional real estate in favor of lasting
-              intellectual rigor, restorative design principles, and regional
-              material mastery.
-            </p>
-          </div>
-          <div
-            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter"
-          >
-            <!-- Pillar 1 -->
-            <div
-              class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between"
-            >
-              <div>
-                <span
-                  class="font-headline-h3 text-headline-h3 text-terracotta mb-4 block font-bold"
-                  >01</span
-                >
-                <h3 class="font-headline-h3 text-headline-h3 text-primary mb-3">
-                  Custodianship Over Sales
-                </h3>
-                <p class="font-body-md text-body-md text-on-surface-variant">
-                  We prize architectural integrity and long-term client trust
-                  above arbitrary deal volumes. Every listing is treated as a
-                  cultural landmark.
-                </p>
-              </div>
-              <div class="mt-8 pt-4 flex items-center text-primary space-x-2">
-                <span class="material-symbols-outlined text-sm"
-                  >shield_with_heart</span
-                >
-                <span
-                  class="font-label-md text-label-md uppercase text-xs tracking-wider"
-                  >Honorary Care</span
-                >
-              </div>
-            </div>
-            <!-- Pillar 2 -->
-            <div
-              class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between"
-            >
-              <div>
-                <span
-                  class="font-headline-h3 text-headline-h3 text-terracotta mb-4 block font-bold"
-                  >02</span
-                >
-                <h3 class="font-headline-h3 text-headline-h3 text-primary mb-3">
-                  Research-Driven Curation
-                </h3>
-                <p class="font-body-md text-body-md text-on-surface-variant">
-                  Deep archival study of property provenance, vernacular
-                  building techniques, and passive bioclimatic cooling methods
-                  guides our collections.
-                </p>
-              </div>
-              <div class="mt-8 pt-4 flex items-center text-primary space-x-2">
-                <span class="material-symbols-outlined text-sm"
-                  >auto_stories</span
-                >
-                <span
-                  class="font-label-md text-label-md uppercase text-xs tracking-wider"
-                  >Rigorous Inquiries</span
-                >
-              </div>
-            </div>
-            <!-- Pillar 3 -->
-            <div
-              class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between"
-            >
-              <div>
-                <span
-                  class="font-headline-h3 text-headline-h3 text-terracotta mb-4 block font-bold"
-                  >03</span
-                >
-                <h3 class="font-headline-h3 text-headline-h3 text-primary mb-3">
-                  Cross-Regional Mobility
-                </h3>
-                <p class="font-body-md text-body-md text-on-surface-variant">
-                  Fluid collaboration across our primary studios in Amman,
-                  Beirut, and Dubai encourages spatial perspective and
-                  cross-border creative resonance.
-                </p>
-              </div>
-              <div class="mt-8 pt-4 flex items-center text-primary space-x-2">
-                <span class="material-symbols-outlined text-sm">near_me</span>
-                <span
-                  class="font-label-md text-label-md uppercase text-xs tracking-wider"
-                  >Pan-Levantine Reach</span
-                >
-              </div>
-            </div>
-            <!-- Pillar 4 -->
-            <div
-              class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between"
-            >
-              <div>
-                <span
-                  class="font-headline-h3 text-headline-h3 text-terracotta mb-4 block font-bold"
-                  >04</span
-                >
-                <h3 class="font-headline-h3 text-headline-h3 text-primary mb-3">
-                  Bespoke Lifelong Craft
-                </h3>
-                <p class="font-body-md text-body-md text-on-surface-variant">
-                  Continuous masterclasses with visiting stonemasons, acoustic
-                  engineers, and architectural historians nurture unmatched
-                  expertise.
-                </p>
-              </div>
-              <div class="mt-8 pt-4 flex items-center text-primary space-x-2">
-                <span class="material-symbols-outlined text-sm">handyman</span>
-                <span
-                  class="font-label-md text-label-md uppercase text-xs tracking-wider"
-                  >Master Guild</span
-                >
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- Open Opportunities (Filterable Listings) -->
-        <section class="w-full bg-surface-container-low py-section-gap">
-          <div
-            class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop"
-          >
-            <div
-              class="flex flex-col md:flex-row md:items-end justify-between mb-12"
-            >
-              <div>
-                <span
-                  class="font-label-md text-label-md uppercase tracking-widest text-terracotta font-semibold"
-                  >Join the Studio</span
-                >
-                <h2 class="font-headline-h2 text-headline-h2 text-primary mt-2">
-                  Open Opportunities
-                </h2>
-              </div>
-              <div
-                class="mt-4 md:mt-0 font-body-md text-body-md text-on-surface-variant"
-              >
-                Showing 5 active fellowships &amp; appointments across 3
-                regional studios
-              </div>
-            </div>
-            <!-- Department Filter Tabs -->
-            <div class="flex flex-wrap gap-2 mb-10" id="filter-container">
-              <button
-                class="filter-btn active-tab bg-primary text-on-primary px-5 py-2.5 rounded-full font-label-md text-label-md transition-all"
-                data-filter="all"
-              >
-                All (5)
-              </button>
-              <button
-                class="filter-btn bg-surface text-on-surface-variant hover:text-primary px-5 py-2.5 rounded-full font-label-md text-label-md transition-all shadow-sm"
-                data-filter="curation"
-              >
-                Architectural Curation (2)
-              </button>
-              <button
-                class="filter-btn bg-surface text-on-surface-variant hover:text-primary px-5 py-2.5 rounded-full font-label-md text-label-md transition-all shadow-sm"
-                data-filter="advisory"
-              >
-                Private Advisory (1)
-              </button>
-              <button
-                class="filter-btn bg-surface text-on-surface-variant hover:text-primary px-5 py-2.5 rounded-full font-label-md text-label-md transition-all shadow-sm"
-                data-filter="editorial"
-              >
-                Brand &amp; Media (1)
-              </button>
-              <button
-                class="filter-btn bg-surface text-on-surface-variant hover:text-primary px-5 py-2.5 rounded-full font-label-md text-label-md transition-all shadow-sm"
-                data-filter="tech"
-              >
-                Technology (1)
-              </button>
-            </div>
-            <!-- Roles Stack -->
-            <div class="space-y-4" id="roles-list">
-              <!-- Role 1 -->
-              <div
-                class="role-card group bg-surface-container-lowest p-6 md:p-8 rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer"
-                data-dept="curation"
-              >
-                <div
-                  class="flex flex-col lg:flex-row lg:items-center justify-between gap-6"
-                >
-                  <div class="space-y-2">
-                    <div class="flex flex-wrap items-center gap-3">
-                      <span
-                        class="bg-primary-fixed text-on-primary-fixed px-3 py-1 rounded-md text-xs font-label-md font-medium"
-                        >Architectural Curation</span
-                      >
-                      <span
-                        class="text-secondary text-sm font-label-md flex items-center gap-1"
-                      >
-                        <span class="material-symbols-outlined text-sm"
-                          >schedule</span
-                        >
-                        Full-time
-                      </span>
-                      <span
-                        class="text-secondary text-sm font-label-md flex items-center gap-1"
-                      >
-                        <span class="material-symbols-outlined text-sm"
-                          >location_on</span
-                        >
-                        Amman / Beirut
-                      </span>
-                    </div>
-                    <h3
-                      class="font-headline-h3 text-headline-h3 text-primary group-hover:text-terracotta transition-colors"
-                    >
-                      Senior Architectural Provenance Specialist
-                    </h3>
-                    <p
-                      class="font-body-md text-body-md text-on-surface-variant max-w-3xl"
-                    >
-                      Lead research and verification of historic stone
-                      properties and archival records. Coordinate closely with
-                      cadastral offices and architectural conservators to
-                      authenticate structural genealogies.
-                    </p>
-                  </div>
-                  <div class="flex items-center space-x-4 shrink-0">
-                    <button
-                      class="bg-surface-container text-primary hover:bg-primary hover:text-on-primary px-6 py-3 rounded-lg font-button text-button transition-colors flex items-center space-x-2"
-                    >
-                      <span>View Role</span>
-                      <span class="material-symbols-outlined text-sm"
-                        >arrow_forward</span
-                      >
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <!-- Role 2 -->
-              <div
-                class="role-card group bg-surface-container-lowest p-6 md:p-8 rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer"
-                data-dept="advisory"
-              >
-                <div
-                  class="flex flex-col lg:flex-row lg:items-center justify-between gap-6"
-                >
-                  <div class="space-y-2">
-                    <div class="flex flex-wrap items-center gap-3">
-                      <span
-                        class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-md text-xs font-label-md font-medium"
-                        >Private Advisory</span
-                      >
-                      <span
-                        class="text-secondary text-sm font-label-md flex items-center gap-1"
-                      >
-                        <span class="material-symbols-outlined text-sm"
-                          >schedule</span
-                        >
-                        Full-time
-                      </span>
-                      <span
-                        class="text-secondary text-sm font-label-md flex items-center gap-1"
-                      >
-                        <span class="material-symbols-outlined text-sm"
-                          >location_on</span
-                        >
-                        Dubai DIFC
-                      </span>
-                    </div>
-                    <h3
-                      class="font-headline-h3 text-headline-h3 text-primary group-hover:text-terracotta transition-colors"
-                    >
-                      Private Client Advisor — Ultra-High-Net-Worth Portfolio
-                    </h3>
-                    <p
-                      class="font-body-md text-body-md text-on-surface-variant max-w-3xl"
-                    >
-                      Manage tailored acquisitions for sovereign family offices
-                      and discerning private collectors seeking historically
-                      significant and climate-resilient estates across the
-                      Middle East.
-                    </p>
-                  </div>
-                  <div class="flex items-center space-x-4 shrink-0">
-                    <button
-                      class="bg-surface-container text-primary hover:bg-primary hover:text-on-primary px-6 py-3 rounded-lg font-button text-button transition-colors flex items-center space-x-2"
-                    >
-                      <span>View Role</span>
-                      <span class="material-symbols-outlined text-sm"
-                        >arrow_forward</span
-                      >
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <!-- Role 3 -->
-              <div
-                class="role-card group bg-surface-container-lowest p-6 md:p-8 rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer"
-                data-dept="curation"
-              >
-                <div
-                  class="flex flex-col lg:flex-row lg:items-center justify-between gap-6"
-                >
-                  <div class="space-y-2">
-                    <div class="flex flex-wrap items-center gap-3">
-                      <span
-                        class="bg-primary-fixed text-on-primary-fixed px-3 py-1 rounded-md text-xs font-label-md font-medium"
-                        >Architectural Curation</span
-                      >
-                      <span
-                        class="text-secondary text-sm font-label-md flex items-center gap-1"
-                      >
-                        <span class="material-symbols-outlined text-sm"
-                          >schedule</span
-                        >
-                        Full-time
-                      </span>
-                      <span
-                        class="text-secondary text-sm font-label-md flex items-center gap-1"
-                      >
-                        <span class="material-symbols-outlined text-sm"
-                          >location_on</span
-                        >
-                        Beirut
-                      </span>
-                    </div>
-                    <h3
-                      class="font-headline-h3 text-headline-h3 text-primary group-hover:text-terracotta transition-colors"
-                    >
-                      Heritage Conservation Project Lead
-                    </h3>
-                    <p
-                      class="font-body-md text-body-md text-on-surface-variant max-w-3xl"
-                    >
-                      Direct on-site restoration and structural feasibility
-                      studies. Oversee the sensitive integration of modern
-                      thermal insulation and renewable energy into 19th and
-                      early 20th-century residences.
-                    </p>
-                  </div>
-                  <div class="flex items-center space-x-4 shrink-0">
-                    <button
-                      class="bg-surface-container text-primary hover:bg-primary hover:text-on-primary px-6 py-3 rounded-lg font-button text-button transition-colors flex items-center space-x-2"
-                    >
-                      <span>View Role</span>
-                      <span class="material-symbols-outlined text-sm"
-                        >arrow_forward</span
-                      >
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <!-- Role 4 -->
-              <div
-                class="role-card group bg-surface-container-lowest p-6 md:p-8 rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer"
-                data-dept="editorial"
-              >
-                <div
-                  class="flex flex-col lg:flex-row lg:items-center justify-between gap-6"
-                >
-                  <div class="space-y-2">
-                    <div class="flex flex-wrap items-center gap-3">
-                      <span
-                        class="bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-md text-xs font-label-md font-medium"
-                        >Brand &amp; Media</span
-                      >
-                      <span
-                        class="text-secondary text-sm font-label-md flex items-center gap-1"
-                      >
-                        <span class="material-symbols-outlined text-sm"
-                          >schedule</span
-                        >
-                        Full-time / Hybrid
-                      </span>
-                      <span
-                        class="text-secondary text-sm font-label-md flex items-center gap-1"
-                      >
-                        <span class="material-symbols-outlined text-sm"
-                          >location_on</span
-                        >
-                        Amman Studio
-                      </span>
-                    </div>
-                    <h3
-                      class="font-headline-h3 text-headline-h3 text-primary group-hover:text-terracotta transition-colors"
-                    >
-                      Editorial Director &amp; Architectural Writer
-                    </h3>
-                    <p
-                      class="font-body-md text-body-md text-on-surface-variant max-w-3xl"
-                    >
-                      Author bespoke property monographs, quarterly
-                      architectural journals, and deep-dive critical essays
-                      exploring regional architectural heritage and sustainable
-                      urban futures.
-                    </p>
-                  </div>
-                  <div class="flex items-center space-x-4 shrink-0">
-                    <button
-                      class="bg-surface-container text-primary hover:bg-primary hover:text-on-primary px-6 py-3 rounded-lg font-button text-button transition-colors flex items-center space-x-2"
-                    >
-                      <span>View Role</span>
-                      <span class="material-symbols-outlined text-sm"
-                        >arrow_forward</span
-                      >
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <!-- Role 5 -->
-              <div
-                class="role-card group bg-surface-container-lowest p-6 md:p-8 rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer"
-                data-dept="tech"
-              >
-                <div
-                  class="flex flex-col lg:flex-row lg:items-center justify-between gap-6"
-                >
-                  <div class="space-y-2">
-                    <div class="flex flex-wrap items-center gap-3">
-                      <span
-                        class="bg-surface-container-highest text-on-surface-variant px-3 py-1 rounded-md text-xs font-label-md font-medium"
-                        >Technology</span
-                      >
-                      <span
-                        class="text-secondary text-sm font-label-md flex items-center gap-1"
-                      >
-                        <span class="material-symbols-outlined text-sm"
-                          >schedule</span
-                        >
-                        Full-time / Hybrid
-                      </span>
-                      <span
-                        class="text-secondary text-sm font-label-md flex items-center gap-1"
-                      >
-                        <span class="material-symbols-outlined text-sm"
-                          >location_on</span
-                        >
-                        Dubai / Remote
-                      </span>
-                    </div>
-                    <h3
-                      class="font-headline-h3 text-headline-h3 text-primary group-hover:text-terracotta transition-colors"
-                    >
-                      Head of Digital Curation &amp; Product
-                    </h3>
-                    <p
-                      class="font-body-md text-body-md text-on-surface-variant max-w-3xl"
-                    >
-                      Lead our digital technology team engineering private
-                      collector portals, digital provenance registries, and
-                      high-fidelity 3D architectural scanning interfaces.
-                    </p>
-                  </div>
-                  <div class="flex items-center space-x-4 shrink-0">
-                    <button
-                      class="bg-surface-container text-primary hover:bg-primary hover:text-on-primary px-6 py-3 rounded-lg font-button text-button transition-colors flex items-center space-x-2"
-                    >
-                      <span>View Role</span>
-                      <span class="material-symbols-outlined text-sm"
-                        >arrow_forward</span
-                      >
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- Perks & Benefits -->
-        <section
-          class="w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap"
-        >
-          <div class="text-center max-w-2xl mx-auto mb-16">
-            <span
-              class="font-label-md text-label-md uppercase tracking-widest text-terracotta font-semibold"
-              >Stewardship in Return</span
-            >
-            <h2 class="font-headline-h2 text-headline-h2 text-primary mt-2">
-              Perks Built for Intellectual Growth
-            </h2>
-            <p class="font-body-md text-body-md text-on-surface-variant mt-3">
-              We provide an environment where long-term intellectual curiosity,
-              holistic personal wellbeing, and architectural passion are
-              unconditionally supported.
-            </p>
-          </div>
-          <div
-            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter"
-          >
-            <!-- Perk 1 -->
-            <div
-              class="bg-surface p-8 rounded-xl shadow-sm flex flex-col justify-between"
-            >
-              <div
-                class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center text-primary mb-6"
-              >
-                <span class="material-symbols-outlined text-2xl"
-                  >account_balance</span
-                >
-              </div>
-              <div>
-                <h3 class="font-headline-h3 text-headline-h3 text-primary mb-2">
-                  Equity &amp; Preservation
-                </h3>
-                <p
-                  class="font-body-md text-body-md text-on-surface-variant text-sm"
-                >
-                  Competitive baseline compensation complemented by private
-                  equity stakes and profit participation pools in our restored
-                  landmark portfolios.
-                </p>
-              </div>
-            </div>
-            <!-- Perk 2 -->
-            <div
-              class="bg-surface p-8 rounded-xl shadow-sm flex flex-col justify-between"
-            >
-              <div
-                class="w-12 h-12 rounded-lg bg-secondary-container flex items-center justify-center text-primary mb-6"
-              >
-                <span class="material-symbols-outlined text-2xl"
-                  >flight_takeoff</span
-                >
-              </div>
-              <div>
-                <h3 class="font-headline-h3 text-headline-h3 text-primary mb-2">
-                  Architectural Travel
-                </h3>
-                <p
-                  class="font-body-md text-body-md text-on-surface-variant text-sm"
-                >
-                  Annual $5,000 stipend dedicated to international architectural
-                  travel, biennial passes to Venice &amp; Sharjah, and global
-                  institutional museum memberships.
-                </p>
-              </div>
-            </div>
-            <!-- Perk 3 -->
-            <div
-              class="bg-surface p-8 rounded-xl shadow-sm flex flex-col justify-between"
-            >
-              <div
-                class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary mb-6"
-              >
-                <span class="material-symbols-outlined text-2xl">spa</span>
-              </div>
-              <div>
-                <h3 class="font-headline-h3 text-headline-h3 text-primary mb-2">
-                  Holistic Health
-                </h3>
-                <p
-                  class="font-body-md text-body-md text-on-surface-variant text-sm"
-                >
-                  Top-tier private health coverage for you and your dependents,
-                  mental health allowances, and ergonomic studio workstation
-                  budgets.
-                </p>
-              </div>
-            </div>
-            <!-- Perk 4 -->
-            <div
-              class="bg-surface p-8 rounded-xl shadow-sm flex flex-col justify-between"
-            >
-              <div
-                class="w-12 h-12 rounded-lg bg-tertiary-fixed flex items-center justify-center text-tertiary mb-6"
-              >
-                <span class="material-symbols-outlined text-2xl">forum</span>
-              </div>
-              <div>
-                <h3 class="font-headline-h3 text-headline-h3 text-primary mb-2">
-                  Annual Symposium
-                </h3>
-                <p
-                  class="font-body-md text-body-md text-on-surface-variant text-sm"
-                >
-                  A week-long firm retreat held each autumn in a Mediterranean
-                  coastal town, convening historians, master builders, and all
-                  studio members.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- Spontaneous Application Dossier Section -->
-        <section
-          class="w-full bg-primary-container text-on-primary-container py-section-gap relative overflow-hidden"
-        >
-          <!-- Subtle architectural arc visual -->
-          <div
-            class="absolute -right-24 -bottom-24 w-96 h-96 rounded-full bg-primary opacity-30 pointer-events-none"
-          ></div>
-          <div
-            class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10"
-          >
-            <div
-              class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center"
-            >
-              <div class="lg:col-span-6 space-y-6">
-                <span
-                  class="font-label-md text-label-md uppercase tracking-widest text-on-tertiary-container font-semibold"
-                  >Unlisted Callings</span
-                >
-                <h2
-                  class="font-headline-h2 text-headline-h2 text-on-primary font-serif"
-                >
-                  Don't see your exact discipline?
-                </h2>
-                <p
-                  class="font-body-lg text-body-lg text-on-primary-container opacity-90 leading-relaxed"
-                >
-                  We are always looking for passionate architects, architectural
-                  historians, master draftspersons, structural conservation
-                  engineers, and discreet client advisors. If your work bridges
-                  regional heritage and modern elegance, we want to hear from
-                  you.
-                </p>
-                <div class="pt-4 flex items-center space-x-6">
-                  <div>
-                    <span
-                      class="block text-xs uppercase tracking-wider text-on-primary-container opacity-70"
-                      >Direct Inquiries</span
-                    >
-                    <a
-                      class="font-headline-h3 text-headline-h3 text-on-primary hover:text-on-tertiary-container transition-colors"
-                      href="mailto:careers@diyari.com"
-                      >careers@diyari.com</a
-                    >
-                  </div>
-                  <div class="h-8 w-px bg-on-primary-container/20"></div>
-                  <div>
-                    <span
-                      class="block text-xs uppercase tracking-wider text-on-primary-container opacity-70"
-                      >Typical Response</span
-                    >
-                    <span
-                      class="font-headline-h3 text-headline-h3 text-on-primary"
-                      >Within 5 Days</span
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="lg:col-span-6 mt-8 lg:mt-0">
-                <div
-                  class="bg-surface text-on-surface p-8 md:p-10 rounded-xl shadow-xl"
-                >
-                  <h3
-                    class="font-headline-h3 text-headline-h3 text-primary mb-2"
-                  >
-                    Send Spontaneous Dossier
-                  </h3>
-                  <p
-                    class="font-body-md text-body-md text-on-surface-variant text-sm mb-6"
-                  >
-                    Share your portfolio or monograph links, CV, and a short
-                    statement on your architectural philosophy.
-                  </p>
-                  <form
-                    class="space-y-4"
-                    id="dossier-form"
-                    onsubmit="
-                      event.preventDefault();
-                      submitDossier();
-                    "
-                  >
-                    <div>
-                      <label
-                        class="block font-label-md text-label-md uppercase text-secondary mb-1"
-                        >Full Name</label
-                      >
-                      <input
-                        class="w-full bg-surface-container-low border-0 focus:ring-1 focus:ring-primary rounded-lg p-3 text-on-surface font-body-md text-sm"
-                        placeholder="e.g. Layla Al-Khatib"
-                        required=""
-                        type="text"
-                      />
-                    </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      <div>
-                        <label
-                          class="block font-label-md text-label-md uppercase text-secondary mb-1"
-                          >Email Address</label
-                        >
-                        <input
-                          class="w-full bg-surface-container-low border-0 focus:ring-1 focus:ring-primary rounded-lg p-3 text-on-surface font-body-md text-sm"
-                          placeholder="layla@domain.com"
-                          required=""
-                          type="email"
-                        />
-                      </div>
-                      <div>
-                        <label
-                          class="block font-label-md text-label-md uppercase text-secondary mb-1"
-                          >Field of Mastery</label
-                        >
-                        <select
-                          class="w-full bg-surface-container-low border-0 focus:ring-1 focus:ring-primary rounded-lg p-3 text-on-surface font-body-md text-sm"
-                        >
-                          <option>Architectural Conservation</option>
-                          <option>Private Real Estate Advisory</option>
-                          <option>Spatial &amp; Environmental Design</option>
-                          <option>Architectural Writing / Criticism</option>
-                          <option>Digital Systems / Cartography</option>
-                          <option>Other Interdisciplinary Craft</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div>
-                      <label
-                        class="block font-label-md text-label-md uppercase text-secondary mb-1"
-                        >Portfolio or Research Monograph Link</label
-                      >
-                      <input
-                        class="w-full bg-surface-container-low border-0 focus:ring-1 focus:ring-primary rounded-lg p-3 text-on-surface font-body-md text-sm"
-                        placeholder="https://..."
-                        type="url"
-                      />
-                    </div>
-                    <div>
-                      <label
-                        class="block font-label-md text-label-md uppercase text-secondary mb-1"
-                        >Short Statement on Architectural Philosophy</label
-                      >
-                      <textarea
-                        class="w-full bg-surface-container-low border-0 focus:ring-1 focus:ring-primary rounded-lg p-3 text-on-surface font-body-md text-sm"
-                        placeholder="Tell us how you perceive regional craft, provenance, and spatial longevity..."
-                        rows="3"
-                      ></textarea>
-                    </div>
-                    <button
-                      class="w-full bg-terracotta hover:bg-tertiary-container text-on-tertiary py-3.5 px-6 rounded-lg font-button text-button transition-colors flex items-center justify-center space-x-2 mt-4"
-                      type="submit"
-                    >
-                      <span>Submit Spontaneous Dossier</span>
-                      <span class="material-symbols-outlined text-sm"
-                        >send</span
-                      >
-                    </button>
-                  </form>
-                  <div
-                    class="hidden mt-4 p-4 bg-primary-fixed text-on-primary-fixed rounded-lg text-sm text-center"
-                    id="dossier-success"
-                  >
-                    Thank you. Your dossier has been transferred to our studio
-                    partners at
-                    <span class="font-semibold">careers@diyari.com</span>.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- Interactive JavaScript for Department Tabs & Form Feedback -->
-        <script>
-          // Department filtering
-          const filterButtons = document.querySelectorAll(".filter-btn");
-          const roleCards = document.querySelectorAll(".role-card");
-
-          filterButtons.forEach((btn) => {
-            btn.addEventListener("click", () => {
-              // Toggle styling
-              filterButtons.forEach((b) => {
-                b.classList.remove(
-                  "bg-primary",
-                  "text-on-primary",
-                  "active-tab",
-                );
-                b.classList.add("bg-surface", "text-on-surface-variant");
-              });
-              btn.classList.remove("bg-surface", "text-on-surface-variant");
-              btn.classList.add("bg-primary", "text-on-primary", "active-tab");
-
-              const filter = btn.getAttribute("data-filter");
-
-              roleCards.forEach((card) => {
-                if (
-                  filter === "all" ||
-                  card.getAttribute("data-dept") === filter
-                ) {
-                  card.classList.remove("hidden");
-                } else {
-                  card.classList.add("hidden");
-                }
-              });
-            });
-          });
-
-          // Spontaneous Dossier Submission Interaction
-          function submitDossier() {
-            const form = document.getElementById("dossier-form");
-            const success = document.getElementById("dossier-success");
-            form.classList.add("opacity-40", "pointer-events-none");
-            success.classList.remove("hidden");
-          }
-        </script>
-      </div>
-    </main>
-    <!-- Footer -->
-    <footer
-      class="bg-primary-container text-on-primary-container py-section-gap w-full"
-    >
-      <div
-        class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter"
-      >
-        <div class="flex flex-col space-y-6">
-          <div
-            class="font-headline-h2 text-headline-h2 text-on-primary-container"
-          >
-            Diyari
-          </div>
-          <p class="text-sm leading-relaxed opacity-80">
-            A premium real estate experience bridging heritage and luxury.
-            Curating exceptional spaces across the region for over a decade.
-          </p>
-        </div>
-        <div class="flex flex-col space-y-4">
-          <h4
-            class="font-headline-h3 text-headline-h3 text-on-primary-container"
-          >
-            About
-          </h4>
-          <a
-            class="opacity-80 hover:text-on-tertiary-container transition-colors"
-            href="#"
-            >Our Story</a
-          >
-          <a
-            class="opacity-80 hover:text-on-tertiary-container transition-colors"
-            href="#"
-            >The Team</a
-          >
-          <a
-            class="opacity-80 hover:text-on-tertiary-container transition-colors"
-            href="#"
-            >Partners</a
-          >
-          <a
-            class="opacity-80 hover:text-on-tertiary-container transition-colors"
-            href="#"
-            >Careers</a
-          >
-        </div>
-        <div class="flex flex-col space-y-4">
-          <h4
-            class="font-headline-h3 text-headline-h3 text-on-primary-container"
-          >
-            Property types
-          </h4>
-          <a
-            class="opacity-80 hover:text-on-tertiary-container transition-colors"
-            href="#"
-            >Villas</a
-          >
-          <a
-            class="opacity-80 hover:text-on-tertiary-container transition-colors"
-            href="#"
-            >Apartments</a
-          >
-          <a
-            class="opacity-80 hover:text-on-tertiary-container transition-colors"
-            href="#"
-            >Commercial</a
-          >
-          <a
-            class="opacity-80 hover:text-on-tertiary-container transition-colors"
-            href="#"
-            >Penthouse</a
-          >
-        </div>
-        <div class="flex flex-col space-y-4">
-          <h4
-            class="font-headline-h3 text-headline-h3 text-on-primary-container"
-          >
-            Contact
-          </h4>
-          <p class="opacity-80">124 Luxury Tower, Burj District, Dubai, UAE</p>
-          <p class="opacity-80">contact@diyari.com</p>
-          <div class="flex space-x-4 pt-4">
-            <span
-              class="material-symbols-outlined cursor-pointer hover:text-on-tertiary-container transition-colors"
-              >share</span
-            >
-            <span
-              class="material-symbols-outlined cursor-pointer hover:text-on-tertiary-container transition-colors"
-              >public</span
-            >
-            <span
-              class="material-symbols-outlined cursor-pointer hover:text-on-tertiary-container transition-colors"
-              >alternate_email</span
-            >
-          </div>
-        </div>
-      </div>
-      <div
-        class="max-w-container-max mx-auto px-margin-desktop mt-24 pt-8 border-t border-on-primary-container/20 text-center opacity-60 text-xs"
-      >
-        © 2024 Diyari Real Estate. All rights reserved.
-      </div>
-    </footer>
-    <script>
-      // Scroll Reveal Implementation
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px",
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("reveal-visible");
-            // Start count-up if it's the stats section
-            if (entry.target.contains(document.querySelector(".count-up"))) {
-              animateCounters();
-            }
-          }
-        });
-      }, observerOptions);
-
-      document
-        .querySelectorAll(".scroll-reveal")
-        .forEach((el) => observer.observe(el));
-
-      // Count-up animation
-      function animateCounters() {
-        document.querySelectorAll(".count-up").forEach((counter) => {
-          const target = +counter.getAttribute("data-target");
-          const count = +counter.innerText.replace(",", "");
-          const increment = target / 100;
-
-          if (count < target) {
-            const newValue = Math.ceil(count + increment);
-            counter.innerText = newValue.toLocaleString();
-            setTimeout(animateCounters, 20);
-          } else {
-            counter.innerText =
-              target.toLocaleString() + (target > 100 ? "+" : "");
-          }
-        });
-      }
-
-      // Sticky Nav logic
-      window.addEventListener("scroll", () => {
-        const nav = document.getElementById("top-nav");
-        if (window.scrollY > 40) {
-          nav.classList.add("nav-scrolled");
-        } else {
-          nav.classList.remove("nav-scrolled");
         }
-      });
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .stagger-1 { transition-delay: 0.1s; }
+        .stagger-2 { transition-delay: 0.2s; }
+        .stagger-3 { transition-delay: 0.3s; }
 
-      // Simple testimonial interaction
-      const dots = document.querySelectorAll(".dot-inactive, .dot-active");
-      dots.forEach((dot, idx) => {
-        dot.addEventListener("click", () => {
-          dots.forEach((d) => {
-            d.classList.remove("dot-active");
-            d.classList.add("dot-inactive");
-          });
-          dot.classList.add("dot-active");
-          dot.classList.remove("dot-inactive");
-          // Normally would slide the container here
+        .property-card:hover img {
+            transform: scale(1.05);
+        }
+        
+        .nav-scrolled {
+            background-color: #f6f3ee !important;
+            border-bottom: 0.5px solid #e5e1d8;
+        }
+
+        /* Testimonial Dot Style */
+        .dot-active { background-color: #fcf9f8; }
+        .dot-inactive { background-color: rgba(252, 249, 248, 0.3); }
+    </style>
+<meta content="web_standard" name="shell-type"></head>
+<body class="bg-surface text-on-surface font-body-md">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 transition-all duration-300 bg-transparent" id="top-nav">
+<div class="flex justify-between items-center w-full px-4 sm:px-6 lg:px-8 py-4 max-w-container-max mx-auto"><a class="flex items-center space-x-3 group cursor-pointer" href="#"><img alt="Diyari Real Estate Logo" class="h-10 w-10 object-contain rounded-md" src="https://lh3.googleusercontent.com/aida/ALJJyrDMrlKBAQ8SG5l9mv6_OwvXLK-bi8XQ3IIamu-c9mVOWsxzDEu0htb9RFT9-7EnYI2CdUQalm9-pxfqgoR9TwTZWCn9d2MzZiQquYVjIeTGipRLG8qFlUAM1niN1qBIqOA0HWenjOYAQ-ven1QPMOmSx1R2FZkQ183MkCEHbWyHb3LriBSRF3vsCgNxvP-9PgYqsnxc9H8IvobLsF3auhR1N45fujAM75XgGRy4CdTJHw"><span class="font-headline-h2 text-headline-h2 text-primary tracking-tight">Diyari</span></a><div class="hidden md:flex items-center space-x-8"><a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md" href="#">Home</a><a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Properties</a><a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">About</a><a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Contact</a></div><button class="bg-primary text-on-primary px-6 py-3 rounded-lg font-button text-button hover:scale-95 transition-transform duration-150">List your property</button></div>
+</nav>
+<main><div class="flex flex-col w-full">
+<!-- Editorial Hero Section -->
+<section class="relative w-full max-w-container-max mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16 md:pb-24"><div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-end"><div class="lg:col-span-8 flex flex-col space-y-6"><div class="inline-flex items-center space-x-3 w-fit bg-surface-container-high px-4 py-1.5 rounded-full"><span class="w-2 h-2 rounded-full bg-terracotta"></span><span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-medium">Careers at Diyari</span></div><h1 class="font-headline-h1 text-headline-h1 text-primary tracking-tight">Shape the Future of Regional Architectural Living</h1><p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">Join a dedicated team of architects, researchers, client advisors, and technologists redefining luxury real estate through the lens of heritage, craftsmanship, and climate intelligence.</p><div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6"><div class="bg-surface-container-low p-5 rounded-xl shadow-sm"><span class="font-label-md text-label-md uppercase tracking-widest text-secondary block mb-1">Global Hubs</span><div class="font-headline-h3 text-headline-h3 text-primary">3 Studios</div><p class="font-body-md text-body-md text-on-surface-variant text-sm mt-0.5">Amman • Beirut • Dubai</p></div><div class="bg-surface-container-low p-5 rounded-xl shadow-sm"><span class="font-label-md text-label-md uppercase tracking-widest text-secondary block mb-1">Work Rhythm</span><div class="font-headline-h3 text-headline-h3 text-primary">Hybrid Culture</div><p class="font-body-md text-body-md text-on-surface-variant text-sm mt-0.5">Studio presence &amp; remote focus</p></div><div class="bg-surface-container-low p-5 rounded-xl shadow-sm"><span class="font-label-md text-label-md uppercase tracking-widest text-secondary block mb-1">Immersion</span><div class="font-headline-h3 text-headline-h3 text-primary">Sabbaticals</div><p class="font-body-md text-body-md text-on-surface-variant text-sm mt-0.5">Annual funded field research</p></div></div></div><div class="lg:col-span-4 relative mt-8 lg:mt-0"><div class="relative rounded-xl overflow-hidden shadow-xl aspect-[4/5] bg-surface-container"><img alt="Jabal Amman Heritage Quarter Studio" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="An elegant architectural studio in the Mediterranean or Levantine region with warm limestone walls, arched doorways, deep green olive plants in terracotta pots, and natural afternoon light casting gentle shadows across walnut desks and architectural blueprints." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8w04zKw7J8Ih5Y8qBBHil0I0drksR1AFNZlICWZ4Y2yI5PVEFwKKy_sdLVAVrH2_Ltdev5af5m3KjVq64F4NUTeFjRe0iE9SsJDZeom4LAHH9UkPnhh-LwC783F-P4bZaJ1rW4rIt0aEHvWGycQE1NG8Pwb8If9jh8VXzMnI0CxvhOTMJbWs97EO6T1rOwDihXHGtck6pGS3nJzudTdx18oToIZQmRRg5bqlfMiVv"><div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex flex-col justify-end p-6 text-on-primary"><span class="font-label-md text-label-md uppercase tracking-widest text-primary-fixed-dim">Studio Amman</span><p class="font-headline-h3 text-headline-h3 text-on-primary mt-1">Jabal Amman Heritage Quarter</p></div></div></div></div></section>
+<!-- Editorial Image Strip / Spatial Break -->
+<section class="w-full bg-surface-container-low py-12">
+<div class="max-w-container-max mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-6 items-center"><div class="relative h-64 rounded-xl overflow-hidden shadow-md"><img class="w-full h-full object-cover" data-alt="A master stonemason in an open-air workshop near Byblos carefully chisel-dressing a hand-cut regional yellow limestone block, bathed in crisp morning sunlight with stone dust floating softly in the air." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvORofIL7pgxIhHygMr1pYelCj0jHPhr2gLg7W0E-6kUkM3-TCVSEgFVGtqnqrO4IlFVEOeSvpy8830eZRBKHicMtH8Az_1KBHUy3ckgjmuSoRkbJ412pfSYqq4HgDGVvd9fRVcaR9KZrdP3JyHi1xRwXFUtmrQRqXkNzGkNqlKwk4Aer--g810oaYVQ2aC-J32puDZRVHr-P9gYwIfIiRkYp3JzHIW7JB_NnPYD7k"><div class="absolute bottom-4 left-4 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-md text-xs font-label-md text-primary font-medium">Material Provenance</div></div><div class="relative h-64 rounded-xl overflow-hidden shadow-md md:-mt-6"><img class="w-full h-full object-cover" data-alt="Contemporary interior of a modern minimalist salon in Dubai with high ceilings, polished microcement floors, textured ivory plaster walls, and custom deep forest green upholstered armchairs facing a private courtyard garden." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCirJYuCTwazkY_RZ96isl4QeUc_v7TDxehpa2u0J_FsVjLL5LndKqJstFds-C_T06LjC9paNEXnE08RWwfJ9-FI5k2DNZUZUgNsxkotSzjIAbxow7WGsLQVcil0A1KVEawscwCxBe4lT8JhL7aRAcjZ72ib2tAFyEf0UrssPBRuLDt2BfHTFeRjYrHLwjRF3XxPCfUoLK9H-HgCJ5nB9gEwUvm3sH1P47jpmaGtGeR"><div class="absolute bottom-4 left-4 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-md text-xs font-label-md text-primary font-medium">Living Archives</div></div><div class="relative h-64 rounded-xl overflow-hidden shadow-md"><img class="w-full h-full object-cover" data-alt="Archival library table illuminated by an art deco bronze lamp with historical hand-drawn blueprints of Levantine modernist residences, vintage architectural monographs, and brass drafting dividers laid out carefully." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6aXgrzI9Vju9oiYD-YAmwaFNr-zcUjOHykEUC6qxHnUZBtEIIBII730TU25zAxjsyN3YsXZCLTQGVppIcFI9XBWxidsTUXrdUgnJ1VwdxgdtMJm-ZKLaro5U7uw3yopf-Zq097zvhoyjptRs7RYS4dUPKTMIyCIOKGXFbUx8N7BpzDyUTLTamU-IXYjAWxjllcdhG0tKo2uLDea9E85489MBwWu6Ga2vbuWfkB1pR"><div class="absolute bottom-4 left-4 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-md text-xs font-label-md text-primary font-medium">Archival Research</div></div></div>
+</section>
+<!-- Culture & Values -->
+<section class="w-full max-w-container-max mx-auto px-4 sm:px-6 lg:px-8 py-section-gap"><div class="flex flex-col md:flex-row md:items-end justify-between mb-16"><div><span class="font-label-md text-label-md uppercase tracking-widest text-terracotta font-semibold">Our Ethos</span><h2 class="font-headline-h2 text-headline-h2 text-primary mt-2">Culture Founded on Architectural Stewardship</h2></div><p class="font-body-md text-body-md text-on-surface-variant max-w-md mt-4 md:mt-0">We reject transactional real estate in favor of lasting intellectual rigor, restorative design principles, and regional material mastery.</p></div><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"><div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between"><div><span class="font-headline-h3 text-headline-h3 text-terracotta mb-4 block font-bold">01</span><h3 class="font-headline-h3 text-headline-h3 text-primary mb-3">Custodianship Over Sales</h3><p class="font-body-md text-body-md text-on-surface-variant">We prize architectural integrity and long-term client trust above arbitrary deal volumes. Every listing is treated as a cultural landmark.</p></div><div class="mt-8 pt-4 flex items-center text-primary space-x-2"><span class="material-symbols-outlined text-sm">shield_with_heart</span><span class="font-label-md text-label-md uppercase text-xs tracking-wider">Honorary Care</span></div></div><div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between"><div><span class="font-headline-h3 text-headline-h3 text-terracotta mb-4 block font-bold">02</span><h3 class="font-headline-h3 text-headline-h3 text-primary mb-3">Research-Driven Curation</h3><p class="font-body-md text-body-md text-on-surface-variant">Deep archival study of property provenance, vernacular building techniques, and passive bioclimatic cooling methods guides our collections.</p></div><div class="mt-8 pt-4 flex items-center text-primary space-x-2"><span class="material-symbols-outlined text-sm">auto_stories</span><span class="font-label-md text-label-md uppercase text-xs tracking-wider">Rigorous Inquiries</span></div></div><div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between"><div><span class="font-headline-h3 text-headline-h3 text-terracotta mb-4 block font-bold">03</span><h3 class="font-headline-h3 text-headline-h3 text-primary mb-3">Cross-Regional Mobility</h3><p class="font-body-md text-body-md text-on-surface-variant">Fluid collaboration across our primary studios in Amman, Beirut, and Dubai encourages spatial perspective and cross-border creative resonance.</p></div><div class="mt-8 pt-4 flex items-center text-primary space-x-2"><span class="material-symbols-outlined text-sm">near_me</span><span class="font-label-md text-label-md uppercase text-xs tracking-wider">Pan-Levantine Reach</span></div></div><div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between"><div><span class="font-headline-h3 text-headline-h3 text-terracotta mb-4 block font-bold">04</span><h3 class="font-headline-h3 text-headline-h3 text-primary mb-3">Bespoke Lifelong Craft</h3><p class="font-body-md text-body-md text-on-surface-variant">Continuous masterclasses with visiting stonemasons, acoustic engineers, and architectural historians nurture unmatched expertise.</p></div><div class="mt-8 pt-4 flex items-center text-primary space-x-2"><span class="material-symbols-outlined text-sm">handyman</span><span class="font-label-md text-label-md uppercase text-xs tracking-wider">Master Guild</span></div></div></div></section>
+<!-- Open Opportunities (Filterable Listings) -->
+<section class="w-full bg-surface-container-low py-section-gap">
+<div class="max-w-container-max mx-auto px-4 sm:px-6 lg:px-8"><div class="flex flex-col md:flex-row md:items-end justify-between mb-12"><div><span class="font-label-md text-label-md uppercase tracking-widest text-terracotta font-semibold">Join the Studio</span><h2 class="font-headline-h2 text-headline-h2 text-primary mt-2">Open Opportunities</h2></div><div class="mt-4 md:mt-0 font-body-md text-body-md text-on-surface-variant">Showing 5 active fellowships &amp; appointments across 3 regional studios</div></div><div class="flex flex-wrap gap-2 mb-10" id="filter-container"><button class="filter-btn active-tab bg-primary text-on-primary px-5 py-2.5 rounded-full font-label-md text-label-md transition-all" data-filter="all">All (5)</button><button class="filter-btn bg-surface text-on-surface-variant hover:text-primary px-5 py-2.5 rounded-full font-label-md text-label-md transition-all shadow-sm" data-filter="curation">Architectural Curation (2)</button><button class="filter-btn bg-surface text-on-surface-variant hover:text-primary px-5 py-2.5 rounded-full font-label-md text-label-md transition-all shadow-sm" data-filter="advisory">Private Advisory (1)</button><button class="filter-btn bg-surface text-on-surface-variant hover:text-primary px-5 py-2.5 rounded-full font-label-md text-label-md transition-all shadow-sm" data-filter="editorial">Brand &amp; Media (1)</button><button class="filter-btn bg-surface text-on-surface-variant hover:text-primary px-5 py-2.5 rounded-full font-label-md text-label-md transition-all shadow-sm" data-filter="tech">Technology (1)</button></div><div class="space-y-4" id="roles-list"><div class="role-card group bg-surface-container-lowest p-6 md:p-8 rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer" data-dept="curation"><div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4"><div class="space-y-2"><div class="flex flex-wrap items-center gap-3"><span class="bg-primary-fixed text-on-primary-fixed px-3 py-1 rounded-md text-xs font-label-md font-medium">Architectural Curation</span><span class="text-secondary text-sm font-label-md flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> Full-time</span><span class="text-secondary text-sm font-label-md flex items-center gap-1"><span class="material-symbols-outlined text-sm">location_on</span> Amman / Beirut</span></div><h3 class="font-headline-h3 text-headline-h3 text-primary group-hover:text-terracotta transition-colors">Senior Architectural Provenance Specialist</h3><p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">Lead research and verification of historic stone properties and archival records. Coordinate closely with cadastral offices and architectural conservators to authenticate structural genealogies.</p></div><div class="flex items-center space-x-4 shrink-0 w-full sm:w-auto justify-end"><button class="bg-surface-container text-primary hover:bg-primary hover:text-on-primary px-6 py-3 rounded-lg font-button text-button transition-colors flex items-center space-x-2 w-full sm:w-auto justify-center"><span>View Role</span><span class="material-symbols-outlined text-sm">arrow_forward</span></button></div></div></div><div class="role-card group bg-surface-container-lowest p-6 md:p-8 rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer" data-dept="advisory"><div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4"><div class="space-y-2"><div class="flex flex-wrap items-center gap-3"><span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-md text-xs font-label-md font-medium">Private Advisory</span><span class="text-secondary text-sm font-label-md flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> Full-time</span><span class="text-secondary text-sm font-label-md flex items-center gap-1"><span class="material-symbols-outlined text-sm">location_on</span> Dubai DIFC</span></div><h3 class="font-headline-h3 text-headline-h3 text-primary group-hover:text-terracotta transition-colors">Private Client Advisor — Ultra-High-Net-Worth Portfolio</h3><p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">Manage tailored acquisitions for sovereign family offices and discerning private collectors seeking historically significant and climate-resilient estates across the Middle East.</p></div><div class="flex items-center space-x-4 shrink-0 w-full sm:w-auto justify-end"><button class="bg-surface-container text-primary hover:bg-primary hover:text-on-primary px-6 py-3 rounded-lg font-button text-button transition-colors flex items-center space-x-2 w-full sm:w-auto justify-center"><span>View Role</span><span class="material-symbols-outlined text-sm">arrow_forward</span></button></div></div></div><div class="role-card group bg-surface-container-lowest p-6 md:p-8 rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer" data-dept="curation"><div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4"><div class="space-y-2"><div class="flex flex-wrap items-center gap-3"><span class="bg-primary-fixed text-on-primary-fixed px-3 py-1 rounded-md text-xs font-label-md font-medium">Architectural Curation</span><span class="text-secondary text-sm font-label-md flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> Full-time</span><span class="text-secondary text-sm font-label-md flex items-center gap-1"><span class="material-symbols-outlined text-sm">location_on</span> Beirut</span></div><h3 class="font-headline-h3 text-headline-h3 text-primary group-hover:text-terracotta transition-colors">Heritage Conservation Project Lead</h3><p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">Direct on-site restoration and structural feasibility studies. Oversee the sensitive integration of modern thermal insulation and renewable energy into 19th and early 20th-century residences.</p></div><div class="flex items-center space-x-4 shrink-0 w-full sm:w-auto justify-end"><button class="bg-surface-container text-primary hover:bg-primary hover:text-on-primary px-6 py-3 rounded-lg font-button text-button transition-colors flex items-center space-x-2 w-full sm:w-auto justify-center"><span>View Role</span><span class="material-symbols-outlined text-sm">arrow_forward</span></button></div></div></div><div class="role-card group bg-surface-container-lowest p-6 md:p-8 rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer" data-dept="editorial"><div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4"><div class="space-y-2"><div class="flex flex-wrap items-center gap-3"><span class="bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-md text-xs font-label-md font-medium">Brand &amp; Media</span><span class="text-secondary text-sm font-label-md flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> Full-time / Hybrid</span><span class="text-secondary text-sm font-label-md flex items-center gap-1"><span class="material-symbols-outlined text-sm">location_on</span> Amman Studio</span></div><h3 class="font-headline-h3 text-headline-h3 text-primary group-hover:text-terracotta transition-colors">Editorial Director &amp; Architectural Writer</h3><p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">Author bespoke property monographs, quarterly architectural journals, and deep-dive critical essays exploring regional architectural heritage and sustainable urban futures.</p></div><div class="flex items-center space-x-4 shrink-0 w-full sm:w-auto justify-end"><button class="bg-surface-container text-primary hover:bg-primary hover:text-on-primary px-6 py-3 rounded-lg font-button text-button transition-colors flex items-center space-x-2 w-full sm:w-auto justify-center"><span>View Role</span><span class="material-symbols-outlined text-sm">arrow_forward</span></button></div></div></div><div class="role-card group bg-surface-container-lowest p-6 md:p-8 rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer" data-dept="tech"><div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4"><div class="space-y-2"><div class="flex flex-wrap items-center gap-3"><span class="bg-surface-container-highest text-on-surface-variant px-3 py-1 rounded-md text-xs font-label-md font-medium">Technology</span><span class="text-secondary text-sm font-label-md flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> Full-time / Hybrid</span><span class="text-secondary text-sm font-label-md flex items-center gap-1"><span class="material-symbols-outlined text-sm">location_on</span> Dubai / Remote</span></div><h3 class="font-headline-h3 text-headline-h3 text-primary group-hover:text-terracotta transition-colors">Head of Digital Curation &amp; Product</h3><p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">Lead our digital technology team engineering private collector portals, digital provenance registries, and high-fidelity 3D architectural scanning interfaces.</p></div><div class="flex items-center space-x-4 shrink-0 w-full sm:w-auto justify-end"><button class="bg-surface-container text-primary hover:bg-primary hover:text-on-primary px-6 py-3 rounded-lg font-button text-button transition-colors flex items-center space-x-2 w-full sm:w-auto justify-center"><span>View Role</span><span class="material-symbols-outlined text-sm">arrow_forward</span></button></div></div></div></div></div>
+</section>
+<!-- Perks & Benefits -->
+<section class="w-full max-w-container-max mx-auto px-4 sm:px-6 lg:px-8 py-section-gap"><div class="text-center max-w-2xl mx-auto mb-16"><span class="font-label-md text-label-md uppercase tracking-widest text-terracotta font-semibold">Stewardship in Return</span><h2 class="font-headline-h2 text-headline-h2 text-primary mt-2">Perks Built for Intellectual Growth</h2><p class="font-body-md text-body-md text-on-surface-variant mt-3">We provide an environment where long-term intellectual curiosity, holistic personal wellbeing, and architectural passion are unconditionally supported.</p></div><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"><div class="bg-surface p-8 rounded-xl shadow-sm flex flex-col justify-between"><div class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center text-primary mb-6"><span class="material-symbols-outlined text-2xl">account_balance</span></div><div><h3 class="font-headline-h3 text-headline-h3 text-primary mb-2">Equity &amp; Preservation</h3><p class="font-body-md text-body-md text-on-surface-variant text-sm">Competitive baseline compensation complemented by private equity stakes and profit participation pools in our restored landmark portfolios.</p></div></div><div class="bg-surface p-8 rounded-xl shadow-sm flex flex-col justify-between"><div class="w-12 h-12 rounded-lg bg-secondary-container flex items-center justify-center text-primary mb-6"><span class="material-symbols-outlined text-2xl">flight_takeoff</span></div><div><h3 class="font-headline-h3 text-headline-h3 text-primary mb-2">Architectural Travel</h3><p class="font-body-md text-body-md text-on-surface-variant text-sm">Annual $5,000 stipend dedicated to international architectural travel, biennial passes to Venice &amp; Sharjah, and global institutional museum memberships.</p></div></div><div class="bg-surface p-8 rounded-xl shadow-sm flex flex-col justify-between"><div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary mb-6"><span class="material-symbols-outlined text-2xl">spa</span></div><div><h3 class="font-headline-h3 text-headline-h3 text-primary mb-2">Holistic Health</h3><p class="font-body-md text-body-md text-on-surface-variant text-sm">Top-tier private health coverage for you and your dependents, mental health allowances, and ergonomic studio workstation budgets.</p></div></div><div class="bg-surface p-8 rounded-xl shadow-sm flex flex-col justify-between"><div class="w-12 h-12 rounded-lg bg-tertiary-fixed flex items-center justify-center text-tertiary mb-6"><span class="material-symbols-outlined text-2xl">forum</span></div><div><h3 class="font-headline-h3 text-headline-h3 text-primary mb-2">Annual Symposium</h3><p class="font-body-md text-body-md text-on-surface-variant text-sm">A week-long firm retreat held each autumn in a Mediterranean coastal town, convening historians, master builders, and all studio members.</p></div></div></div></section>
+<!-- Spontaneous Application Dossier Section -->
+<section class="w-full bg-primary-container text-on-primary-container py-section-gap relative overflow-hidden">
+<!-- Subtle architectural arc visual -->
+<div class="absolute -right-24 -bottom-24 w-96 h-96 rounded-full bg-primary opacity-30 pointer-events-none"></div>
+<div class="max-w-container-max mx-auto px-4 sm:px-6 lg:px-8 relative z-10"><div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"><div class="space-y-6"><span class="font-label-md text-label-md uppercase tracking-widest text-on-tertiary-container font-semibold">Unlisted Callings</span><h2 class="font-headline-h2 text-headline-h2 text-on-primary font-serif">Don't see your exact discipline?</h2><p class="font-body-lg text-body-lg text-on-primary-container opacity-90 leading-relaxed">We are always looking for passionate architects, architectural historians, master draftspersons, structural conservation engineers, and discreet client advisors. If your work bridges regional heritage and modern elegance, we want to hear from you.</p><div class="pt-4 flex flex-wrap items-center gap-6"><div><span class="block text-xs uppercase tracking-wider text-on-primary-container opacity-70">Direct Inquiries</span><a class="font-headline-h3 text-headline-h3 text-on-primary hover:text-on-tertiary-container transition-colors" href="mailto:careers@diyari.com">careers@diyari.com</a></div><div class="h-8 w-px bg-on-primary-container/20 hidden sm:block"></div><div><span class="block text-xs uppercase tracking-wider text-on-primary-container opacity-70">Typical Response</span><span class="font-headline-h3 text-headline-h3 text-on-primary">Within 5 Days</span></div></div></div><div class="mt-8 lg:mt-0"><div class="bg-surface text-on-surface p-8 md:p-10 rounded-xl shadow-xl"><h3 class="font-headline-h3 text-headline-h3 text-primary mb-2">Send Spontaneous Dossier</h3><p class="font-body-md text-body-md text-on-surface-variant text-sm mb-6">Share your portfolio or monograph links, CV, and a short statement on your architectural philosophy.</p><form class="space-y-4" id="dossier-form" onsubmit="event.preventDefault(); submitDossier();"><div><label class="block font-label-md text-label-md uppercase text-secondary mb-1">Full Name</label><input class="w-full bg-surface-container-low border-0 focus:ring-1 focus:ring-primary rounded-lg p-3 text-on-surface font-body-md text-sm" placeholder="e.g. Layla Al-Khatib" required="" type="text"></div><div class="grid grid-cols-1 sm:grid-cols-2 gap-4"><div><label class="block font-label-md text-label-md uppercase text-secondary mb-1">Email Address</label><input class="w-full bg-surface-container-low border-0 focus:ring-1 focus:ring-primary rounded-lg p-3 text-on-surface font-body-md text-sm" placeholder="layla@domain.com" required="" type="email"></div><div><label class="block font-label-md text-label-md uppercase text-secondary mb-1">Field of Mastery</label><select class="w-full bg-surface-container-low border-0 focus:ring-1 focus:ring-primary rounded-lg p-3 text-on-surface font-body-md text-sm"><option>Architectural Conservation</option><option>Private Real Estate Advisory</option><option>Spatial &amp; Environmental Design</option><option>Architectural Writing / Criticism</option><option>Digital Systems / Cartography</option><option>Other Interdisciplinary Craft</option></select></div></div><div><label class="block font-label-md text-label-md uppercase text-secondary mb-1">Portfolio or Research Monograph Link</label><input class="w-full bg-surface-container-low border-0 focus:ring-1 focus:ring-primary rounded-lg p-3 text-on-surface font-body-md text-sm" placeholder="https://..." type="url"></div><div><label class="block font-label-md text-label-md uppercase text-secondary mb-1">Short Statement on Architectural Philosophy</label><textarea class="w-full bg-surface-container-low border-0 focus:ring-1 focus:ring-primary rounded-lg p-3 text-on-surface font-body-md text-sm" placeholder="Tell us how you perceive regional craft, provenance, and spatial longevity..." rows="3"></textarea></div><button class="w-full bg-terracotta hover:bg-tertiary-container text-on-tertiary py-3.5 px-6 rounded-lg font-button text-button transition-colors flex items-center justify-center space-x-2 mt-4" type="submit"><span>Submit Spontaneous Dossier</span><span class="material-symbols-outlined text-sm">send</span></button></form><div class="hidden mt-4 p-4 bg-primary-fixed text-on-primary-fixed rounded-lg text-sm text-center" id="dossier-success">Thank you. Your dossier has been transferred to our studio partners at <span class="font-semibold">careers@diyari.com</span>.</div></div></div></div></div>
+</section>
+<!-- Interactive JavaScript for Department Tabs & Form Feedback -->
+<script>
+    // Department filtering
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const roleCards = document.querySelectorAll('.role-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Toggle styling
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-primary', 'text-on-primary', 'active-tab');
+          b.classList.add('bg-surface', 'text-on-surface-variant');
+        });
+        btn.classList.remove('bg-surface', 'text-on-surface-variant');
+        btn.classList.add('bg-primary', 'text-on-primary', 'active-tab');
+
+        const filter = btn.getAttribute('data-filter');
+
+        roleCards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-dept') === filter) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
         });
       });
+    });
+
+    // Spontaneous Dossier Submission Interaction
+    function submitDossier() {
+      const form = document.getElementById('dossier-form');
+      const success = document.getElementById('dossier-success');
+      form.classList.add('opacity-40', 'pointer-events-none');
+      success.classList.remove('hidden');
+    }
+  </script>
+</div></main>
+<!-- Footer -->
+<footer class="bg-primary-container text-on-primary-container py-section-gap w-full"><div class="max-w-container-max mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"><div class="flex flex-col space-y-6"><div class="font-headline-h2 text-headline-h2 text-on-primary-container">Diyari</div><p class="text-sm leading-relaxed opacity-80">A premium real estate experience bridging heritage and luxury. Curating exceptional spaces across the region for over a decade.</p></div><div class="flex flex-col space-y-4"><h4 class="font-headline-h3 text-headline-h3 text-on-primary-container">About</h4><a class="opacity-80 hover:text-on-tertiary-container transition-colors" href="#">Our Story</a><a class="opacity-80 hover:text-on-tertiary-container transition-colors" href="#">The Team</a><a class="opacity-80 hover:text-on-tertiary-container transition-colors" href="#">Partners</a><a class="opacity-80 hover:text-on-tertiary-container transition-colors" href="#">Careers</a></div><div class="flex flex-col space-y-4"><h4 class="font-headline-h3 text-headline-h3 text-on-primary-container">Property types</h4><a class="opacity-80 hover:text-on-tertiary-container transition-colors" href="#">Villas</a><a class="opacity-80 hover:text-on-tertiary-container transition-colors" href="#">Apartments</a><a class="opacity-80 hover:text-on-tertiary-container transition-colors" href="#">Commercial</a><a class="opacity-80 hover:text-on-tertiary-container transition-colors" href="#">Penthouse</a></div><div class="flex flex-col space-y-4"><h4 class="font-headline-h3 text-headline-h3 text-on-primary-container">Contact</h4><p class="opacity-80">124 Luxury Tower, Burj District, Dubai, UAE</p><p class="opacity-80">contact@diyari.com</p><div class="flex space-x-4 pt-4"><span class="material-symbols-outlined cursor-pointer hover:text-on-tertiary-container transition-colors">share</span><span class="material-symbols-outlined cursor-pointer hover:text-on-tertiary-container transition-colors">public</span><span class="material-symbols-outlined cursor-pointer hover:text-on-tertiary-container transition-colors">alternate_email</span></div></div></div><div class="max-w-container-max mx-auto px-4 sm:px-6 lg:px-8 mt-24 pt-8 border-t border-on-primary-container/20 text-center opacity-60 text-xs">© 2024 Diyari Real Estate. All rights reserved.</div></footer>
+<script>
+        // Scroll Reveal Implementation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-visible');
+                    // Start count-up if it's the stats section
+                    if (entry.target.contains(document.querySelector('.count-up'))) {
+                        animateCounters();
+                    }
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+
+        // Count-up animation
+        function animateCounters() {
+            document.querySelectorAll('.count-up').forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText.replace(',', '');
+                const increment = target / 100;
+
+                if (count < target) {
+                    const newValue = Math.ceil(count + increment);
+                    counter.innerText = newValue.toLocaleString();
+                    setTimeout(animateCounters, 20);
+                } else {
+                    counter.innerText = target.toLocaleString() + (target > 100 ? '+' : '');
+                }
+            });
+        }
+
+        // Sticky Nav logic
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('top-nav');
+            if (window.scrollY > 40) {
+                nav.classList.add('nav-scrolled');
+            } else {
+                nav.classList.remove('nav-scrolled');
+            }
+        });
+
+        // Simple testimonial interaction
+        const dots = document.querySelectorAll('.dot-inactive, .dot-active');
+        dots.forEach((dot, idx) => {
+            dot.addEventListener('click', () => {
+                dots.forEach(d => {
+                    d.classList.remove('dot-active');
+                    d.classList.add('dot-inactive');
+                });
+                dot.classList.add('dot-active');
+                dot.classList.remove('dot-inactive');
+                // Normally would slide the container here
+            });
+        });
     </script>
-  </body>
-</html>
+
+
+
+
+</body></html>
