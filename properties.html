@@ -1,0 +1,1057 @@
+<!doctype html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <title>Diyari | Properties</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&amp;family=Work+Sans:wght@400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .filter-panel-transition {
+        transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .card-zoom:hover img {
+        transform: scale(1.05);
+      }
+      .stagger-in {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(12px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fade-up {
+        animation: fadeUp 600ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        background: #c1592b;
+        cursor: pointer;
+        border: 2px solid white;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-bright": "#fcf9f8",
+              "tertiary-fixed": "#ffdbce",
+              "on-primary-fixed-variant": "#3b4a41",
+              "on-tertiary-container": "#f5814f",
+              "surface-variant": "#e5e2e1",
+              "inverse-primary": "#bacbbe",
+              "inverse-surface": "#313030",
+              "surface-container-high": "#eae7e7",
+              "on-error-container": "#93000a",
+              primary: "#17251d",
+              "on-primary-fixed": "#101f17",
+              tertiary: "#421300",
+              "surface-container-low": "#f6f3f2",
+              "inverse-on-surface": "#f3f0ef",
+              "secondary-container": "#e5e2dd",
+              "outline-variant": "#c3c8c2",
+              "on-surface": "#1c1b1b",
+              "on-primary": "#ffffff",
+              "on-tertiary-fixed-variant": "#7f2b00",
+              "surface-container-highest": "#e5e2e1",
+              background: "#fcf9f8",
+              error: "#ba1a1a",
+              "on-tertiary-fixed": "#370e00",
+              "surface-dim": "#dcd9d9",
+              "on-background": "#1c1b1b",
+              "on-secondary-fixed": "#1c1c19",
+              "on-primary-container": "#94a599",
+              "on-error": "#ffffff",
+              "secondary-fixed": "#e5e2dd",
+              secondary: "#5f5e5b",
+              "secondary-fixed-dim": "#c8c6c2",
+              "on-surface-variant": "#434844",
+              "surface-container": "#f0eded",
+              outline: "#737874",
+              "tertiary-container": "#662100",
+              "on-secondary-fixed-variant": "#474743",
+              "error-container": "#ffdad6",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-fixed-dim": "#ffb599",
+              "on-secondary": "#ffffff",
+              surface: "#fcf9f8",
+              "on-secondary-container": "#656461",
+              "surface-tint": "#526258",
+              "primary-container": "#2c3b32",
+              "primary-fixed-dim": "#bacbbe",
+              "primary-fixed": "#d5e7da",
+              "on-tertiary": "#ffffff",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              "stack-xs": "4px",
+              "stack-md": "16px",
+              "section-gap": "120px",
+              gutter: "24px",
+              "stack-lg": "32px",
+              "margin-mobile": "20px",
+              "stack-sm": "8px",
+              "margin-desktop": "64px",
+              "container-max": "1280px",
+            },
+            fontFamily: {
+              button: ["Work Sans"],
+              "headline-h1": ["Fraunces"],
+              "label-md": ["Work Sans"],
+              "body-md": ["Work Sans"],
+              "headline-h3": ["Fraunces"],
+              "headline-h2": ["Fraunces"],
+              "body-lg": ["Work Sans"],
+            },
+            fontSize: {
+              button: ["16px", { lineHeight: "1", fontWeight: "500" }],
+              "headline-h1": [
+                "56px",
+                {
+                  lineHeight: "1.2",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "600",
+                },
+              ],
+              "label-md": [
+                "14px",
+                {
+                  lineHeight: "1.2",
+                  letterSpacing: "0.05em",
+                  fontWeight: "500",
+                },
+              ],
+              "body-md": ["16px", { lineHeight: "1.7", fontWeight: "400" }],
+              "headline-h3": ["24px", { lineHeight: "1.4", fontWeight: "600" }],
+              "headline-h2": ["36px", { lineHeight: "1.3", fontWeight: "600" }],
+              "body-lg": ["18px", { lineHeight: "1.7", fontWeight: "400" }],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-surface font-body-md text-on-surface">
+    <!-- Top Navigation Shell -->
+    <header
+      class="sticky top-0 w-full z-50 border-b border-outline-variant bg-surface"
+    >
+      <div
+        class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto"
+      >
+        <a class="flex items-center gap-3 group" href="#"
+          ><img
+            src="https://lh3.googleusercontent.com/aida/ALJJyrDMrlKBAQ8SG5l9mv6_OwvXLK-bi8XQ3IIamu-c9mVOWsxzDEu0htb9RFT9-7EnYI2CdUQalm9-pxfqgoR9TwTZWCn9d2MzZiQquYVjIeTGipRLG8qFlUAM1niN1qBIqOA0HWenjOYAQ-ven1QPMOmSx1R2FZkQ183MkCEHbWyHb3LriBSRF3vsCgNxvP-9PgYqsnxc9H8IvobLsF3auhR1N45fujAM75XgGRy4CdTJHw"
+            alt="Diyari Logo"
+            class="h-10 w-10 object-contain rounded-md"
+          /><span
+            class="font-headline-h2 text-headline-h2 text-primary group-hover:text-primary-container transition-colors"
+            >Diyari</span
+          ></a
+        >
+        <nav class="hidden md:flex gap-8 items-center">
+          <a
+            class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200"
+            href="home.html"
+            >Home</a
+          >
+          <a
+            class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary pb-1"
+            href="properties.html"
+            >Properties</a
+          >
+          <a
+            class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200"
+            href="about.html"
+            >About</a
+          >
+          <a
+            class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200"
+            href="contact.html"
+            >Contact</a
+          >
+        </nav>
+        <button
+          class="bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-button text-button hover:bg-primary transition-colors active:scale-95 duration-150"
+        >
+          List your property
+        </button>
+      </div>
+    </header>
+    <main class="flex min-h-screen max-w-container-max mx-auto">
+      <!-- Sidebar Filters -->
+      <aside
+        class="w-[280px] min-w-[280px] sticky top-[73px] h-[calc(100vh-73px)] bg-surface-container-low border-r border-outline-variant overflow-y-auto px-6 py-8"
+      >
+        <div class="space-y-8 filter-panel-transition">
+          <!-- Search -->
+          <div class="relative">
+            <span
+              class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant"
+              >search</span
+            >
+            <input
+              class="w-full pl-10 pr-4 py-2 bg-white border border-outline-variant rounded-lg focus:outline-none focus:border-primary-container text-body-md"
+              placeholder="Search location..."
+              type="text"
+            />
+          </div>
+          <!-- Property Type -->
+          <div>
+            <h3 class="font-headline-h3 text-primary mb-4">Property type</h3>
+            <div class="space-y-3">
+              <label class="flex items-center gap-3 cursor-pointer group">
+                <input
+                  class="w-5 h-5 border-outline-variant rounded text-primary-container focus:ring-primary-container"
+                  type="checkbox"
+                />
+                <span
+                  class="font-body-md text-on-surface-variant group-hover:text-primary"
+                  >Villa</span
+                >
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer group">
+                <input
+                  checked=""
+                  class="w-5 h-5 border-outline-variant rounded text-primary-container focus:ring-primary-container"
+                  type="checkbox"
+                />
+                <span
+                  class="font-body-md text-on-surface-variant group-hover:text-primary"
+                  >Apartment</span
+                >
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer group">
+                <input
+                  class="w-5 h-5 border-outline-variant rounded text-primary-container focus:ring-primary-container"
+                  type="checkbox"
+                />
+                <span
+                  class="font-body-md text-on-surface-variant group-hover:text-primary"
+                  >Townhouse</span
+                >
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer group">
+                <input
+                  class="w-5 h-5 border-outline-variant rounded text-primary-container focus:ring-primary-container"
+                  type="checkbox"
+                />
+                <span
+                  class="font-body-md text-on-surface-variant group-hover:text-primary"
+                  >Commercial</span
+                >
+              </label>
+            </div>
+          </div>
+          <!-- Price Range -->
+          <div>
+            <h3 class="font-headline-h3 text-primary mb-4">Price range</h3>
+            <div class="space-y-4">
+              <div
+                class="relative h-2 bg-secondary-container rounded-full mt-6"
+              >
+                <div
+                  class="absolute h-full bg-on-tertiary-container rounded-full"
+                  style="left: 20%; right: 30%"
+                ></div>
+                <div
+                  class="absolute -top-2 left-[20%] w-5 h-5 bg-[#C1592B] border-2 border-white rounded-full shadow-md cursor-pointer"
+                ></div>
+                <div
+                  class="absolute -top-2 left-[70%] w-5 h-5 bg-[#C1592B] border-2 border-white rounded-full shadow-md cursor-pointer"
+                ></div>
+              </div>
+              <div class="flex gap-4 items-center">
+                <div class="flex-1">
+                  <span
+                    class="text-[10px] font-label-md text-on-surface-variant uppercase"
+                    >Min (AED)</span
+                  >
+                  <input
+                    class="w-full mt-1 px-3 py-1 bg-white border border-outline-variant rounded focus:outline-none text-sm"
+                    type="number"
+                    value="500000"
+                  />
+                </div>
+                <div class="flex-1">
+                  <span
+                    class="text-[10px] font-label-md text-on-surface-variant uppercase"
+                    >Max (AED)</span
+                  >
+                  <input
+                    class="w-full mt-1 px-3 py-1 bg-white border border-outline-variant rounded focus:outline-none text-sm"
+                    type="number"
+                    value="2500000"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Bedrooms -->
+          <div>
+            <h3 class="font-headline-h3 text-primary mb-4">Bedrooms</h3>
+            <div class="flex flex-wrap gap-2">
+              <button
+                class="px-4 py-2 rounded-full border border-primary-container bg-primary-container text-white font-label-md text-sm transition-all"
+              >
+                Any
+              </button>
+              <button
+                class="px-4 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label-md text-sm hover:border-primary-container transition-all"
+              >
+                1
+              </button>
+              <button
+                class="px-4 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label-md text-sm hover:border-primary-container transition-all"
+              >
+                2
+              </button>
+              <button
+                class="px-4 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label-md text-sm hover:border-primary-container transition-all"
+              >
+                3+
+              </button>
+            </div>
+          </div>
+          <!-- Amenities -->
+          <div>
+            <h3 class="font-headline-h3 text-primary mb-4">Amenities</h3>
+            <div class="grid grid-cols-1 gap-3">
+              <label class="flex items-center gap-3 cursor-pointer group">
+                <input
+                  class="w-5 h-5 border-outline-variant rounded text-primary-container focus:ring-primary-container"
+                  type="checkbox"
+                />
+                <span
+                  class="font-body-md text-on-surface-variant group-hover:text-primary"
+                  >Pool</span
+                >
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer group">
+                <input
+                  class="w-5 h-5 border-outline-variant rounded text-primary-container focus:ring-primary-container"
+                  type="checkbox"
+                />
+                <span
+                  class="font-body-md text-on-surface-variant group-hover:text-primary"
+                  >Garden</span
+                >
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer group">
+                <input
+                  class="w-5 h-5 border-outline-variant rounded text-primary-container focus:ring-primary-container"
+                  type="checkbox"
+                />
+                <span
+                  class="font-body-md text-on-surface-variant group-hover:text-primary"
+                  >Gym</span
+                >
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer group">
+                <input
+                  class="w-5 h-5 border-outline-variant rounded text-primary-container focus:ring-primary-container"
+                  type="checkbox"
+                />
+                <span
+                  class="font-body-md text-on-surface-variant group-hover:text-primary"
+                  >Sea View</span
+                >
+              </label>
+            </div>
+          </div>
+          <button
+            class="w-full py-4 text-center text-on-tertiary-container font-label-md hover:underline transition-all"
+          >
+            Reset filters
+          </button>
+        </div>
+      </aside>
+      <!-- Main Content Area -->
+      <section class="flex-1 px-10 py-12">
+        <!-- Content Header -->
+        <div class="flex justify-between items-end mb-10">
+          <div class="animate-fade-up">
+            <h1 class="font-headline-h1 text-headline-h1 text-primary">
+              Properties
+            </h1>
+            <p class="font-body-md text-on-surface-variant">
+              Showing 1–12 of 342 listings
+            </p>
+          </div>
+          <div
+            class="flex items-center gap-6 animate-fade-up"
+            style="animation-delay: 100ms"
+          >
+            <!-- Sorting -->
+            <div class="flex items-center gap-3">
+              <span class="font-label-md text-on-surface-variant"
+                >Sort by:</span
+              >
+              <select
+                class="bg-transparent border-none font-label-md text-primary focus:ring-0 cursor-pointer"
+              >
+                <option>Newest</option>
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+              </select>
+            </div>
+            <!-- View Toggles -->
+            <div class="flex bg-surface-container-high p-1 rounded-lg">
+              <button
+                class="p-2 rounded-md bg-white text-primary shadow-sm transition-all"
+                id="grid-view-btn"
+              >
+                <span class="material-symbols-outlined text-xl">grid_view</span>
+              </button>
+              <button
+                class="p-2 rounded-md text-on-surface-variant hover:text-primary transition-all"
+                id="map-view-btn"
+              >
+                <span class="material-symbols-outlined text-xl">map</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Property Grid -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter transition-opacity duration-300"
+          id="property-grid"
+        >
+          <!-- Property Card 1 -->
+          <article
+            class="group bg-white rounded-xl border border-outline-variant/30 overflow-hidden card-zoom hover:shadow-[0_8px_24px_rgba(44,59,50,0.08)] transition-all duration-300 animate-fade-up"
+            style="animation-delay: 120ms"
+          >
+            <div class="relative aspect-[16/10] overflow-hidden">
+              <img
+                class="w-full h-full object-cover transition-transform duration-700 ease-in-out"
+                data-alt="A luxurious modern villa at dusk in Dubai, featuring floor-to-ceiling glass walls, an infinity pool glowing with soft turquoise light, and lush desert landscaping. The architectural style is warm minimalist with cream-colored stones and forest green accents. High-end editorial photography with a cinematic feel, emphasizing luxury and serenity in the Middle East."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlq1IgoofISX1DISCghifci35gAGLKLcOCLBmnchSIsAJ5NAYr0CKogcLvwJOTedvvjRmzoq8mReTsWdHeAQkjlgGTajHgoiDqaG9wWnjU3uREXDKzeLdKwLxftXVfnEaInZb532H7rUddGmMOMXyv030ZSwxxJnPWF0sgMtDrsYMnHPNcmZuXc1RyQin2tc1IgCXFiebNmY4YAX5HfodbEI_w20OfVbV0fGifh9HB30RrrPQNEaoZTg"
+              />
+              <div
+                class="absolute top-4 left-4 bg-primary-container/90 text-white px-3 py-1 rounded text-xs font-label-md uppercase tracking-wider"
+              >
+                Featured
+              </div>
+              <button
+                class="absolute top-4 right-4 p-2 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-white hover:text-primary transition-all"
+              >
+                <span class="material-symbols-outlined">favorite</span>
+              </button>
+            </div>
+            <div class="p-5">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-headline-h3 text-primary">The Onyx Villa</h3>
+                <span class="font-headline-h3 text-on-tertiary-container"
+                  >AED 4.2M</span
+                >
+              </div>
+              <p
+                class="font-body-md text-on-surface-variant mb-4 flex items-center gap-1"
+              >
+                <span class="material-symbols-outlined text-sm"
+                  >location_on</span
+                >
+                Palm Jumeirah, Dubai
+              </p>
+              <div
+                class="flex items-center justify-between border-t border-outline-variant/30 pt-4"
+              >
+                <div class="flex items-center gap-4 text-on-surface-variant">
+                  <div class="flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-lg">bed</span>
+                    <span class="text-sm">4</span>
+                  </div>
+                  <div class="flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-lg"
+                      >bathtub</span
+                    >
+                    <span class="text-sm">5</span>
+                  </div>
+                  <div class="flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-lg"
+                      >square_foot</span
+                    >
+                    <span class="text-sm">4,500</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- Property Card 2 -->
+          <article
+            class="group bg-white rounded-xl border border-outline-variant/30 overflow-hidden card-zoom hover:shadow-[0_8px_24px_rgba(44,59,50,0.08)] transition-all duration-300 animate-fade-up"
+            style="animation-delay: 180ms"
+          >
+            <div class="relative aspect-[16/10] overflow-hidden">
+              <img
+                class="w-full h-full object-cover transition-transform duration-700 ease-in-out"
+                data-alt="High-end penthouse apartment interior with massive arched windows overlooking the Arabian Gulf. Minimalist furniture in neutral tones, rich textured rugs, and gold accents. The lighting is bright and warm, reflecting off polished marble floors. A sophisticated forest green velvet sofa provides a focal point. Editorial style, clean lines, and premium atmosphere."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2nH3_nN1qeGiK7FqXOLFV0EeWOWlzUPpeqvyimfwZc2t6rMtbHTa_7TacaUIYv907W2BDTdJxZ54_W_xLFOO6xi75VzUNwjFB77au2B8IdBTHHUHAZyE8C77Xr2_SGWtmvOTEVR4Dpwf9LTSYg2fci2lShlqN-aHeoE-Scw83d18y6_jjgA48lkDCw8K8yOx_fGdPH5eqkQkDl_mo5OY02kJvzIW6eCvBaX1tHfWIQ3DsUWGmZF1Jfw"
+              />
+              <button
+                class="absolute top-4 right-4 p-2 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-white hover:text-primary transition-all"
+              >
+                <span class="material-symbols-outlined">favorite</span>
+              </button>
+            </div>
+            <div class="p-5">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-headline-h3 text-primary">Skyline Penthouse</h3>
+                <span class="font-headline-h3 text-on-tertiary-container"
+                  >AED 2.8M</span
+                >
+              </div>
+              <p
+                class="font-body-md text-on-surface-variant mb-4 flex items-center gap-1"
+              >
+                <span class="material-symbols-outlined text-sm"
+                  >location_on</span
+                >
+                Downtown Dubai
+              </p>
+              <div
+                class="flex items-center justify-between border-t border-outline-variant/30 pt-4"
+              >
+                <div class="flex items-center gap-4 text-on-surface-variant">
+                  <div class="flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-lg">bed</span>
+                    <span class="text-sm">3</span>
+                  </div>
+                  <div class="flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-lg"
+                      >bathtub</span
+                    >
+                    <span class="text-sm">3</span>
+                  </div>
+                  <div class="flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-lg"
+                      >square_foot</span
+                    >
+                    <span class="text-sm">2,200</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- Property Card 3 -->
+          <article
+            class="group bg-white rounded-xl border border-outline-variant/30 overflow-hidden card-zoom hover:shadow-[0_8px_24px_rgba(44,59,50,0.08)] transition-all duration-300 animate-fade-up"
+            style="animation-delay: 240ms"
+          >
+            <div class="relative aspect-[16/10] overflow-hidden">
+              <img
+                class="w-full h-full object-cover transition-transform duration-700 ease-in-out"
+                data-alt="Exterior of a modern minimalist townhouse development with clean white facades, dark green metal window frames, and private gardens. Soft afternoon sunlight casts long shadows, highlighting the architectural geometry. The mood is peaceful and residential. A premium real estate aesthetic with high contrast and natural light."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJtaPx7lGEg813Y2B1WidTe2ntmvBVG5nC1wqtEcVv4bAwFKXPZWWk6iNXBzJftcuzjl00JjxPsWpJ1dteULdhXp5kqrVO9NJT6lgKrazrsElfzLDXsEHQu86lhRPxzfPW7Jat5ArM1DgFNPv8_nI7StI5JVZulEmOi8JdH1Q5ZLhGb_br3z1lyM-Gtyl9pdl2VAUoCOGFh9d3yN1ukqPyHqTNU2tsUQM0jf1ju3sZY4a6EZM6J82elQ"
+              />
+              <button
+                class="absolute top-4 right-4 p-2 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-white hover:text-primary transition-all"
+              >
+                <span class="material-symbols-outlined">favorite</span>
+              </button>
+            </div>
+            <div class="p-5">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-headline-h3 text-primary">
+                  Desert Rose Estates
+                </h3>
+                <span class="font-headline-h3 text-on-tertiary-container"
+                  >AED 1.9M</span
+                >
+              </div>
+              <p
+                class="font-body-md text-on-surface-variant mb-4 flex items-center gap-1"
+              >
+                <span class="material-symbols-outlined text-sm"
+                  >location_on</span
+                >
+                Arabian Ranches III
+              </p>
+              <div
+                class="flex items-center justify-between border-t border-outline-variant/30 pt-4"
+              >
+                <div class="flex items-center gap-4 text-on-surface-variant">
+                  <div class="flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-lg">bed</span>
+                    <span class="text-sm">5</span>
+                  </div>
+                  <div class="flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-lg"
+                      >bathtub</span
+                    >
+                    <span class="text-sm">4</span>
+                  </div>
+                  <div class="flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-lg"
+                      >square_foot</span
+                    >
+                    <span class="text-sm">3,800</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- Property Card 4 -->
+          <article
+            class="group bg-white rounded-xl border border-outline-variant/30 overflow-hidden card-zoom hover:shadow-[0_8px_24px_rgba(44,59,50,0.08)] transition-all duration-300 animate-fade-up"
+            style="animation-delay: 300ms"
+          >
+            <div class="relative aspect-[16/10] overflow-hidden">
+              <img
+                class="w-full h-full object-cover transition-transform duration-700 ease-in-out"
+                data-alt="Contemporary garden villa with a seamless indoor-outdoor living area. Large sliding glass doors open to a wooden deck and a minimalist pool. Surrounded by lush Mediterranean and desert greenery. The color palette features warm creams, forest greens, and natural wood. Bright, airy, and expensive looking."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7HVE6TvEOH_LkJvZuOelxZHI7kq1GyEygbmU2EDBCAJe20QpMOp2YfcC7o47tRSoP4NTbFLyCaBodeEMjqDcdKEZ6ef7PGkLzM-hyHwT9QM09QJHUmINf4Qbla7-Tz5chGBM4nqLbzB7B2cUYjtiW_4IA8I-vdeo_6Uw1wxVf51ZAqOkDCowfMqnBIM2vW6pOPJ6swcSzmucQ_NI465MptHSt15-cpb8KojZboznCN6pZeNCPPudZow"
+              />
+              <button
+                class="absolute top-4 right-4 p-2 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-white hover:text-primary transition-all"
+              >
+                <span class="material-symbols-outlined">favorite</span>
+              </button>
+            </div>
+            <div class="p-5">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-headline-h3 text-primary">Azure Waterfront</h3>
+                <span class="font-headline-h3 text-on-tertiary-container"
+                  >AED 3.5M</span
+                >
+              </div>
+              <p
+                class="font-body-md text-on-surface-variant mb-4 flex items-center gap-1"
+              >
+                <span class="material-symbols-outlined text-sm"
+                  >location_on</span
+                >
+                Dubai Marina
+              </p>
+              <div
+                class="flex items-center justify-between border-t border-outline-variant/30 pt-4"
+              >
+                <div class="flex items-center gap-4 text-on-surface-variant">
+                  <div class="flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-lg">bed</span>
+                    <span class="text-sm">4</span>
+                  </div>
+                  <div class="flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-lg"
+                      >bathtub</span
+                    >
+                    <span class="text-sm">4</span>
+                  </div>
+                  <div class="flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-lg"
+                      >square_foot</span
+                    >
+                    <span class="text-sm">3,100</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- Property Card 5 -->
+          <article
+            class="group bg-white rounded-xl border border-outline-variant/30 overflow-hidden card-zoom hover:shadow-[0_8px_24px_rgba(44,59,50,0.08)] transition-all duration-300 animate-fade-up"
+            style="animation-delay: 360ms"
+          >
+            <div class="relative aspect-[16/10] overflow-hidden">
+              <img
+                class="w-full h-full object-cover transition-transform duration-700 ease-in-out"
+                data-alt="Aerial view of a luxury residential community in the Middle East at sunset. Warm golden hour lighting illuminating elegant desert villas with flat roofs and expansive courtyards. The landscape is dotted with palms and pristine paved streets. Luxurious, peaceful, and well-ordered architectural digest aesthetic."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJUhVH_P0DLe5P8ZgAx0AMSVUfI20w7U60IkcJdsrQR2LYnYejG-zKN159oCMx6QVkDnx30kcJMh6hGBIbWlIfe2582M_K0PUIv0J1GzwQqDQ9HWhiLwqAqrKqg4NNd8y__6ihCa6S3ts9FzxCCbEwcukL8jkar9TQZ29hMxbvRGaT-rDcStuVj1DyMMYhbFTjd9UaL-t5fehoiOfM6nkdJ5393P_ixruii8figTlPd9RoHNGJLHAaxQ"
+              />
+              <button
+                class="absolute top-4 right-4 p-2 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-white hover:text-primary transition-all"
+              >
+                <span class="material-symbols-outlined">favorite</span>
+              </button>
+            </div>
+            <div class="p-5">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-headline-h3 text-primary">Marquis Heights</h3>
+                <span class="font-headline-h3 text-on-tertiary-container"
+                  >AED 1.2M</span
+                >
+              </div>
+              <p
+                class="font-body-md text-on-surface-variant mb-4 flex items-center gap-1"
+              >
+                <span class="material-symbols-outlined text-sm"
+                  >location_on</span
+                >
+                Business Bay
+              </p>
+              <div
+                class="flex items-center justify-between border-t border-outline-variant/30 pt-4"
+              >
+                <div class="flex items-center gap-4 text-on-surface-variant">
+                  <div class="flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-lg">bed</span>
+                    <span class="text-sm">2</span>
+                  </div>
+                  <div class="flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-lg"
+                      >bathtub</span
+                    >
+                    <span class="text-sm">2</span>
+                  </div>
+                  <div class="flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-lg"
+                      >square_foot</span
+                    >
+                    <span class="text-sm">1,450</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- Property Card 6 -->
+          <article
+            class="group bg-white rounded-xl border border-outline-variant/30 overflow-hidden card-zoom hover:shadow-[0_8px_24px_rgba(44,59,50,0.08)] transition-all duration-300 animate-fade-up"
+            style="animation-delay: 420ms"
+          >
+            <div class="relative aspect-[16/10] overflow-hidden">
+              <img
+                class="w-full h-full object-cover transition-transform duration-700 ease-in-out"
+                data-alt="A modern commercial space interior with high ceilings, exposed concrete beams, and sleek black glass partitions. Minimalist office furniture in light wood and white leather. The lighting is integrated into the architecture, creating clean lines and a professional, cutting-edge corporate environment. High-end property marketing style."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVSgsYuvNOnaw8L0MU4EVgIXIk95231h2HXJ7-7LBN1VeuGncebEI1FZx3S9ZEw3xJuBQe3jvrJMPXpPxFkgpg6sOX6nlzWt4d9FE0rnMRkcc0oiyrqNC-gjHZtOEf3QBTJtmAXvOJYRm1TW06VckvqNlFS_ijdOO23yGGzQokax_l2gWJLkI2NxoAUryn8pZUtfQVS_6gtBkojCkXuu-dcUBYKwMtidtaMQKGtAwN_xkEG7UgTXUG3w"
+              />
+              <button
+                class="absolute top-4 right-4 p-2 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-white hover:text-primary transition-all"
+              >
+                <span class="material-symbols-outlined">favorite</span>
+              </button>
+            </div>
+            <div class="p-5">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-headline-h3 text-primary">DIFC Loft</h3>
+                <span class="font-headline-h3 text-on-tertiary-container"
+                  >AED 5.6M</span
+                >
+              </div>
+              <p
+                class="font-body-md text-on-surface-variant mb-4 flex items-center gap-1"
+              >
+                <span class="material-symbols-outlined text-sm"
+                  >location_on</span
+                >
+                DIFC, Dubai
+              </p>
+              <div
+                class="flex items-center justify-between border-t border-outline-variant/30 pt-4"
+              >
+                <div class="flex items-center gap-4 text-on-surface-variant">
+                  <div class="flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-lg">bed</span>
+                    <span class="text-sm">Office</span>
+                  </div>
+                  <div class="flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-lg"
+                      >bathtub</span
+                    >
+                    <span class="text-sm">2</span>
+                  </div>
+                  <div class="flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-lg"
+                      >square_foot</span
+                    >
+                    <span class="text-sm">8,200</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+        <!-- Map View (Hidden by default) -->
+        <div
+          class="hidden transition-all duration-500 opacity-0 transform translate-y-8 h-[600px] w-full rounded-2xl overflow-hidden border border-outline-variant relative"
+          id="property-map"
+        >
+          <div
+            class="absolute inset-0 bg-secondary-container animate-pulse"
+          ></div>
+          <div
+            class="w-full h-full bg-cover bg-center"
+            data-alt="A high-resolution stylistic map of Dubai's coastline and main developments including Palm Jumeirah and Downtown. The map uses a premium cream and forest green color scheme, with terracotta-colored marker pins (#C1592B) highlighting key property listings. Elegant, clean cartography for a luxury real estate application."
+            data-location="Dubai"
+            style="
+              background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBFV6N8ie0ori4M5_cKXt_Yrm04rmRRcmS8DouovKUdM4lYNG7SyLvsHVxOnrtqtdRMPpRshHO_aljeNNBtB84Vxz-gmQEQLWiKuDGq84ebkXCagYMRWT7BlsZctn3GFEAXHzltUvm8FTWUDqKRxBGZuGTxQEayeV4PcgiRvYHZD7DwIFz1KJPbcNivSYf_AxaUAO5SVhkHxZtdDV6zU5zx5b6VFX7erU1R7DR5Poi_AJ0Aaehoyf0WwQ&quot;);
+            "
+          ></div>
+          <!-- Custom Pin Overlays -->
+          <div
+            class="absolute top-1/3 left-1/4 w-4 h-4 bg-[#C1592B] border-2 border-white rounded-full shadow-lg cursor-pointer transform -translate-x-1/2 -translate-y-1/2 hover:scale-125 transition-transform"
+          ></div>
+          <div
+            class="absolute top-1/2 left-1/2 w-4 h-4 bg-[#C1592B] border-2 border-white rounded-full shadow-lg cursor-pointer transform -translate-x-1/2 -translate-y-1/2 hover:scale-125 transition-transform"
+          ></div>
+          <div
+            class="absolute top-[60%] left-[40%] w-4 h-4 bg-[#C1592B] border-2 border-white rounded-full shadow-lg cursor-pointer transform -translate-x-1/2 -translate-y-1/2 hover:scale-125 transition-transform"
+          ></div>
+        </div>
+        <!-- Pagination -->
+        <div
+          class="mt-section-gap flex justify-center items-center gap-3 animate-fade-up"
+        >
+          <button
+            class="w-10 h-10 rounded-full border border-primary-container flex items-center justify-center text-primary-container hover:bg-primary-container hover:text-white transition-all"
+          >
+            <span class="material-symbols-outlined">chevron_left</span>
+          </button>
+          <button
+            class="w-10 h-10 rounded-full bg-[#C1592B] text-white font-label-md"
+          >
+            1
+          </button>
+          <button
+            class="w-10 h-10 rounded-full border border-primary-container text-primary-container font-label-md hover:bg-primary-container hover:text-white transition-all"
+          >
+            2
+          </button>
+          <button
+            class="w-10 h-10 rounded-full border border-primary-container text-primary-container font-label-md hover:bg-primary-container hover:text-white transition-all"
+          >
+            3
+          </button>
+          <span class="text-on-surface-variant mx-2">...</span>
+          <button
+            class="w-10 h-10 rounded-full border border-primary-container text-primary-container font-label-md hover:bg-primary-container hover:text-white transition-all"
+          >
+            28
+          </button>
+          <button
+            class="w-10 h-10 rounded-full border border-primary-container flex items-center justify-center text-primary-container hover:bg-primary-container hover:text-white transition-all"
+          >
+            <span class="material-symbols-outlined">chevron_right</span>
+          </button>
+        </div>
+      </section>
+    </main>
+    <!-- Footer Shell -->
+    <footer class="bg-primary-container w-full">
+      <div
+        class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-section-gap max-w-container-max mx-auto text-on-primary-container"
+      >
+        <div class="col-span-1 md:col-span-1">
+          <h2 class="font-headline-h2 text-headline-h2 text-white mb-6">
+            Diyari
+          </h2>
+          <p class="font-body-md text-on-primary-container/80 max-w-xs">
+            Curating the finest real estate opportunities in the Middle East for
+            discerning global investors.
+          </p>
+        </div>
+        <div>
+          <h3 class="font-headline-h3 text-white mb-6">Quick links</h3>
+          <ul class="space-y-4 font-body-md">
+            <li>
+              <a
+                class="text-on-primary-container/80 hover:text-on-tertiary-container transition-colors"
+                href="#"
+                >Properties</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-primary-container/80 hover:text-on-tertiary-container transition-colors"
+                href="#"
+                >New Projects</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-primary-container/80 hover:text-on-tertiary-container transition-colors"
+                href="#"
+                >Mortgage Calculator</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-primary-container/80 hover:text-on-tertiary-container transition-colors"
+                href="#"
+                >Market Insights</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-headline-h3 text-white mb-6">Property types</h3>
+          <ul class="space-y-4 font-body-md">
+            <li>
+              <a
+                class="text-on-primary-container/80 hover:text-on-tertiary-container transition-colors"
+                href="#"
+                >Luxury Villas</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-primary-container/80 hover:text-on-tertiary-container transition-colors"
+                href="#"
+                >Penthouse Suites</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-primary-container/80 hover:text-on-tertiary-container transition-colors"
+                href="#"
+                >Commercial Space</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-primary-container/80 hover:text-on-tertiary-container transition-colors"
+                href="#"
+                >Townhouses</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-headline-h3 text-white mb-6">Contact</h3>
+          <ul class="space-y-4 font-body-md">
+            <li class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-sm">mail</span>
+              info@diyari.com
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-sm">phone</span> +971
+              4 123 4567
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-sm">location_on</span>
+              Emaar Square, Dubai, UAE
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="border-t border-white/10 max-w-container-max mx-auto py-8 px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-label-md text-on-primary-container/50"
+      >
+        <span>© 2024 Diyari Real Estate. All rights reserved.</span>
+        <div class="flex gap-8">
+          <a class="hover:text-white transition-colors" href="#"
+            >Privacy Policy</a
+          >
+          <a class="hover:text-white transition-colors" href="#"
+            >Terms of Service</a
+          >
+          <a class="hover:text-white transition-colors" href="#">Sitemap</a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      // Staggered Fade-in Animation logic
+      document.addEventListener("DOMContentLoaded", () => {
+        const observerOptions = {
+          threshold: 0.1,
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+              setTimeout(() => {
+                entry.target.classList.add("animate-fade-up");
+                entry.target.classList.remove("stagger-in");
+              }, index * 60);
+              observer.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        document
+          .querySelectorAll(".stagger-in")
+          .forEach((el) => observer.observe(el));
+
+        // View Toggle Logic
+        const gridBtn = document.getElementById("grid-view-btn");
+        const mapBtn = document.getElementById("map-view-btn");
+        const gridView = document.getElementById("property-grid");
+        const mapView = document.getElementById("property-map");
+
+        gridBtn.addEventListener("click", () => {
+          // UI Toggle
+          gridBtn.classList.add("bg-white", "text-primary", "shadow-sm");
+          gridBtn.classList.remove("text-on-surface-variant");
+          mapBtn.classList.remove("bg-white", "text-primary", "shadow-sm");
+          mapBtn.classList.add("text-on-surface-variant");
+
+          // Content Transition
+          mapView.classList.add("opacity-0", "translate-y-8");
+          setTimeout(() => {
+            mapView.classList.add("hidden");
+            gridView.classList.remove("hidden");
+            setTimeout(() => {
+              gridView.classList.remove("opacity-0");
+            }, 50);
+          }, 300);
+        });
+
+        mapBtn.addEventListener("click", () => {
+          // UI Toggle
+          mapBtn.classList.add("bg-white", "text-primary", "shadow-sm");
+          mapBtn.classList.remove("text-on-surface-variant");
+          gridBtn.classList.remove("bg-white", "text-primary", "shadow-sm");
+          gridBtn.classList.add("text-on-surface-variant");
+
+          // Content Transition
+          gridView.classList.add("opacity-0");
+          setTimeout(() => {
+            gridView.classList.add("hidden");
+            mapView.classList.remove("hidden");
+            setTimeout(() => {
+              mapView.classList.remove("opacity-0", "translate-y-8");
+            }, 50);
+          }, 300);
+        });
+
+        // Filter Change simulation (Opacity fade)
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach((cb) => {
+          cb.addEventListener("change", () => {
+            gridView.classList.add("opacity-50");
+            setTimeout(() => {
+              gridView.classList.remove("opacity-50");
+            }, 400);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

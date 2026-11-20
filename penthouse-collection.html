@@ -1,0 +1,1497 @@
+<!doctype html>
+
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="web_standard" name="shell-type" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,400&amp;family=Work+Sans:wght@400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @layer base {
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          overscroll-behavior: none;
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#ffb599",
+              "on-background": "#1c1b1b",
+              "surface-bright": "#fcf9f8",
+              surface: "#fcf9f8",
+              "on-primary-fixed": "#101f17",
+              tertiary: "#421300",
+              "error-container": "#ffdad6",
+              "on-secondary": "#ffffff",
+              "primary-fixed": "#d5e7da",
+              "surface-variant": "#e5e2e1",
+              error: "#ba1a1a",
+              "on-tertiary-container": "#f5814f",
+              "on-secondary-container": "#656461",
+              secondary: "#5f5e5b",
+              "on-surface-variant": "#434844",
+              "on-tertiary-fixed": "#370e00",
+              outline: "#737874",
+              "secondary-fixed-dim": "#c8c6c2",
+              primary: "#17251d",
+              "on-error": "#ffffff",
+              "primary-fixed-dim": "#bacbbe",
+              "surface-container-lowest": "#ffffff",
+              "secondary-container": "#e5e2dd",
+              "surface-container": "#f0eded",
+              "tertiary-container": "#662100",
+              "primary-container": "#2c3b32",
+              "on-secondary-fixed-variant": "#474743",
+              "outline-variant": "#c3c8c2",
+              "on-tertiary": "#ffffff",
+              "surface-container-high": "#eae7e7",
+              "inverse-surface": "#313030",
+              "on-primary-fixed-variant": "#3b4a41",
+              "surface-tint": "#526258",
+              "on-tertiary-fixed-variant": "#7f2b00",
+              background: "#fcf9f8",
+              "on-secondary-fixed": "#1c1c19",
+              "tertiary-fixed": "#ffdbce",
+              "on-primary": "#ffffff",
+              "on-surface": "#1c1b1b",
+              "on-error-container": "#93000a",
+              "surface-dim": "#dcd9d9",
+              "on-primary-container": "#94a599",
+              "surface-container-low": "#f6f3f2",
+              "surface-container-highest": "#e5e2e1",
+              "inverse-on-surface": "#f3f0ef",
+              "secondary-fixed": "#e5e2dd",
+              "inverse-primary": "#bacbbe",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              "margin-desktop": "64px",
+              gutter: "24px",
+              "stack-md": "16px",
+              "stack-sm": "8px",
+              "stack-xs": "4px",
+              "margin-mobile": "20px",
+              "section-gap": "120px",
+              "container-max": "1280px",
+              "stack-lg": "32px",
+            },
+            fontFamily: {
+              "display-hero-mobile": ["Fraunces"],
+              "display-hero": ["Fraunces"],
+              button: ["Work Sans"],
+              "body-md": ["Work Sans"],
+              "body-lg": ["Work Sans"],
+              "label-md": ["Work Sans"],
+              "headline-h1-mobile": ["Fraunces"],
+              "headline-h1": ["Fraunces"],
+              "headline-h2": ["Fraunces"],
+              "headline-h3": ["Fraunces"],
+            },
+            fontSize: {
+              "display-hero-mobile": [
+                "48px",
+                {
+                  lineHeight: "1.1",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "700",
+                },
+              ],
+              "display-hero": [
+                "72px",
+                {
+                  lineHeight: "1.1",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              button: ["16px", { lineHeight: "1", fontWeight: "500" }],
+              "body-md": ["16px", { lineHeight: "1.7", fontWeight: "400" }],
+              "label-md": [
+                "14px",
+                {
+                  lineHeight: "1.2",
+                  letterSpacing: "0.05em",
+                  fontWeight: "500",
+                },
+              ],
+              "headline-h1-mobile": [
+                "36px",
+                { lineHeight: "1.2", fontWeight: "600" },
+              ],
+              "headline-h1": [
+                "56px",
+                {
+                  lineHeight: "1.2",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "600",
+                },
+              ],
+              "headline-h2": ["36px", { lineHeight: "1.3", fontWeight: "600" }],
+              "body-lg": ["18px", { lineHeight: "1.7", fontWeight: "400" }],
+              "headline-h3": ["24px", { lineHeight: "1.4", fontWeight: "600" }],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-surface font-body-md text-on-surface antialiased">
+    <header
+      class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)]"
+    >
+      <div
+        class="h-20 w-full max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop flex items-center justify-between"
+      >
+        <div class="flex items-center gap-stack-md">
+          <a class="flex items-center gap-3 group" data-path="home" href="#"
+            ><img
+              alt="An elegant, editorial architectural brand logo for Diyari Real Estate. Featuring a minimalist geometric archway and courtyard courtyard motif with a subtle palm/sun or stylized letter D silhouette in refined deep forest green (#2c3b32) and warm terracotta (#c05634) on a subtle warm cream background. Clean lines, luxury craftsmanship, timeless Levantine architectural inspiration.. Brand logo. - Primary color: #2c3b32
+- Font: publicSans
+- Mode: light
+- Roundness: rounded-md
+"
+              class="h-8 w-auto object-contain"
+              src="https://lh3.googleusercontent.com/aida/ALJJyrDMrlKBAQ8SG5l9mv6_OwvXLK-bi8XQ3IIamu-c9mVOWsxzDEu0htb9RFT9-7EnYI2CdUQalm9-pxfqgoR9TwTZWCn9d2MzZiQquYVjIeTGipRLG8qFlUAM1niN1qBIqOA0HWenjOYAQ-ven1QPMOmSx1R2FZkQ183MkCEHbWyHb3LriBSRF3vsCgNxvP-9PgYqsnxc9H8IvobLsF3auhR1N45fujAM75XgGRy4CdTJHw"
+            /><span
+              class="font-headline-h3 text-headline-h3 text-primary tracking-tight"
+              >Diyari</span
+            ></a
+          >
+        </div>
+        <nav
+          class="hidden md:flex items-center gap-8"
+          data-active-classes="text-primary font-medium underline underline-offset-8 decoration-1 decoration-primary"
+        >
+          <a
+            class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors duration-200"
+            data-path="home"
+            href="#"
+            >Home</a
+          ><a
+            class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors duration-200"
+            data-path="properties"
+            href="#"
+            >Properties</a
+          ><a
+            aria-current="page"
+            class="uppercase tracking-wider transition-colors duration-200 text-primary font-medium underline underline-offset-8 decoration-1 decoration-primary"
+            data-path="property-types"
+            href="#"
+            >Property Types</a
+          ><a
+            class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors duration-200"
+            data-path="about"
+            href="#"
+            >About</a
+          ><a
+            class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors duration-200"
+            data-path="contact"
+            href="#"
+            >Contact</a
+          >
+        </nav>
+        <div class="flex items-center gap-stack-md">
+          <a
+            class="font-button text-button inline-flex items-center px-5 py-2.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary transition-all duration-200 shadow-sm active:scale-[0.98]"
+            data-path="list-your-property"
+            href="#"
+            >List your property</a
+          >
+          <div
+            class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"
+          >
+            <span class="material-symbols-outlined text-on-primary text-[18px]"
+              >person</span
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]">
+      <div class="flex flex-col w-full">
+        <!-- Top Category Hero -->
+        <section
+          class="relative w-full max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop pt-8 pb-16 overflow-hidden"
+        >
+          <div class="flex flex-col gap-6 max-w-4xl">
+            <!-- Breadcrumb -->
+            <nav
+              class="flex items-center gap-2 font-label-md text-label-md text-secondary"
+            >
+              <a
+                class="hover:text-primary transition-colors"
+                data-path="property-types"
+                href="#"
+                >Property Types</a
+              >
+              <span class="text-outline-variant">/</span>
+              <span class="text-primary font-medium"
+                >Penthouses &amp; Sky Estates</span
+              >
+            </nav>
+            <!-- Badge / Architectural Archetype -->
+            <div class="inline-flex items-center gap-3">
+              <span
+                class="px-3.5 py-1.5 rounded-full bg-secondary-container text-on-secondary-fixed text-[11px] tracking-[0.2em] uppercase font-semibold"
+              >
+                Collection Archetype 04 — The Crown Collection
+              </span>
+              <span
+                class="inline-flex items-center gap-1.5 text-xs text-on-surface-variant font-medium tracking-wide"
+              >
+                <span
+                  class="w-1.5 h-1.5 rounded-full bg-tertiary-container animate-pulse"
+                ></span>
+                5 Exclusive Allocations
+              </span>
+            </div>
+            <!-- Main Headline -->
+            <h1
+              class="font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-primary tracking-tight"
+            >
+              Horizon Residences Suspended Above the City
+            </h1>
+            <!-- Subhead -->
+            <p
+              class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed max-w-3xl"
+            >
+              The pinnacle of vertical luxury. Single-floor and triplex sky
+              mansions featuring 360-degree panoramic vistas, cantilevered
+              private pools, and bespoke architectural finishes curated across
+              the Levant’s most coveted coordinates.
+            </p>
+            <!-- Exclusivity Notice Strip -->
+            <div class="flex flex-wrap items-center gap-4 pt-2">
+              <div
+                class="flex items-center gap-2.5 px-4 py-2.5 rounded-lg bg-surface-container-high text-primary font-label-md text-label-md"
+              >
+                <span
+                  class="material-symbols-outlined text-[18px] text-tertiary-container"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >verified_user</span
+                >
+                <span
+                  >Private showings strictly by NDA &amp; prior
+                  appointment</span
+                >
+              </div>
+              <div
+                class="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md"
+              >
+                <span class="material-symbols-outlined text-[18px]">lock</span>
+                <span>Verified Off-Market &amp; Prime Holdings</span>
+              </div>
+            </div>
+          </div>
+          <!-- Editorial Accent Badge (Absolute Positioning Desktop) -->
+          <div
+            class="hidden lg:flex flex-col items-end absolute top-12 right-margin-desktop text-right"
+          >
+            <span
+              class="font-headline-h3 text-headline-h3 text-primary-container"
+              >04</span
+            >
+            <span
+              class="text-[11px] uppercase tracking-[0.25em] text-secondary [writing-mode:vertical-rl] mt-3"
+              >Penthouse Series</span
+            >
+          </div>
+        </section>
+        <!-- Filter & Refinement Bar -->
+        <section
+          class="w-full bg-surface-container-low shadow-[0_1px_0_rgba(115,120,116,0.08)] sticky top-20 z-40 backdrop-blur-md bg-surface-container-low/95"
+        >
+          <div
+            class="w-full max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop py-4"
+          >
+            <div
+              class="flex flex-col lg:flex-row lg:items-center justify-between gap-4"
+            >
+              <!-- Sub-types Navigation -->
+              <div
+                class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1"
+                id="filter-tabs"
+              >
+                <button
+                  class="filter-btn px-4 py-2 rounded-lg bg-primary-container text-on-primary font-button text-[14px] transition-all whitespace-nowrap active:scale-[0.98]"
+                  data-filter="all"
+                >
+                  All Penthouses
+                </button>
+                <button
+                  class="filter-btn px-4 py-2 rounded-lg bg-surface text-on-surface hover:bg-surface-variant transition-all font-button text-[14px] whitespace-nowrap active:scale-[0.98]"
+                  data-filter="triplex"
+                >
+                  Triplex Sky Mansions
+                </button>
+                <button
+                  class="filter-btn px-4 py-2 rounded-lg bg-surface text-on-surface hover:bg-surface-variant transition-all font-button text-[14px] whitespace-nowrap active:scale-[0.98]"
+                  data-filter="pool"
+                >
+                  Private Pool Terraces
+                </button>
+                <button
+                  class="filter-btn px-4 py-2 rounded-lg bg-surface text-on-surface hover:bg-surface-variant transition-all font-button text-[14px] whitespace-nowrap active:scale-[0.98]"
+                  data-filter="historic"
+                >
+                  Historic Skyline
+                </button>
+              </div>
+              <!-- Attribute Dropdowns / Quick Toggles -->
+              <div class="flex flex-wrap items-center gap-3">
+                <!-- Sq Footage Selector -->
+                <div class="relative inline-block text-left">
+                  <button
+                    class="inline-flex items-center justify-between gap-3 px-3.5 py-2 rounded-lg bg-surface text-on-surface font-label-md text-label-md hover:bg-surface-variant transition-colors shadow-sm"
+                    id="sqft-btn"
+                    type="button"
+                  >
+                    <span class="flex items-center gap-2">
+                      <span
+                        class="material-symbols-outlined text-[16px] text-secondary"
+                        >straighten</span
+                      >
+                      <span>Area: 4,000 – 15,000+ sq.ft</span>
+                    </span>
+                    <span
+                      class="material-symbols-outlined text-[18px] text-secondary"
+                      >expand_more</span
+                    >
+                  </button>
+                </div>
+                <!-- Skyline Orientation -->
+                <div class="relative inline-block text-left">
+                  <button
+                    class="inline-flex items-center justify-between gap-3 px-3.5 py-2 rounded-lg bg-surface text-on-surface font-label-md text-label-md hover:bg-surface-variant transition-colors shadow-sm"
+                    id="orientation-btn"
+                    type="button"
+                  >
+                    <span class="flex items-center gap-2">
+                      <span
+                        class="material-symbols-outlined text-[16px] text-secondary"
+                        >explore</span
+                      >
+                      <span>Orientation: All Horizons</span>
+                    </span>
+                    <span
+                      class="material-symbols-outlined text-[18px] text-secondary"
+                      >expand_more</span
+                    >
+                  </button>
+                </div>
+                <!-- Currency Toggler Indicator -->
+                <div
+                  class="px-3 py-2 rounded-lg bg-surface-container-high text-on-surface-variant font-label-md text-[13px] hidden sm:flex items-center gap-1.5"
+                >
+                  <span class="text-tertiary-container font-semibold">USD</span>
+                  <span class="text-outline">| Verified Escrow</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Penthouse Portfolio Showcase -->
+        <section
+          class="w-full max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop py-16 flex flex-col gap-16"
+        >
+          <!-- Section Header Counter -->
+          <div class="flex items-end justify-between">
+            <div>
+              <p
+                class="font-label-md text-label-md uppercase tracking-[0.2em] text-secondary font-medium"
+              >
+                Curated Sky Portfolio
+              </p>
+              <h2 class="font-headline-h2 text-headline-h2 text-primary mt-1">
+                Five Monumental Penthouse Residences
+              </h2>
+            </div>
+            <span
+              class="text-on-surface-variant font-label-md text-label-md hidden md:inline-block"
+              >Showing 5 of 5 Verified Assets</span
+            >
+          </div>
+          <!-- Residence 1: Flagship Asymmetric Bento (The Sky Citadel Triplex) -->
+          <article
+            class="w-full bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-[0_12px_32px_rgba(44,59,50,0.08)] transition-all duration-300 flex flex-col lg:flex-row group"
+          >
+            <div
+              class="w-full lg:w-7/12 relative h-96 lg:h-auto overflow-hidden"
+            >
+              <img
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                data-alt="Ultra-luxury triplex modern penthouse exterior perched high on the 4th Circle ridge in Amman Jordan at dusk. Cantilevered infinity glass-bottom lap pool suspended over stone terraces with warm travertine walls, panoramic city view of stone architecture under soft golden sunset light, Levantine modernist luxury."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHFDjmvvMiTiojH4QfIuF9zCH_fOcu19TVlNLnG6V6--pY_VzbL2DNF5KLijQErlVIS-4k5X2HRa7EHBb716wL-N3GqdQQyfxYZjZcyepO-kPFj_17opEjpZqIDN2AinAey3AyiFyT6mZz7uOX1nFXsZYJigjb3PmplxGj_j08H6Zmj35zmwIYuAqjvEStEzArD7-P3-bFD3g_SvOeUbu4W6A1opv89z1CHOzLhvoa"
+              />
+              <div class="absolute top-4 left-4 flex gap-2">
+                <span
+                  class="px-3 py-1 rounded bg-primary-container text-on-primary font-label-md text-[11px] uppercase tracking-wider font-semibold"
+                  >Triplex Estate</span
+                >
+                <span
+                  class="px-3 py-1 rounded bg-tertiary-container text-on-tertiary font-label-md text-[11px] uppercase tracking-wider font-semibold"
+                  >Rare Opportunity</span
+                >
+              </div>
+              <div
+                class="absolute bottom-4 left-4 right-4 p-4 rounded-lg bg-primary/80 backdrop-blur-md text-on-primary flex items-center justify-between"
+              >
+                <div class="flex items-center gap-2">
+                  <span
+                    class="material-symbols-outlined text-[20px] text-tertiary-fixed-dim"
+                    >pool</span
+                  >
+                  <span class="text-xs uppercase tracking-wider"
+                    >Cantilevered Glass Lap Pool</span
+                  >
+                </div>
+                <span class="text-xs text-primary-fixed"
+                  >360° Views of Amman</span
+                >
+              </div>
+            </div>
+            <div
+              class="w-full lg:w-5/12 p-8 lg:p-10 flex flex-col justify-between bg-surface-container-lowest"
+            >
+              <div class="flex flex-col gap-4">
+                <div class="flex items-center justify-between">
+                  <span
+                    class="font-label-md text-label-md uppercase tracking-wider text-secondary"
+                    >4th Circle Ridge, Amman</span
+                  >
+                  <span class="font-headline-h3 text-headline-h3 text-primary"
+                    >$6,800,000</span
+                  >
+                </div>
+                <h3
+                  class="font-headline-h3 text-headline-h3 text-primary group-hover:text-tertiary-container transition-colors"
+                >
+                  The Sky Citadel Triplex
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Commanding the highest elevation in central Amman, this
+                  monumental triplex marries raw Jerusalem limestone with
+                  frameless acoustic glazing. Features dual dedicated master
+                  wings, an open-air banquet terrace, and bespoke Jordan Valley
+                  olivewood millwork.
+                </p>
+                <!-- Spec Badges -->
+                <div
+                  class="grid grid-cols-3 gap-3 py-3 rounded-lg bg-surface-container-low px-4 text-center"
+                >
+                  <div>
+                    <span
+                      class="block text-xs uppercase tracking-wider text-secondary"
+                      >Interior</span
+                    >
+                    <span class="font-semibold text-primary">8,900 sq.ft</span>
+                  </div>
+                  <div>
+                    <span
+                      class="block text-xs uppercase tracking-wider text-secondary"
+                      >Terrace</span
+                    >
+                    <span class="font-semibold text-primary">3,200 sq.ft</span>
+                  </div>
+                  <div>
+                    <span
+                      class="block text-xs uppercase tracking-wider text-secondary"
+                      >Suites</span
+                    >
+                    <span class="font-semibold text-primary"
+                      >5 Beds / 7 Baths</span
+                    >
+                  </div>
+                </div>
+                <!-- Key Points -->
+                <ul
+                  class="flex flex-col gap-2 font-body-md text-[14px] text-on-surface-variant"
+                >
+                  <li class="flex items-center gap-2">
+                    <span
+                      class="material-symbols-outlined text-[16px] text-tertiary-container"
+                      >check_circle</span
+                    >
+                    <span>Private cantilevered glass-bottom lap pool</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span
+                      class="material-symbols-outlined text-[16px] text-tertiary-container"
+                      >check_circle</span
+                    >
+                    <span>Direct elevator entry with retinal scan access</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span
+                      class="material-symbols-outlined text-[16px] text-tertiary-container"
+                      >check_circle</span
+                    >
+                    <span
+                      >Four subterranean climate-controlled parking bays</span
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="pt-8 flex items-center gap-4">
+                <a
+                  class="flex-1 text-center py-3.5 px-6 rounded-lg bg-primary-container text-on-primary font-button text-button hover:bg-primary transition-all active:scale-[0.98]"
+                  data-path="contact"
+                  href="#"
+                >
+                  Request Private Dossier
+                </a>
+                <button
+                  class="p-3.5 rounded-lg bg-surface-container text-primary hover:bg-secondary-container transition-colors flex items-center justify-center"
+                  title="Save to Shortlist"
+                >
+                  <span class="material-symbols-outlined text-[20px]"
+                    >bookmark</span
+                  >
+                </button>
+              </div>
+            </div>
+          </article>
+          <!-- Residence 2: The Mediterranean Horizon Sky Mansion (Beirut Waterfront) -->
+          <article
+            class="w-full bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-[0_12px_32px_rgba(44,59,50,0.08)] transition-all duration-300 flex flex-col lg:flex-row-reverse group"
+          >
+            <div
+              class="w-full lg:w-7/12 relative h-96 lg:h-auto overflow-hidden"
+            >
+              <img
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                data-alt="Breathtaking architectural interior of a triple-height luxury sky mansion living salon over Beirut waterfront marina. Enormous floor-to-ceiling frameless glass panels framing the deep azure Mediterranean Sea, white Calacatta Borghini marble surfaces, minimalist brass accents, soft natural light."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYsJ5txmeqeHTCRtjqi_GivdsVqDSlL4VqC8Qp5OVcm3lNSI3lH5MK8Pt49d72Qi6i5sIZnu55-bvDv652XKY5JL7brtqWolju5JK2NHW1Q3fTKzHWqQ--rTpkWT4vd9MBdHo2ANPkbVxHz5PX-uCD4w_hlOPEPUoejUMHrBUmPrVQjtDatL_1vnpi3U-us_SyHSW9cQqwOfCPJlma4_HHE84AB_Ri2AOnpIBwh43h"
+              />
+              <div class="absolute top-4 left-4 flex gap-2">
+                <span
+                  class="px-3 py-1 rounded bg-primary-container text-on-primary font-label-md text-[11px] uppercase tracking-wider font-semibold"
+                  >Beirut Marina</span
+                >
+                <span
+                  class="px-3 py-1 rounded bg-secondary-container text-on-secondary-fixed font-label-md text-[11px] uppercase tracking-wider font-semibold"
+                  >Waterfront</span
+                >
+              </div>
+              <div
+                class="absolute bottom-4 left-4 right-4 p-4 rounded-lg bg-primary/80 backdrop-blur-md text-on-primary flex items-center justify-between"
+              >
+                <div class="flex items-center gap-2">
+                  <span
+                    class="material-symbols-outlined text-[20px] text-tertiary-fixed-dim"
+                    >elevator</span
+                  >
+                  <span class="text-xs uppercase tracking-wider"
+                    >Private Glass Internal Elevator</span
+                  >
+                </div>
+                <span class="text-xs text-primary-fixed"
+                  >Ceiling Clearance 7.4m</span
+                >
+              </div>
+            </div>
+            <div
+              class="w-full lg:w-5/12 p-8 lg:p-10 flex flex-col justify-between bg-surface-container-lowest"
+            >
+              <div class="flex flex-col gap-4">
+                <div class="flex items-center justify-between">
+                  <span
+                    class="font-label-md text-label-md uppercase tracking-wider text-secondary"
+                    >Minet El Hosn, Beirut</span
+                  >
+                  <span class="font-headline-h3 text-headline-h3 text-primary"
+                    >$9,500,000</span
+                  >
+                </div>
+                <h3
+                  class="font-headline-h3 text-headline-h3 text-primary group-hover:text-tertiary-container transition-colors"
+                >
+                  The Mediterranean Horizon Sky Mansion
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Floating atop the prestigious Beirut Marina, this full-floor
+                  residence showcases a triple-height grand reception hall
+                  wrapped in motorized acoustic curtain walls. Complete with
+                  dual chef preparation spaces, private wine vault, and
+                  panoramic sunset balconies.
+                </p>
+                <div
+                  class="grid grid-cols-3 gap-3 py-3 rounded-lg bg-surface-container-low px-4 text-center"
+                >
+                  <div>
+                    <span
+                      class="block text-xs uppercase tracking-wider text-secondary"
+                      >Area</span
+                    >
+                    <span class="font-semibold text-primary">11,200 sq.ft</span>
+                  </div>
+                  <div>
+                    <span
+                      class="block text-xs uppercase tracking-wider text-secondary"
+                      >Bedrooms</span
+                    >
+                    <span class="font-semibold text-primary">6 Suites</span>
+                  </div>
+                  <div>
+                    <span
+                      class="block text-xs uppercase tracking-wider text-secondary"
+                      >Bathrooms</span
+                    >
+                    <span class="font-semibold text-primary">8 Baths</span>
+                  </div>
+                </div>
+                <ul
+                  class="flex flex-col gap-2 font-body-md text-[14px] text-on-surface-variant"
+                >
+                  <li class="flex items-center gap-2">
+                    <span
+                      class="material-symbols-outlined text-[16px] text-tertiary-container"
+                      >check_circle</span
+                    >
+                    <span>Calacatta Borghini bookmatched marble kitchen</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span
+                      class="material-symbols-outlined text-[16px] text-tertiary-container"
+                      >check_circle</span
+                    >
+                    <span
+                      >Private high-speed internal pneumatic glass
+                      elevator</span
+                    >
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span
+                      class="material-symbols-outlined text-[16px] text-tertiary-container"
+                      >check_circle</span
+                    >
+                    <span>Dedicated yacht slip access at Beirut Marina</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="pt-8 flex items-center gap-4">
+                <a
+                  class="flex-1 text-center py-3.5 px-6 rounded-lg bg-primary-container text-on-primary font-button text-button hover:bg-primary transition-all active:scale-[0.98]"
+                  data-path="contact"
+                  href="#"
+                >
+                  Schedule Private Viewing
+                </a>
+                <button
+                  class="p-3.5 rounded-lg bg-surface-container text-primary hover:bg-secondary-container transition-colors flex items-center justify-center"
+                  title="Save to Shortlist"
+                >
+                  <span class="material-symbols-outlined text-[20px]"
+                    >bookmark</span
+                  >
+                </button>
+              </div>
+            </div>
+          </article>
+          <!-- Residence 3: The Palm Monolith Penthouse (Dubai) -->
+          <article
+            class="w-full bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-[0_12px_32px_rgba(44,59,50,0.08)] transition-all duration-300 flex flex-col lg:flex-row group"
+          >
+            <div
+              class="w-full lg:w-7/12 relative h-96 lg:h-auto overflow-hidden"
+            >
+              <img
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                data-alt="Ultra-modern open penthouse roof deck in Dubai overlooking Palm Jumeirah at twilight. Seamless negative-edge sky pool with illuminated water reflections, sculptural minimalist louvers, fire pit lounge area, sleek stone deck, glowing Dubai skyline in soft focus backdrop."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCw90la8w6Pe0ebanD8rP5YmTNxhGJXPG6iJ7HfcxQMiW3b2vcNYzxc-bZZ-YEvRgep-GHtRmjKHudENZeRTSTjol2glcaDoS_ANtiCgnj6MbTXqk8AEIOIzSIMpY7ONDIcEqQOUZCD0--tn05mFVphJRkzpuTE2OAo-5Ch1wimjUOjGFNuB8Ocio_2aOHKk8YbrB4zs0WfpsfwBgvjwfU25ylA10dqYm78mEYg6zL6"
+              />
+              <div class="absolute top-4 left-4 flex gap-2">
+                <span
+                  class="px-3 py-1 rounded bg-primary-container text-on-primary font-label-md text-[11px] uppercase tracking-wider font-semibold"
+                  >Palm Jumeirah</span
+                >
+                <span
+                  class="px-3 py-1 rounded bg-surface-bright text-primary font-label-md text-[11px] uppercase tracking-wider font-semibold"
+                  >Trophy Asset</span
+                >
+              </div>
+              <div
+                class="absolute bottom-4 left-4 right-4 p-4 rounded-lg bg-primary/80 backdrop-blur-md text-on-primary flex items-center justify-between"
+              >
+                <div class="flex items-center gap-2">
+                  <span
+                    class="material-symbols-outlined text-[20px] text-tertiary-fixed-dim"
+                    >spa</span
+                  >
+                  <span class="text-xs uppercase tracking-wider"
+                    >Hammam &amp; Cryotherapy Suite</span
+                  >
+                </div>
+                <span class="text-xs text-primary-fixed"
+                  >8-Car Glass Gallery</span
+                >
+              </div>
+            </div>
+            <div
+              class="w-full lg:w-5/12 p-8 lg:p-10 flex flex-col justify-between bg-surface-container-lowest"
+            >
+              <div class="flex flex-col gap-4">
+                <div class="flex items-center justify-between">
+                  <span
+                    class="font-label-md text-label-md uppercase tracking-wider text-secondary"
+                    >Crescent West, Dubai</span
+                  >
+                  <span class="font-headline-h3 text-headline-h3 text-primary"
+                    >$14,200,000</span
+                  >
+                </div>
+                <h3
+                  class="font-headline-h3 text-headline-h3 text-primary group-hover:text-tertiary-container transition-colors"
+                >
+                  The Palm Monolith Penthouse
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Occupying the crown of an iconic beachfront tower, this duplex
+                  sky estate merges contemporary Middle Eastern minimalism with
+                  private resort amenities. Enclosed private wellness pavilion
+                  with traditional marble hammam and open sky infinity edge.
+                </p>
+                <div
+                  class="grid grid-cols-3 gap-3 py-3 rounded-lg bg-surface-container-low px-4 text-center"
+                >
+                  <div>
+                    <span
+                      class="block text-xs uppercase tracking-wider text-secondary"
+                      >Area</span
+                    >
+                    <span class="font-semibold text-primary">12,800 sq.ft</span>
+                  </div>
+                  <div>
+                    <span
+                      class="block text-xs uppercase tracking-wider text-secondary"
+                      >Suites</span
+                    >
+                    <span class="font-semibold text-primary">5 Beds</span>
+                  </div>
+                  <div>
+                    <span
+                      class="block text-xs uppercase tracking-wider text-secondary"
+                      >Baths</span
+                    >
+                    <span class="font-semibold text-primary">7 Baths</span>
+                  </div>
+                </div>
+                <ul
+                  class="flex flex-col gap-2 font-body-md text-[14px] text-on-surface-variant"
+                >
+                  <li class="flex items-center gap-2">
+                    <span
+                      class="material-symbols-outlined text-[16px] text-tertiary-container"
+                      >check_circle</span
+                    >
+                    <span>25-meter private negative edge sky pool</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span
+                      class="material-symbols-outlined text-[16px] text-tertiary-container"
+                      >check_circle</span
+                    >
+                    <span
+                      >Subterranean 8-car climate-controlled display
+                      gallery</span
+                    >
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span
+                      class="material-symbols-outlined text-[16px] text-tertiary-container"
+                      >check_circle</span
+                    >
+                    <span>24/7 dedicated residential butler quarters</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="pt-8 flex items-center gap-4">
+                <a
+                  class="flex-1 text-center py-3.5 px-6 rounded-lg bg-primary-container text-on-primary font-button text-button hover:bg-primary transition-all active:scale-[0.98]"
+                  data-path="contact"
+                  href="#"
+                >
+                  Acquisition Inquiries
+                </a>
+                <button
+                  class="p-3.5 rounded-lg bg-surface-container text-primary hover:bg-secondary-container transition-colors flex items-center justify-center"
+                  title="Save to Shortlist"
+                >
+                  <span class="material-symbols-outlined text-[20px]"
+                    >bookmark</span
+                  >
+                </button>
+              </div>
+            </div>
+          </article>
+          <!-- 2-Column Grid for Residences 4 & 5 -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+            <!-- Residence 4: The Cedar View Duplex Penthouse (Broumana) -->
+            <article
+              class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-[0_12px_32px_rgba(44,59,50,0.08)] transition-all duration-300 flex flex-col group"
+            >
+              <div class="relative h-80 overflow-hidden">
+                <img
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  data-alt="Alpine mountain luxury penthouse balcony overlooking Lebanese pine and cedar forests with distant views of Beirut and Mediterranean coastline. Natural dry-stacked sandstone fireplace, timber decking, bespoke outdoor cedarwood sauna with panoramic glass wall, mountain mist."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf0SiEYBfx3PDFB4F6kmj-yzXj6G1hTSSej7auT_BxnCLRL2tXB36_mRIjbGItzb18manMUM1lccCR9b63Hrc6Yy8-2gXdhjgWAUaJlmWrZ0rLmfaTMc6SOGobvYOFPBDrZ5YUv3aFLZJiZiuBpbKnM8Oof4pCP3kzrmI3Ur_BDcZ1-a5GxAvbxbnLLI8p0BLb00APkmukmpKtI8XJmOp-6Qy6m6MKyq0_0lHZomZj"
+                />
+                <div class="absolute top-4 left-4">
+                  <span
+                    class="px-3 py-1 rounded bg-primary-container text-on-primary font-label-md text-[11px] uppercase tracking-wider font-semibold"
+                    >Mountain &amp; Sea Sanctuary</span
+                  >
+                </div>
+                <div
+                  class="absolute bottom-4 right-4 px-3 py-1.5 rounded bg-surface/90 backdrop-blur-md text-primary font-label-md text-xs font-semibold"
+                >
+                  Broumana Heights
+                </div>
+              </div>
+              <div class="p-8 flex flex-col flex-1 justify-between gap-6">
+                <div>
+                  <div class="flex items-center justify-between mb-2">
+                    <span
+                      class="font-label-md text-label-md uppercase tracking-wider text-secondary"
+                      >Mount Lebanon Ridge</span
+                    >
+                    <span class="font-headline-h3 text-headline-h3 text-primary"
+                      >$4,900,000</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-h3 text-headline-h3 text-primary group-hover:text-tertiary-container transition-colors"
+                  >
+                    The Cedar View Duplex Penthouse
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant mt-3"
+                  >
+                    Perched above the humidity line with panoramic views from
+                    snow-capped peaks to the Mediterranean basin. Crafted with
+                    hand-chiseled mountain limestone, an authentic dual-hearth
+                    wood fireplace, and cedarwood sauna.
+                  </p>
+                  <div
+                    class="grid grid-cols-3 gap-2 py-3 rounded-lg bg-surface-container-low px-3 text-center mt-5"
+                  >
+                    <div>
+                      <span
+                        class="block text-[11px] uppercase tracking-wider text-secondary"
+                        >Area</span
+                      >
+                      <span class="font-medium text-primary text-sm"
+                        >6,400 sq.ft</span
+                      >
+                    </div>
+                    <div>
+                      <span
+                        class="block text-[11px] uppercase tracking-wider text-secondary"
+                        >Bedrooms</span
+                      >
+                      <span class="font-medium text-primary text-sm"
+                        >4 Suites</span
+                      >
+                    </div>
+                    <div>
+                      <span
+                        class="block text-[11px] uppercase tracking-wider text-secondary"
+                        >Baths</span
+                      >
+                      <span class="font-medium text-primary text-sm"
+                        >5 Baths</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <a
+                    class="flex-1 text-center py-3 px-4 rounded-lg bg-primary-container text-on-primary font-button text-[14px] hover:bg-primary transition-all"
+                    data-path="contact"
+                    href="#"
+                  >
+                    Schedule Viewing
+                  </a>
+                  <button
+                    class="p-3 rounded-lg bg-surface-container text-primary hover:bg-secondary-container transition-colors"
+                    title="Save to Shortlist"
+                  >
+                    <span class="material-symbols-outlined text-[18px]"
+                      >bookmark</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!-- Residence 5: The Abdali Crown Residence (Amman) -->
+            <article
+              class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-[0_12px_32px_rgba(44,59,50,0.08)] transition-all duration-300 flex flex-col group"
+            >
+              <div class="relative h-80 overflow-hidden">
+                <img
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  data-alt="Editorial penthouse interior in high-rise tower Amman Jordan overlooking Abdali modern boulevard. Dark European walnut wood library shelving, custom brushed brass detailing, warm ambient architectural lighting, private sunset cocktail terrace with polished basalt stone floor."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-VBXxza5gGxD5fCp79V5VvGoLMXaBZObm1ccZ4wchK2WMsV4gYd0gYCnPBGRpUupRWQ6b0AXR94XhZFCGP2WXtoAbEZf1xCT2_8X-zBm9U8ynnuKIcZA5c9JYxbkonz48F_H4XajbSGdZ_pih31Uv2NRsqHJR1ODwQGW8lKF-d9iNggW8gMI7VTav1iwwV4e3rzgGUk-lzBZHEt_OrvwoYozwOBgzkSGogvhIQFpj"
+                />
+                <div class="absolute top-4 left-4">
+                  <span
+                    class="px-3 py-1 rounded bg-primary-container text-on-primary font-label-md text-[11px] uppercase tracking-wider font-semibold"
+                    >CBD Crown</span
+                  >
+                </div>
+                <div
+                  class="absolute bottom-4 right-4 px-3 py-1.5 rounded bg-surface/90 backdrop-blur-md text-primary font-label-md text-xs font-semibold"
+                >
+                  Abdali Central, Amman
+                </div>
+              </div>
+              <div class="p-8 flex flex-col flex-1 justify-between gap-6">
+                <div>
+                  <div class="flex items-center justify-between mb-2">
+                    <span
+                      class="font-label-md text-label-md uppercase tracking-wider text-secondary"
+                      >Amman Downtown Skyline</span
+                    >
+                    <span class="font-headline-h3 text-headline-h3 text-primary"
+                      >$5,600,000</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-h3 text-headline-h3 text-primary group-hover:text-tertiary-container transition-colors"
+                  >
+                    The Abdali Crown Residence
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant mt-3"
+                  >
+                    Amman’s premier architectural triumph in modern urban
+                    living. Featuring motorized automated shading louvers, a
+                    two-story walnut and brass private library, and an open
+                    cocktail pavilion oriented toward the western sunset.
+                  </p>
+                  <div
+                    class="grid grid-cols-3 gap-2 py-3 rounded-lg bg-surface-container-low px-3 text-center mt-5"
+                  >
+                    <div>
+                      <span
+                        class="block text-[11px] uppercase tracking-wider text-secondary"
+                        >Area</span
+                      >
+                      <span class="font-medium text-primary text-sm"
+                        >7,100 sq.ft</span
+                      >
+                    </div>
+                    <div>
+                      <span
+                        class="block text-[11px] uppercase tracking-wider text-secondary"
+                        >Bedrooms</span
+                      >
+                      <span class="font-medium text-primary text-sm"
+                        >4 Suites</span
+                      >
+                    </div>
+                    <div>
+                      <span
+                        class="block text-[11px] uppercase tracking-wider text-secondary"
+                        >Baths</span
+                      >
+                      <span class="font-medium text-primary text-sm"
+                        >5.5 Baths</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <a
+                    class="flex-1 text-center py-3 px-4 rounded-lg bg-primary-container text-on-primary font-button text-[14px] hover:bg-primary transition-all"
+                    data-path="contact"
+                    href="#"
+                  >
+                    Schedule Viewing
+                  </a>
+                  <button
+                    class="p-3 rounded-lg bg-surface-container text-primary hover:bg-secondary-container transition-colors"
+                    title="Save to Shortlist"
+                  >
+                    <span class="material-symbols-outlined text-[18px]"
+                      >bookmark</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+        <!-- Penthouse Architectural Anatomy / Amenities Breakdown -->
+        <section class="w-full bg-surface-container-high py-20">
+          <div
+            class="w-full max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop flex flex-col gap-12"
+          >
+            <div
+              class="flex flex-col md:flex-row md:items-end justify-between gap-6"
+            >
+              <div class="max-w-xl">
+                <span
+                  class="font-label-md text-label-md uppercase tracking-[0.2em] text-tertiary-container font-semibold"
+                  >Architectural Standard</span
+                >
+                <h2 class="font-headline-h2 text-headline-h2 text-primary mt-2">
+                  Bespoke Sky Estate Engineering
+                </h2>
+              </div>
+              <p
+                class="font-body-md text-body-md text-on-surface-variant max-w-md"
+              >
+                Every Diyari penthouse undergoes an acoustic, structural, and
+                privacy assessment to verify true vertical isolation.
+              </p>
+            </div>
+            <!-- 4-Column Feature Matrix -->
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter"
+            >
+              <!-- Feature 1 -->
+              <div
+                class="p-6 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-4"
+              >
+                <div
+                  class="w-12 h-12 rounded-lg bg-secondary-container flex items-center justify-center text-primary"
+                >
+                  <span class="material-symbols-outlined text-[24px]"
+                    >pool</span
+                  >
+                </div>
+                <h3 class="font-headline-h3 text-[18px] text-primary">
+                  Private Sky Pools &amp; Spas
+                </h3>
+                <p
+                  class="font-body-md text-[14px] text-on-surface-variant leading-relaxed"
+                >
+                  Engineered cantilevered basins with dedicated filtration,
+                  heated vitality jets, and uninterrupted horizon rims that
+                  merge water with sky.
+                </p>
+                <span
+                  class="font-label-md text-[12px] text-secondary mt-auto uppercase tracking-wider"
+                  >Independent Load Bearing</span
+                >
+              </div>
+              <!-- Feature 2 -->
+              <div
+                class="p-6 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-4"
+              >
+                <div
+                  class="w-12 h-12 rounded-lg bg-secondary-container flex items-center justify-center text-primary"
+                >
+                  <span class="material-symbols-outlined text-[24px]"
+                    >elevator</span
+                  >
+                </div>
+                <h3 class="font-headline-h3 text-[18px] text-primary">
+                  Dedicated Express Lifts
+                </h3>
+                <p
+                  class="font-body-md text-[14px] text-on-surface-variant leading-relaxed"
+                >
+                  Direct-to-foyer destination elevators operating at 4m/s,
+                  equipped with secure biometric keying and dual service entries
+                  for staff.
+                </p>
+                <span
+                  class="font-label-md text-[12px] text-secondary mt-auto uppercase tracking-wider"
+                  >Biometric Passports</span
+                >
+              </div>
+              <!-- Feature 3 -->
+              <div
+                class="p-6 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-4"
+              >
+                <div
+                  class="w-12 h-12 rounded-lg bg-secondary-container flex items-center justify-center text-primary"
+                >
+                  <span class="material-symbols-outlined text-[24px]"
+                    >volume_off</span
+                  >
+                </div>
+                <h3 class="font-headline-h3 text-[18px] text-primary">
+                  Full-Floor Acoustic Privacy
+                </h3>
+                <p
+                  class="font-body-md text-[14px] text-on-surface-variant leading-relaxed"
+                >
+                  Multi-layered acoustic decoupling beneath natural stone floors
+                  and quadruple-laminated acoustic facade glazing (STC rating
+                  54+).
+                </p>
+                <span
+                  class="font-label-md text-[12px] text-secondary mt-auto uppercase tracking-wider"
+                  >Zero Adjoining Walls</span
+                >
+              </div>
+              <!-- Feature 4 -->
+              <div
+                class="p-6 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-4"
+              >
+                <div
+                  class="w-12 h-12 rounded-lg bg-secondary-container flex items-center justify-center text-primary"
+                >
+                  <span class="material-symbols-outlined text-[24px]"
+                    >room_service</span
+                  >
+                </div>
+                <h3 class="font-headline-h3 text-[18px] text-primary">
+                  24/7 White-Glove Valet
+                </h3>
+                <p
+                  class="font-body-md text-[14px] text-on-surface-variant leading-relaxed"
+                >
+                  Bespoke estate managers, discreet baggage porters,
+                  in-residence sommelier storage assistance, and secure
+                  subterranean car reception.
+                </p>
+                <span
+                  class="font-label-md text-[12px] text-secondary mt-auto uppercase tracking-wider"
+                  >Dedicated Concierge</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Discreet Acquisition Protocol / VIP Inquiry Module -->
+        <section
+          class="w-full max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop py-20"
+        >
+          <div
+            class="w-full bg-primary text-on-primary rounded-2xl overflow-hidden p-8 md:p-14 relative"
+          >
+            <!-- Decorative radial glow -->
+            <div
+              class="absolute -top-24 -right-24 w-96 h-96 bg-primary-fixed-dim/10 rounded-full blur-3xl pointer-events-none"
+            ></div>
+            <div
+              class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10"
+            >
+              <!-- Protocol Copy -->
+              <div class="lg:col-span-7 flex flex-col gap-5">
+                <div class="inline-flex items-center gap-2">
+                  <span
+                    class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"
+                  ></span>
+                  <span
+                    class="font-label-md text-label-md uppercase tracking-[0.2em] text-primary-fixed-dim"
+                    >Discreet Acquisition Protocol</span
+                  >
+                </div>
+                <h2
+                  class="font-headline-h2 text-headline-h2 text-on-primary tracking-tight"
+                >
+                  Initiate a Private Viewing or Receive the Confidential Crown
+                  Ledger
+                </h2>
+                <p
+                  class="font-body-md text-body-md text-surface-variant/80 max-w-xl"
+                >
+                  Due to privacy stipulations agreed with our patrons and family
+                  offices, precise architectural schematics, deed documentation,
+                  and on-site walkthroughs require formal client registration
+                  and a standard Non-Disclosure Agreement.
+                </p>
+                <div
+                  class="flex flex-col sm:flex-row items-start sm:items-center gap-6 pt-4 text-sm text-surface-variant"
+                >
+                  <div class="flex items-center gap-2">
+                    <span
+                      class="material-symbols-outlined text-primary-fixed-dim text-[20px]"
+                      >phone_in_talk</span
+                    >
+                    <span
+                      >Direct Partner Line:
+                      <strong class="text-on-primary"
+                        >+961 1 980 215</strong
+                      ></span
+                    >
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span
+                      class="material-symbols-outlined text-primary-fixed-dim text-[20px]"
+                      >mark_email_read</span
+                    >
+                    <span>vip.penthouse@diyari.com</span>
+                  </div>
+                </div>
+              </div>
+              <!-- VIP Form Card -->
+              <div
+                class="lg:col-span-5 bg-surface text-on-surface p-8 rounded-xl shadow-xl"
+              >
+                <form
+                  class="flex flex-col gap-4"
+                  onsubmit="
+                    event.preventDefault();
+                    alert(
+                      'Your confidential inquiry has been routed to the Senior Managing Partner.',
+                    );
+                  "
+                >
+                  <div>
+                    <label
+                      class="block font-label-md text-xs uppercase tracking-wider text-secondary font-medium mb-1.5"
+                      >Principal Full Name</label
+                    >
+                    <input
+                      class="w-full px-4 py-2.5 rounded-lg bg-surface-container-low text-on-surface text-sm focus:outline-none focus:ring-1 focus:ring-primary shadow-inner"
+                      placeholder="e.g. Tariq Al-Sabah"
+                      required=""
+                      type="text"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      class="block font-label-md text-xs uppercase tracking-wider text-secondary font-medium mb-1.5"
+                      >Direct Communication (Mobile / Signal)</label
+                    >
+                    <input
+                      class="w-full px-4 py-2.5 rounded-lg bg-surface-container-low text-on-surface text-sm focus:outline-none focus:ring-1 focus:ring-primary shadow-inner"
+                      placeholder="+962 7 9000 0000"
+                      required=""
+                      type="tel"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      class="block font-label-md text-xs uppercase tracking-wider text-secondary font-medium mb-1.5"
+                      >Residence of Interest</label
+                    >
+                    <select
+                      class="w-full px-4 py-2.5 rounded-lg bg-surface-container-low text-on-surface text-sm focus:outline-none focus:ring-1 focus:ring-primary"
+                    >
+                      <option value="sky-citadel">
+                        The Sky Citadel Triplex (Amman)
+                      </option>
+                      <option value="beirut-horizon">
+                        The Mediterranean Horizon (Beirut)
+                      </option>
+                      <option value="palm-monolith">
+                        The Palm Monolith (Dubai)
+                      </option>
+                      <option value="cedar-view">
+                        The Cedar View Duplex (Broumana)
+                      </option>
+                      <option value="abdali-crown">
+                        The Abdali Crown Residence (Amman)
+                      </option>
+                      <option value="all-ledger">
+                        Full Confidential Penthouse Ledger
+                      </option>
+                    </select>
+                  </div>
+                  <div class="flex items-center gap-2 pt-1">
+                    <input
+                      class="rounded text-primary focus:ring-0"
+                      id="nda-consent"
+                      required=""
+                      type="checkbox"
+                    />
+                    <label
+                      class="text-xs text-on-surface-variant"
+                      for="nda-consent"
+                      >I agree to receive the digital NDA prior to unlisted
+                      schematic disclosures.</label
+                    >
+                  </div>
+                  <button
+                    class="w-full mt-2 py-3 px-6 rounded-lg bg-tertiary text-on-tertiary font-button text-button hover:bg-tertiary-container transition-all shadow-md active:scale-[0.98]"
+                    type="submit"
+                  >
+                    Request Confidential Briefing →
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Client-side Interactive Filter Script -->
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            const filterButtons = document.querySelectorAll(".filter-btn");
+
+            filterButtons.forEach((btn) => {
+              btn.addEventListener("click", () => {
+                // Toggle UI state
+                filterButtons.forEach((b) => {
+                  b.classList.remove("bg-primary-container", "text-on-primary");
+                  b.classList.add("bg-surface", "text-on-surface");
+                });
+                btn.classList.remove("bg-surface", "text-on-surface");
+                btn.classList.add("bg-primary-container", "text-on-primary");
+              });
+            });
+          });
+        </script>
+      </div>
+    </main>
+    <footer
+      class="w-full bg-surface-container-low text-on-surface mt-section-gap shadow-[0_-1px_6px_rgba(0,0,0,0.02)]"
+    >
+      <div
+        class="w-full max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop py-section-gap"
+      >
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+          <div class="md:col-span-4 flex flex-col gap-stack-sm">
+            <div class="flex items-center gap-3">
+              <img
+                alt="Diyari Real Estate"
+                class="h-8 w-auto object-contain"
+                src="https://lh3.googleusercontent.com/aida/ALJJyrDMrlKBAQ8SG5l9mv6_OwvXLK-bi8XQ3IIamu-c9mVOWsxzDEu0htb9RFT9-7EnYI2CdUQalm9-pxfqgoR9TwTZWCn9d2MzZiQquYVjIeTGipRLG8qFlUAM1niN1qBIqOA0HWenjOYAQ-ven1QPMOmSx1R2FZkQ183MkCEHbWyHb3LriBSRF3vsCgNxvP-9PgYqsnxc9H8IvobLsF3auhR1N45fujAM75XgGRy4CdTJHw"
+              /><span class="font-headline-h3 text-headline-h3 text-primary"
+                >Diyari</span
+              >
+            </div>
+            <p
+              class="font-body-md text-body-md text-on-surface-variant max-w-sm mt-stack-xs"
+            >
+              A curated editorial marketplace celebrating Levantine
+              architectural heritage, modernist craft, and exceptional living
+              environments.
+            </p>
+            <div class="flex items-center gap-stack-sm mt-stack-sm">
+              <span class="w-2 h-2 rounded-full bg-tertiary-container"></span
+              ><span class="font-label-md text-label-md text-on-surface-variant"
+                >Beirut • Amman • Dubai</span
+              >
+            </div>
+          </div>
+          <div class="md:col-span-3 md:col-start-6 flex flex-col gap-stack-sm">
+            <span
+              class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-semibold"
+              >Property Types</span
+            >
+            <div class="flex flex-col gap-stack-xs mt-1">
+              <a
+                class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-150"
+                data-path="property-types"
+                href="#"
+                >Villas</a
+              ><a
+                class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-150"
+                data-path="property-types"
+                href="#"
+                >Apartments</a
+              ><a
+                class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-150"
+                data-path="property-types"
+                href="#"
+                >Commercial</a
+              ><a
+                class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-150"
+                data-path="property-types"
+                href="#"
+                >Penthouse</a
+              >
+            </div>
+          </div>
+          <div class="md:col-span-2 flex flex-col gap-stack-sm">
+            <span
+              class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-semibold"
+              >Company</span
+            >
+            <div class="flex flex-col gap-stack-xs mt-1">
+              <a
+                class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-150"
+                data-path="about"
+                href="#"
+                >Our Story</a
+              ><a
+                class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-150"
+                data-path="about"
+                href="#"
+                >Team</a
+              ><a
+                class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-150"
+                data-path="about"
+                href="#"
+                >Partners</a
+              ><a
+                class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-150"
+                data-path="about"
+                href="#"
+                >Careers</a
+              >
+            </div>
+          </div>
+          <div class="md:col-span-2 flex flex-col gap-stack-sm">
+            <span
+              class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-semibold"
+              >Contact</span
+            >
+            <div class="flex flex-col gap-stack-xs mt-1">
+              <span class="font-body-md text-body-md text-on-surface-variant"
+                >concierge@diyari.com</span
+              ><span class="font-body-md text-body-md text-on-surface-variant"
+                >+961 1 980 200</span
+              ><a
+                class="font-body-md text-body-md text-primary font-medium hover:text-on-surface transition-colors duration-150 mt-stack-xs"
+                data-path="contact"
+                href="#"
+                >Schedule an Appointment →</a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-section-gap pt-stack-lg flex flex-col sm:flex-row items-center justify-between gap-stack-sm shadow-[0_-1px_0_rgba(115,120,116,0.12)]"
+        >
+          <p class="font-body-md text-body-md text-secondary">
+            © 2024 Diyari Real Estate. All rights reserved.
+          </p>
+          <div class="flex items-center gap-stack-md">
+            <span class="font-label-md text-label-md text-secondary"
+              >Privacy Policy</span
+            ><span class="font-label-md text-label-md text-secondary"
+              >Terms of Service</span
+            ><span class="font-label-md text-label-md text-secondary"
+              >Editorial Code</span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

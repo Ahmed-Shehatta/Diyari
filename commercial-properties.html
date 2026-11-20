@@ -1,0 +1,1654 @@
+<!doctype html>
+
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="web_standard" name="shell-type" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,400&amp;family=Work+Sans:wght@400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @layer base {
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          overscroll-behavior: none;
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#ffb599",
+              "on-background": "#1c1b1b",
+              "surface-bright": "#fcf9f8",
+              surface: "#fcf9f8",
+              "on-primary-fixed": "#101f17",
+              tertiary: "#421300",
+              "error-container": "#ffdad6",
+              "on-secondary": "#ffffff",
+              "primary-fixed": "#d5e7da",
+              "surface-variant": "#e5e2e1",
+              error: "#ba1a1a",
+              "on-tertiary-container": "#f5814f",
+              "on-secondary-container": "#656461",
+              secondary: "#5f5e5b",
+              "on-surface-variant": "#434844",
+              "on-tertiary-fixed": "#370e00",
+              outline: "#737874",
+              "secondary-fixed-dim": "#c8c6c2",
+              primary: "#17251d",
+              "on-error": "#ffffff",
+              "primary-fixed-dim": "#bacbbe",
+              "surface-container-lowest": "#ffffff",
+              "secondary-container": "#e5e2dd",
+              "surface-container": "#f0eded",
+              "tertiary-container": "#662100",
+              "primary-container": "#2c3b32",
+              "on-secondary-fixed-variant": "#474743",
+              "outline-variant": "#c3c8c2",
+              "on-tertiary": "#ffffff",
+              "surface-container-high": "#eae7e7",
+              "inverse-surface": "#313030",
+              "on-primary-fixed-variant": "#3b4a41",
+              "surface-tint": "#526258",
+              "on-tertiary-fixed-variant": "#7f2b00",
+              background: "#fcf9f8",
+              "on-secondary-fixed": "#1c1c19",
+              "tertiary-fixed": "#ffdbce",
+              "on-primary": "#ffffff",
+              "on-surface": "#1c1b1b",
+              "on-error-container": "#93000a",
+              "surface-dim": "#dcd9d9",
+              "on-primary-container": "#94a599",
+              "surface-container-low": "#f6f3f2",
+              "surface-container-highest": "#e5e2e1",
+              "inverse-on-surface": "#f3f0ef",
+              "secondary-fixed": "#e5e2dd",
+              "inverse-primary": "#bacbbe",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              "margin-desktop": "64px",
+              gutter: "24px",
+              "stack-md": "16px",
+              "stack-sm": "8px",
+              "stack-xs": "4px",
+              "margin-mobile": "20px",
+              "section-gap": "120px",
+              "container-max": "1280px",
+              "stack-lg": "32px",
+            },
+            fontFamily: {
+              "display-hero-mobile": ["Fraunces"],
+              "display-hero": ["Fraunces"],
+              button: ["Work Sans"],
+              "body-md": ["Work Sans"],
+              "body-lg": ["Work Sans"],
+              "label-md": ["Work Sans"],
+              "headline-h1-mobile": ["Fraunces"],
+              "headline-h1": ["Fraunces"],
+              "headline-h2": ["Fraunces"],
+              "headline-h3": ["Fraunces"],
+            },
+            fontSize: {
+              "display-hero-mobile": [
+                "48px",
+                {
+                  lineHeight: "1.1",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "700",
+                },
+              ],
+              "display-hero": [
+                "72px",
+                {
+                  lineHeight: "1.1",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              button: ["16px", { lineHeight: "1", fontWeight: "500" }],
+              "body-md": ["16px", { lineHeight: "1.7", fontWeight: "400" }],
+              "label-md": [
+                "14px",
+                {
+                  lineHeight: "1.2",
+                  letterSpacing: "0.05em",
+                  fontWeight: "500",
+                },
+              ],
+              "headline-h1-mobile": [
+                "36px",
+                { lineHeight: "1.2", fontWeight: "600" },
+              ],
+              "headline-h1": [
+                "56px",
+                {
+                  lineHeight: "1.2",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "600",
+                },
+              ],
+              "headline-h2": ["36px", { lineHeight: "1.3", fontWeight: "600" }],
+              "body-lg": ["18px", { lineHeight: "1.7", fontWeight: "400" }],
+              "headline-h3": ["24px", { lineHeight: "1.4", fontWeight: "600" }],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-surface font-body-md text-on-surface antialiased">
+    <header
+      class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)]"
+    >
+      <div
+        class="h-20 w-full max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop flex items-center justify-between"
+      >
+        <div class="flex items-center gap-stack-md">
+          <a class="flex items-center gap-3 group" data-path="home" href="#"
+            ><img
+              alt="An elegant, editorial architectural brand logo for Diyari Real Estate. Featuring a minimalist geometric archway and courtyard courtyard motif with a subtle palm/sun or stylized letter D silhouette in refined deep forest green (#2c3b32) and warm terracotta (#c05634) on a subtle warm cream background. Clean lines, luxury craftsmanship, timeless Levantine architectural inspiration.. Brand logo. - Primary color: #2c3b32
+- Font: publicSans
+- Mode: light
+- Roundness: rounded-md
+"
+              class="h-8 w-auto object-contain"
+              src="https://lh3.googleusercontent.com/aida/ALJJyrDMrlKBAQ8SG5l9mv6_OwvXLK-bi8XQ3IIamu-c9mVOWsxzDEu0htb9RFT9-7EnYI2CdUQalm9-pxfqgoR9TwTZWCn9d2MzZiQquYVjIeTGipRLG8qFlUAM1niN1qBIqOA0HWenjOYAQ-ven1QPMOmSx1R2FZkQ183MkCEHbWyHb3LriBSRF3vsCgNxvP-9PgYqsnxc9H8IvobLsF3auhR1N45fujAM75XgGRy4CdTJHw"
+            /><span
+              class="font-headline-h3 text-headline-h3 text-primary tracking-tight"
+              >Diyari</span
+            ></a
+          >
+        </div>
+        <nav
+          class="hidden md:flex items-center gap-8"
+          data-active-classes="text-primary font-medium underline underline-offset-8 decoration-1 decoration-primary"
+        >
+          <a
+            class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors duration-200"
+            data-path="home"
+            href="#"
+            >Home</a
+          ><a
+            class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors duration-200"
+            data-path="properties"
+            href="#"
+            >Properties</a
+          ><a
+            aria-current="page"
+            class="uppercase tracking-wider transition-colors duration-200 text-primary font-medium underline underline-offset-8 decoration-1 decoration-primary"
+            data-path="property-types"
+            href="#"
+            >Property Types</a
+          ><a
+            class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors duration-200"
+            data-path="about"
+            href="#"
+            >About</a
+          ><a
+            class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors duration-200"
+            data-path="contact"
+            href="#"
+            >Contact</a
+          >
+        </nav>
+        <div class="flex items-center gap-stack-md">
+          <a
+            class="font-button text-button inline-flex items-center px-5 py-2.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary transition-all duration-200 shadow-sm active:scale-[0.98]"
+            data-path="list-your-property"
+            href="#"
+            >List your property</a
+          >
+          <div
+            class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"
+          >
+            <span class="material-symbols-outlined text-on-primary text-[18px]"
+              >person</span
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]">
+      <div class="flex flex-col w-full">
+        <!-- Top Ambient Glow & Decorative Grid Element -->
+        <div
+          class="relative w-full max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop pt-12 md:pt-16 pb-12"
+        >
+          <div
+            class="absolute -top-12 -left-20 w-96 h-96 rounded-full bg-primary-fixed/30 blur-3xl pointer-events-none -z-10"
+          ></div>
+          <div
+            class="absolute top-20 right-0 w-80 h-80 rounded-full bg-tertiary-fixed/30 blur-3xl pointer-events-none -z-10"
+          ></div>
+          <!-- Category Header Section -->
+          <div class="flex flex-col gap-6 max-w-4xl">
+            <!-- Breadcrumb & Tag -->
+            <div class="flex flex-wrap items-center gap-3">
+              <a
+                class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1.5"
+                href="#"
+              >
+                <span>Property Types</span>
+                <span class="material-symbols-outlined text-sm"
+                  >chevron_right</span
+                >
+              </a>
+              <span
+                class="font-label-md text-label-md text-primary font-medium tracking-wide"
+                >Commercial &amp; Creative Workspaces</span
+              >
+              <span
+                class="hidden sm:inline-block w-1.5 h-1.5 rounded-full bg-outline-variant"
+              ></span>
+              <span
+                class="inline-flex items-center px-3 py-1 rounded-full bg-primary-container text-on-primary font-label-md text-xs tracking-widest uppercase"
+              >
+                COLLECTION ARCHETYPE 03
+              </span>
+            </div>
+            <!-- Main Headline -->
+            <h1
+              class="font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-primary tracking-tight"
+            >
+              Architecture for Visionary Enterprises &amp; Creative Studios
+            </h1>
+            <!-- Editorial Subhead -->
+            <p
+              class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl"
+            >
+              Distinguished headquarters, restored historic villas for design
+              ateliers, flagship boutique retail spaces, and private medical
+              &amp; legal chambers across Amman, Beirut, and Dubai.
+            </p>
+            <!-- Key Commercial Metrics Bar -->
+            <div
+              class="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-8 pt-4 pb-2"
+            >
+              <div
+                class="flex items-center gap-4 p-4 rounded-xl bg-surface-container-low shadow-sm"
+              >
+                <div
+                  class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center shrink-0"
+                >
+                  <span class="material-symbols-outlined text-primary text-2xl"
+                    >account_balance</span
+                  >
+                </div>
+                <div class="flex flex-col">
+                  <span
+                    class="font-headline-h3 text-headline-h3 text-primary font-bold"
+                    >$180M+</span
+                  >
+                  <span
+                    class="font-label-md text-xs uppercase tracking-wider text-on-surface-variant"
+                    >Transacted Portfolio</span
+                  >
+                </div>
+              </div>
+              <div
+                class="flex items-center gap-4 p-4 rounded-xl bg-surface-container-low shadow-sm"
+              >
+                <div
+                  class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center shrink-0"
+                >
+                  <span class="material-symbols-outlined text-primary text-2xl"
+                    >location_city</span
+                  >
+                </div>
+                <div class="flex flex-col">
+                  <span
+                    class="font-headline-h3 text-headline-h3 text-primary font-bold"
+                    >3 Metropolises</span
+                  >
+                  <span
+                    class="font-label-md text-xs uppercase tracking-wider text-on-surface-variant"
+                    >Prime Business Districts</span
+                  >
+                </div>
+              </div>
+              <div
+                class="flex items-center gap-4 p-4 rounded-xl bg-surface-container-low shadow-sm"
+              >
+                <div
+                  class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center shrink-0"
+                >
+                  <span
+                    class="material-symbols-outlined text-tertiary-container text-2xl"
+                    >architecture</span
+                  >
+                </div>
+                <div class="flex flex-col">
+                  <span
+                    class="font-headline-h3 text-headline-h3 text-primary font-bold"
+                    >Turnkey / Shell</span
+                  >
+                  <span
+                    class="font-label-md text-xs uppercase tracking-wider text-on-surface-variant"
+                    >Custom Space Solutions</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Interactive Category Filter Chips -->
+        <div
+          class="w-full bg-surface-container-low/60 py-4 shadow-sm sticky top-20 z-30 backdrop-blur-md"
+        >
+          <div
+            class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop flex items-center justify-between gap-4 overflow-x-auto no-scrollbar"
+          >
+            <div
+              class="flex items-center gap-2 shrink-0"
+              id="categoryFilterBar"
+            >
+              <button
+                class="filter-chip active px-4 py-2 rounded-lg font-button text-button bg-primary text-on-primary transition-all duration-200 shadow-sm"
+                data-category="all"
+              >
+                All Commercial (6)
+              </button>
+              <button
+                class="filter-chip px-4 py-2 rounded-lg font-button text-button bg-surface text-on-surface hover:bg-surface-variant transition-all duration-200"
+                data-category="atelier"
+              >
+                Design &amp; Creative Ateliers
+              </button>
+              <button
+                class="filter-chip px-4 py-2 rounded-lg font-button text-button bg-surface text-on-surface hover:bg-surface-variant transition-all duration-200"
+                data-category="hq"
+              >
+                Corporate Headquarters
+              </button>
+              <button
+                class="filter-chip px-4 py-2 rounded-lg font-button text-button bg-surface text-on-surface hover:bg-surface-variant transition-all duration-200"
+                data-category="retail"
+              >
+                Flagship Retail &amp; Dining
+              </button>
+              <button
+                class="filter-chip px-4 py-2 rounded-lg font-button text-button bg-surface text-on-surface hover:bg-surface-variant transition-all duration-200"
+                data-category="heritage"
+              >
+                Heritage Commercial Conversions
+              </button>
+            </div>
+            <!-- Quick Sort / View Selector -->
+            <div class="hidden lg:flex items-center gap-3 shrink-0">
+              <span class="font-label-md text-label-md text-secondary"
+                >Sort by:</span
+              >
+              <select
+                class="bg-surface font-body-md text-sm text-on-surface py-1.5 px-3 rounded-md shadow-sm outline-none focus:bg-surface-bright cursor-pointer"
+              >
+                <option>Curated Distinction (Default)</option>
+                <option>Price: High to Low</option>
+                <option>Total Area (Sq.Ft)</option>
+                <option>City: Amman / Beirut / Dubai</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <!-- Main Commercial Portfolio Grid (6 Curated Properties) -->
+        <section
+          class="w-full max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-16"
+        >
+          <div class="flex items-baseline justify-between mb-8">
+            <div>
+              <span
+                class="font-label-md text-xs uppercase tracking-widest text-secondary"
+                >Class-A Commercial Real Estate</span
+              >
+              <h2 class="font-headline-h2 text-headline-h2 text-primary">
+                Available Spaces &amp; Estates
+              </h2>
+            </div>
+            <p
+              class="hidden sm:block font-body-md text-on-surface-variant text-sm"
+            >
+              Showing 6 institutional grade offerings
+            </p>
+          </div>
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            id="propertiesGrid"
+          >
+            <!-- 1. The Limestone Atelier -->
+            <article
+              class="property-item group flex flex-col bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
+              data-category="hq atelier"
+            >
+              <div
+                class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container"
+              >
+                <img
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  data-alt="Modernist Jordanian pale limestone architectural building with rhythmic arched windows and floor-to-ceiling glass atrium in Amman financial district during warm afternoon light, editorial architecture magazine photography"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw4dG2Yn_l_NRhYSM2aCR_qxq_83A6eT-fwLc99B2cscVigFNKoxpavHmp1WGxZKg14Z3DwnN4PNlXoSrDqaDIh7KGK10TWU5-L1x9MBINcTkDfRdSe3sqOyRhx-V2rA46I3JIgVjdn5lMObsrbPCWlHSqj_O6RuA1PHrsg340psflaRF1ggY-hHD93mE0kPQJIoS108rqB3iLtgoyEgTj5boZ_75lGrHCBvq1axW8"
+                />
+                <div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+                  <span
+                    class="px-2.5 py-1 rounded bg-primary/80 backdrop-blur-md text-on-primary font-label-md text-xs uppercase tracking-wider"
+                  >
+                    Amman, Jordan
+                  </span>
+                  <span
+                    class="px-2 py-0.5 rounded bg-surface/90 backdrop-blur-md text-primary font-label-md text-xs"
+                  >
+                    Standalone Building
+                  </span>
+                </div>
+                <div
+                  class="absolute bottom-3 right-3 px-3 py-1 rounded-full bg-surface-bright/95 text-on-surface font-body-md text-sm font-semibold shadow-md"
+                >
+                  $3,600,000
+                  <span class="font-normal text-xs text-secondary"
+                    >or $240k/yr</span
+                  >
+                </div>
+              </div>
+              <div class="p-6 flex flex-col flex-1 justify-between gap-4">
+                <div class="flex flex-col gap-2">
+                  <div
+                    class="flex items-center justify-between text-xs text-secondary font-label-md uppercase tracking-wider"
+                  >
+                    <span>Shmeisani Financial District</span>
+                    <span class="flex items-center gap-1 text-primary"
+                      ><span class="material-symbols-outlined text-sm"
+                        >square_foot</span
+                      >
+                      8,500 sq.ft</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-h3 text-headline-h3 text-primary group-hover:text-primary-container transition-colors"
+                  >
+                    The Limestone Atelier
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant text-sm line-clamp-2"
+                  >
+                    Standalone 3-story hand-cut stone building featuring a
+                    central natural sky-lit atrium, expansive open-plan creative
+                    floors, and private subterranean parking for 18 vehicles.
+                  </p>
+                </div>
+                <div
+                  class="pt-4 flex items-center justify-between border-t-0 bg-surface-container-low/50 -mx-6 -mb-6 p-6 mt-2"
+                >
+                  <div
+                    class="flex items-center gap-3 text-xs text-on-surface-variant"
+                  >
+                    <span class="flex items-center gap-1"
+                      ><span
+                        class="material-symbols-outlined text-base text-primary"
+                        >directions_car</span
+                      >
+                      18 Bays</span
+                    >
+                    <span class="flex items-center gap-1"
+                      ><span
+                        class="material-symbols-outlined text-base text-primary"
+                        >solar_power</span
+                      >
+                      LEED Silver</span
+                    >
+                  </div>
+                  <a
+                    class="font-button text-xs uppercase tracking-wider text-primary font-semibold hover:text-tertiary-container flex items-center gap-1"
+                    href="#inquiry"
+                  >
+                    Details
+                    <span class="material-symbols-outlined text-sm"
+                      >arrow_forward</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </article>
+            <!-- 2. Beit Al-Tijara -->
+            <article
+              class="property-item group flex flex-col bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
+              data-category="heritage hq atelier"
+            >
+              <div
+                class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container"
+              >
+                <img
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  data-alt="Restored 19th-century grand Levantine stone palazzo in Beirut Sursock quarter with intricate Venetian triple arches, high ceilings, wrought iron balconies, surrounded by jasmine and citrus trees in an elegant sunlit courtyard"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbvi0Z7O2661Usrg8QYGOfT_COxUi5Bk27rDBRh1ESaLQOwoyDSadKFx7XKj744gubeURUlRC3YSVw6jl3N9ma0B-xKO3foBghkLk6-oKTozV_iRykNvw2xCI8I1WeUsWS-MEP_uyChIV_DZ6fCKYqLiySt2gBe7dU0g_Af_8O63fEIoed0aiOx1Exdwtv7lv5NFG4JBam0nQcnae8a1lrb4hqiCx_G8xsv17A2gdZ"
+                />
+                <div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+                  <span
+                    class="px-2.5 py-1 rounded bg-tertiary-container backdrop-blur-md text-on-tertiary font-label-md text-xs uppercase tracking-wider"
+                  >
+                    Heritage Restoration
+                  </span>
+                  <span
+                    class="px-2 py-0.5 rounded bg-surface/90 backdrop-blur-md text-primary font-label-md text-xs"
+                  >
+                    Beirut
+                  </span>
+                </div>
+                <div
+                  class="absolute bottom-3 right-3 px-3 py-1 rounded-full bg-surface-bright/95 text-on-surface font-body-md text-sm font-semibold shadow-md"
+                >
+                  $4,100,000
+                </div>
+              </div>
+              <div class="p-6 flex flex-col flex-1 justify-between gap-4">
+                <div class="flex flex-col gap-2">
+                  <div
+                    class="flex items-center justify-between text-xs text-secondary font-label-md uppercase tracking-wider"
+                  >
+                    <span>Sursock Quarter, Beirut</span>
+                    <span class="flex items-center gap-1 text-primary"
+                      ><span class="material-symbols-outlined text-sm"
+                        >square_foot</span
+                      >
+                      6,200 sq.ft</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-h3 text-headline-h3 text-primary group-hover:text-primary-container transition-colors"
+                  >
+                    Beit Al-Tijara
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant text-sm line-clamp-2"
+                  >
+                    Magnificently restored 19th-century palace converted into a
+                    prestigious international headquarters with triple-arched
+                    mullioned windows, private courtyard, and stately boardroom.
+                  </p>
+                </div>
+                <div
+                  class="pt-4 flex items-center justify-between border-t-0 bg-surface-container-low/50 -mx-6 -mb-6 p-6 mt-2"
+                >
+                  <div
+                    class="flex items-center gap-3 text-xs text-on-surface-variant"
+                  >
+                    <span class="flex items-center gap-1"
+                      ><span
+                        class="material-symbols-outlined text-base text-primary"
+                        >park</span
+                      >
+                      Private Garden</span
+                    >
+                    <span class="flex items-center gap-1"
+                      ><span
+                        class="material-symbols-outlined text-base text-primary"
+                        >meeting_room</span
+                      >
+                      12 Chambers</span
+                    >
+                  </div>
+                  <a
+                    class="font-button text-xs uppercase tracking-wider text-primary font-semibold hover:text-tertiary-container flex items-center gap-1"
+                    href="#inquiry"
+                  >
+                    Details
+                    <span class="material-symbols-outlined text-sm"
+                      >arrow_forward</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </article>
+            <!-- 3. The Foundry Creative Hub -->
+            <article
+              class="property-item group flex flex-col bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
+              data-category="atelier"
+            >
+              <div
+                class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container"
+              >
+                <img
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  data-alt="Expansive double-height industrial loft architectural design studio in Al Quoz Dubai with polished concrete floors, steel-framed glass mezzanine, lush interior ficus trees, and natural skylights creating dramatic light rays"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGMPr9BEBmgiVPyfQ_Scy725bzU5qjQzt-xf7oV0I4SKGTwnSSTXz3PyzvQO7ot6QPa1zlFAsdkE49hANZnhehTFG8wkPvzHlT052ZOHfGt2Mmj3UTxjMgFGn0b-oRNNFms9AHtZn7FtAJ48L9hNDEtMeUevplwOsL4UsLALXvJcxSskgYERcGqPwHmnNgUtp2AVzeGQTzX9u_-3_r_McwqhEsE6GnbGKGk09mtsec"
+                />
+                <div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+                  <span
+                    class="px-2.5 py-1 rounded bg-primary/80 backdrop-blur-md text-on-primary font-label-md text-xs uppercase tracking-wider"
+                  >
+                    Dubai, UAE
+                  </span>
+                  <span
+                    class="px-2 py-0.5 rounded bg-surface/90 backdrop-blur-md text-primary font-label-md text-xs"
+                  >
+                    Industrial Conversion
+                  </span>
+                </div>
+                <div
+                  class="absolute bottom-3 right-3 px-3 py-1 rounded-full bg-surface-bright/95 text-on-surface font-body-md text-sm font-semibold shadow-md"
+                >
+                  $5,800,000
+                </div>
+              </div>
+              <div class="p-6 flex flex-col flex-1 justify-between gap-4">
+                <div class="flex flex-col gap-2">
+                  <div
+                    class="flex items-center justify-between text-xs text-secondary font-label-md uppercase tracking-wider"
+                  >
+                    <span>Al Quoz Creative Zone</span>
+                    <span class="flex items-center gap-1 text-primary"
+                      ><span class="material-symbols-outlined text-sm"
+                        >square_foot</span
+                      >
+                      12,000 sq.ft</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-h3 text-headline-h3 text-primary group-hover:text-primary-container transition-colors"
+                  >
+                    The Foundry Creative Hub
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant text-sm line-clamp-2"
+                  >
+                    Industrial high-volume warehouse converted into a
+                    multi-disciplinary design incubator. Features cantilevered
+                    mezzanines, soundproof recording suites, and rooftop solar
+                    microgrid.
+                  </p>
+                </div>
+                <div
+                  class="pt-4 flex items-center justify-between border-t-0 bg-surface-container-low/50 -mx-6 -mb-6 p-6 mt-2"
+                >
+                  <div
+                    class="flex items-center gap-3 text-xs text-on-surface-variant"
+                  >
+                    <span class="flex items-center gap-1"
+                      ><span
+                        class="material-symbols-outlined text-base text-primary"
+                        >height</span
+                      >
+                      8m Ceilings</span
+                    >
+                    <span class="flex items-center gap-1"
+                      ><span
+                        class="material-symbols-outlined text-base text-primary"
+                        >wb_sunny</span
+                      >
+                      Solar Microgrid</span
+                    >
+                  </div>
+                  <a
+                    class="font-button text-xs uppercase tracking-wider text-primary font-semibold hover:text-tertiary-container flex items-center gap-1"
+                    href="#inquiry"
+                  >
+                    Details
+                    <span class="material-symbols-outlined text-sm"
+                      >arrow_forward</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </article>
+            <!-- 4. Rainbow Street Flagship Space -->
+            <article
+              class="property-item group flex flex-col bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
+              data-category="retail heritage"
+            >
+              <div
+                class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container"
+              >
+                <img
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  data-alt="Boutique high-end commercial retail storefront on historic cobblestone Rainbow Street Amman with warm textured sandstone masonry, brass signage framing, and curved floor-to-ceiling display windows illuminated at twilight"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXRWA8poYAZjRoEyz6wq17DDdLSaevb19YWy15g_YCIPJycyUL4r-D2e2sDYMcM-JvKo7Ul5LQqHbZTZPFszjCl378ZXjA1RLQH3l8NhTWK1cyYYX-UpHhFV1F1X5jLFJq1FR5bbjV4s1QkGpzJokaG0FZSD63f5HGKYpy0fnES2P55xC8aHnuSh7tCVBaBJe-7-ZzXgufkTrrHBP7L3huR0tuMmlpsSRzMPdGKGdr"
+                />
+                <div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+                  <span
+                    class="px-2.5 py-1 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-xs uppercase tracking-wider"
+                  >
+                    Flagship Retail
+                  </span>
+                  <span
+                    class="px-2 py-0.5 rounded bg-surface/90 backdrop-blur-md text-primary font-label-md text-xs"
+                  >
+                    Prime Footfall
+                  </span>
+                </div>
+                <div
+                  class="absolute bottom-3 right-3 px-3 py-1 rounded-full bg-surface-bright/95 text-on-surface font-body-md text-sm font-semibold shadow-md"
+                >
+                  $2,100,000
+                </div>
+              </div>
+              <div class="p-6 flex flex-col flex-1 justify-between gap-4">
+                <div class="flex flex-col gap-2">
+                  <div
+                    class="flex items-center justify-between text-xs text-secondary font-label-md uppercase tracking-wider"
+                  >
+                    <span>1st Circle, Jabal Amman</span>
+                    <span class="flex items-center gap-1 text-primary"
+                      ><span class="material-symbols-outlined text-sm"
+                        >square_foot</span
+                      >
+                      3,800 sq.ft</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-h3 text-headline-h3 text-primary group-hover:text-primary-container transition-colors"
+                  >
+                    Rainbow Street Flagship Space
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant text-sm line-clamp-2"
+                  >
+                    High-visibility prominent corner retail or culinary venue
+                    showcasing authentic yellow sandstone facade, 24-meter
+                    display frontage, and split-level subterranean cellar.
+                  </p>
+                </div>
+                <div
+                  class="pt-4 flex items-center justify-between border-t-0 bg-surface-container-low/50 -mx-6 -mb-6 p-6 mt-2"
+                >
+                  <div
+                    class="flex items-center gap-3 text-xs text-on-surface-variant"
+                  >
+                    <span class="flex items-center gap-1"
+                      ><span
+                        class="material-symbols-outlined text-base text-primary"
+                        >storefront</span
+                      >
+                      24m Frontage</span
+                    >
+                    <span class="flex items-center gap-1"
+                      ><span
+                        class="material-symbols-outlined text-base text-primary"
+                        >restaurant</span
+                      >
+                      F&amp;B Permitted</span
+                    >
+                  </div>
+                  <a
+                    class="font-button text-xs uppercase tracking-wider text-primary font-semibold hover:text-tertiary-container flex items-center gap-1"
+                    href="#inquiry"
+                  >
+                    Details
+                    <span class="material-symbols-outlined text-sm"
+                      >arrow_forward</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </article>
+            <!-- 5. Marina Terrace Executive Suites -->
+            <article
+              class="property-item group flex flex-col bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
+              data-category="hq"
+            >
+              <div
+                class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container"
+              >
+                <img
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  data-alt="Ultra-luxury corporate penthouse executive floor in Dubai Marina with panoramic curved floor-to-ceiling glass overlooking yachts and azure water, warm walnut paneling, bespoke travertine reception desk, and minimalist lighting"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdeXSZx8cUKk8JHBA8eHuj39KUQpIq2AfAT_-qYNKnIfrmePLvcMJ-Rk1e7zT6Y7SY3hLNCkVDYsRwninwx0qjDOIIjNhBZogx-RN4oJxRtScfz77KqGJlC2dAQiLfbL9sQZUYIvLeio49SFeqxAS-2vGVah4EzRUH-Dtd40qvzbcDBGGGviNN6IwyTerTE3nAcJN8XyBTkqESscXV-kFBTKtLSa152DDfUqSv5piu"
+                />
+                <div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+                  <span
+                    class="px-2.5 py-1 rounded bg-primary/80 backdrop-blur-md text-on-primary font-label-md text-xs uppercase tracking-wider"
+                  >
+                    Dubai Marina
+                  </span>
+                  <span
+                    class="px-2 py-0.5 rounded bg-surface/90 backdrop-blur-md text-primary font-label-md text-xs"
+                  >
+                    Whole Floor
+                  </span>
+                </div>
+                <div
+                  class="absolute bottom-3 right-3 px-3 py-1 rounded-full bg-surface-bright/95 text-on-surface font-body-md text-sm font-semibold shadow-md"
+                >
+                  $4,500,000
+                </div>
+              </div>
+              <div class="p-6 flex flex-col flex-1 justify-between gap-4">
+                <div class="flex flex-col gap-2">
+                  <div
+                    class="flex items-center justify-between text-xs text-secondary font-label-md uppercase tracking-wider"
+                  >
+                    <span>Financial Center Access, Dubai</span>
+                    <span class="flex items-center gap-1 text-primary"
+                      ><span class="material-symbols-outlined text-sm"
+                        >square_foot</span
+                      >
+                      7,400 sq.ft</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-h3 text-headline-h3 text-primary group-hover:text-primary-container transition-colors"
+                  >
+                    Marina Terrace Executive Suites
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant text-sm line-clamp-2"
+                  >
+                    Entire private floor offering unobstructed waterfront
+                    panoramas, 4 private partner suites, a 20-seat high-tech
+                    conference salon, and private elevator vestibule.
+                  </p>
+                </div>
+                <div
+                  class="pt-4 flex items-center justify-between border-t-0 bg-surface-container-low/50 -mx-6 -mb-6 p-6 mt-2"
+                >
+                  <div
+                    class="flex items-center gap-3 text-xs text-on-surface-variant"
+                  >
+                    <span class="flex items-center gap-1"
+                      ><span
+                        class="material-symbols-outlined text-base text-primary"
+                        >water</span
+                      >
+                      Sea Views</span
+                    >
+                    <span class="flex items-center gap-1"
+                      ><span
+                        class="material-symbols-outlined text-base text-primary"
+                        >lock</span
+                      >
+                      Secure Lift Access</span
+                    >
+                  </div>
+                  <a
+                    class="font-button text-xs uppercase tracking-wider text-primary font-semibold hover:text-tertiary-container flex items-center gap-1"
+                    href="#inquiry"
+                  >
+                    Details
+                    <span class="material-symbols-outlined text-sm"
+                      >arrow_forward</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </article>
+            <!-- 6. Verdun Med & Wellness Sanctuary -->
+            <article
+              class="property-item group flex flex-col bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
+              data-category="hq atelier"
+            >
+              <div
+                class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container"
+              >
+                <img
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  data-alt="Refined contemporary medical and wellness clinic in Verdun Beirut, featuring minimalist beige microcement walls, ambient indirect architectural lighting, fluted glass partitions, and sculptural indoor Zen greenery"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNLXuXLkNUm9gl1AupVmuW_RYpNu7ChLj33SR0Xtpc_bdZJqtkYLcKVJ2SECjvfgDO8F-xo1TVRTachYl7WvnMUlWXckDZ7bw71O3hMrK7JH3dKiBMRphHuyPhZM6R0K-FxtKErtNAOubjT5r0afFckHrF62r2u_cKnzPX8F_-djnemNcZ7MGkL3ymZuDdM_RrLdRHAY9n6VCyYh-x8ZBF_NLYJ7LvzgbA27p5uDv4"
+                />
+                <div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+                  <span
+                    class="px-2.5 py-1 rounded bg-primary-fixed text-on-primary-fixed font-label-md text-xs uppercase tracking-wider"
+                  >
+                    Medical / Clinic
+                  </span>
+                  <span
+                    class="px-2 py-0.5 rounded bg-surface/90 backdrop-blur-md text-primary font-label-md text-xs"
+                  >
+                    Verdun, Beirut
+                  </span>
+                </div>
+                <div
+                  class="absolute bottom-3 right-3 px-3 py-1 rounded-full bg-surface-bright/95 text-on-surface font-body-md text-sm font-semibold shadow-md"
+                >
+                  $2,800,000
+                </div>
+              </div>
+              <div class="p-6 flex flex-col flex-1 justify-between gap-4">
+                <div class="flex flex-col gap-2">
+                  <div
+                    class="flex items-center justify-between text-xs text-secondary font-label-md uppercase tracking-wider"
+                  >
+                    <span>Medical District, Beirut</span>
+                    <span class="flex items-center gap-1 text-primary"
+                      ><span class="material-symbols-outlined text-sm"
+                        >square_foot</span
+                      >
+                      5,100 sq.ft</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-h3 text-headline-h3 text-primary group-hover:text-primary-container transition-colors"
+                  >
+                    Verdun Med &amp; Wellness Sanctuary
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant text-sm line-clamp-2"
+                  >
+                    Purpose-built turnkey medical and aesthetic chambers with
+                    hospital-grade HVAC filtration, private patient elevator,
+                    sound-attenuated consultation suites, and VIP valet access.
+                  </p>
+                </div>
+                <div
+                  class="pt-4 flex items-center justify-between border-t-0 bg-surface-container-low/50 -mx-6 -mb-6 p-6 mt-2"
+                >
+                  <div
+                    class="flex items-center gap-3 text-xs text-on-surface-variant"
+                  >
+                    <span class="flex items-center gap-1"
+                      ><span
+                        class="material-symbols-outlined text-base text-primary"
+                        >air</span
+                      >
+                      HEPA Cleared</span
+                    >
+                    <span class="flex items-center gap-1"
+                      ><span
+                        class="material-symbols-outlined text-base text-primary"
+                        >local_hospital</span
+                      >
+                      Medical License Active</span
+                    >
+                  </div>
+                  <a
+                    class="font-button text-xs uppercase tracking-wider text-primary font-semibold hover:text-tertiary-container flex items-center gap-1"
+                    href="#inquiry"
+                  >
+                    Details
+                    <span class="material-symbols-outlined text-sm"
+                      >arrow_forward</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+        <!-- Editorial Architectural Feature Callout (Asymmetric Banner) -->
+        <section
+          class="w-full bg-primary text-on-primary py-20 my-12 overflow-hidden relative"
+        >
+          <div
+            class="absolute -right-24 -bottom-24 w-96 h-96 rounded-full bg-primary-container/40 blur-3xl pointer-events-none"
+          ></div>
+          <div
+            class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-12 items-center"
+          >
+            <div class="lg:col-span-7 flex flex-col gap-6">
+              <div
+                class="flex items-center gap-2 text-tertiary-fixed font-label-md text-xs uppercase tracking-widest"
+              >
+                <span class="w-2 h-2 rounded-full bg-tertiary-fixed"></span>
+                <span>Architectural Integrity • Heritage Protection</span>
+              </div>
+              <h2
+                class="font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-surface-bright leading-tight"
+              >
+                Preserving Levantine Modernism for Next-Generation Commerce
+              </h2>
+              <p
+                class="font-body-lg text-body-lg text-surface-variant max-w-xl"
+              >
+                We believe the world’s most impactful brands crave character
+                over sterile steel towers. Our commercial team identifies,
+                permits, and stewards spaces with soul—from Ottoman-era stone
+                porticos to mid-century brutalist pavilions.
+              </p>
+              <div class="flex flex-wrap items-center gap-6 pt-4">
+                <div class="flex flex-col">
+                  <span class="font-headline-h2 text-tertiary-fixed font-bold"
+                    >94%</span
+                  >
+                  <span
+                    class="font-label-md text-xs uppercase tracking-wider text-surface-variant"
+                    >Tenant Retention Rate</span
+                  >
+                </div>
+                <div class="w-px h-12 bg-outline/30 hidden sm:block"></div>
+                <div class="flex flex-col">
+                  <span class="font-headline-h2 text-tertiary-fixed font-bold"
+                    >14 Wks</span
+                  >
+                  <span
+                    class="font-label-md text-xs uppercase tracking-wider text-surface-variant"
+                    >Avg. Municipality Permitting</span
+                  >
+                </div>
+                <div class="w-px h-12 bg-outline/30 hidden sm:block"></div>
+                <div class="flex flex-col">
+                  <span class="font-headline-h2 text-tertiary-fixed font-bold"
+                    >100%</span
+                  >
+                  <span
+                    class="font-label-md text-xs uppercase tracking-wider text-surface-variant"
+                    >Direct Landlord Representation</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="lg:col-span-5 relative">
+              <div
+                class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl relative"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  data-alt="Atmospheric architectural photography of an executive boardroom in an adaptive reuse heritage stone arch building with modernist olive wood table, brass lamps, and large framed contemporary Middle Eastern art"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXTy8qaCJvS59Fa-9ikBgidPNCCvdXUTE4DU9M0n70l9XkAoNXC4MOl1sHj1XUNB6Cq245kuFaJnoLGD2AinqtoeIRparuAqelUAd5ZBBaGGpct-re7vHa-wx_fL6Ln0Hz88mLwYQRugPJDuvfy2WyAN9t-fB_rLe1fYZB4oOFXDTBG76F0xZHFy3ngDysF6vQkbBC-AqVIkSzqjVAgKMjl4z4ufkkuUpekbKehWWn"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"
+                ></div>
+                <div
+                  class="absolute bottom-6 left-6 right-6 p-4 rounded-lg bg-primary-container/80 backdrop-blur-md"
+                >
+                  <p class="font-headline-h3 text-base text-surface-bright">
+                    “Diyari unlocked a space that became our firm's greatest
+                    talent recruitment asset.”
+                  </p>
+                  <span
+                    class="font-label-md text-xs text-primary-fixed block mt-1"
+                    >— Managing Partner, Horizon Architecture Group</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Bespoke Corporate Advisory & Tenant Representation (Service Modules) -->
+        <section
+          class="w-full max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop py-16"
+        >
+          <div class="max-w-2xl mb-12">
+            <span
+              class="font-label-md text-xs uppercase tracking-widest text-secondary font-semibold"
+              >End-To-End Practice</span
+            >
+            <h2 class="font-headline-h2 text-headline-h2 text-primary mt-1">
+              Corporate Advisory &amp; Tenant Representation
+            </h2>
+            <p class="font-body-md text-body-md text-on-surface-variant mt-3">
+              Commercial acquisition in Amman, Beirut, and Dubai demands an
+              understanding of zoning, historical conservation laws, and bespoke
+              mechanical infrastructure.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Service 1 -->
+            <div
+              class="p-8 rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between hover:bg-surface-container transition-colors duration-200"
+            >
+              <div class="flex flex-col gap-4">
+                <div
+                  class="w-12 h-12 rounded-lg bg-primary-fixed/50 flex items-center justify-center text-primary"
+                >
+                  <span class="material-symbols-outlined text-2xl"
+                    >space_dashboard</span
+                  >
+                </div>
+                <h3 class="font-headline-h3 text-xl text-primary">
+                  Space Programming &amp; Strategy
+                </h3>
+                <p class="font-body-md text-sm text-on-surface-variant">
+                  Full audit of hybrid workflows, acoustic zoning requirements,
+                  headcount trajectories, and client-facing spatial impressions.
+                </p>
+              </div>
+              <span
+                class="font-label-md text-xs uppercase tracking-wider text-secondary mt-6 flex items-center gap-1"
+              >
+                Stage 01 • Diagnostic
+              </span>
+            </div>
+            <!-- Service 2 -->
+            <div
+              class="p-8 rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between hover:bg-surface-container transition-colors duration-200"
+            >
+              <div class="flex flex-col gap-4">
+                <div
+                  class="w-12 h-12 rounded-lg bg-tertiary-fixed flex items-center justify-center text-tertiary-container"
+                >
+                  <span class="material-symbols-outlined text-2xl"
+                    >assured_workload</span
+                  >
+                </div>
+                <h3 class="font-headline-h3 text-xl text-primary">
+                  Heritage Permits &amp; Approvals
+                </h3>
+                <p class="font-body-md text-sm text-on-surface-variant">
+                  Navigating cultural preservation bodies, civil defense
+                  regulations, and commercial change-of-use permits across
+                  municipalities.
+                </p>
+              </div>
+              <span
+                class="font-label-md text-xs uppercase tracking-wider text-secondary mt-6 flex items-center gap-1"
+              >
+                Stage 02 • Statutory
+              </span>
+            </div>
+            <!-- Service 3 -->
+            <div
+              class="p-8 rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between hover:bg-surface-container transition-colors duration-200"
+            >
+              <div class="flex flex-col gap-4">
+                <div
+                  class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary"
+                >
+                  <span class="material-symbols-outlined text-2xl"
+                    >construction</span
+                  >
+                </div>
+                <h3 class="font-headline-h3 text-xl text-primary">
+                  Fit-Out Management
+                </h3>
+                <p class="font-body-md text-sm text-on-surface-variant">
+                  Tendering vetted Levant craft artisans, HVAC engineers,
+                  acoustic architects, and lighting designers for bespoke
+                  execution.
+                </p>
+              </div>
+              <span
+                class="font-label-md text-xs uppercase tracking-wider text-secondary mt-6 flex items-center gap-1"
+              >
+                Stage 03 • Execution
+              </span>
+            </div>
+            <!-- Service 4 -->
+            <div
+              class="p-8 rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between hover:bg-surface-container transition-colors duration-200"
+            >
+              <div class="flex flex-col gap-4">
+                <div
+                  class="w-12 h-12 rounded-lg bg-primary text-on-primary flex items-center justify-center"
+                >
+                  <span class="material-symbols-outlined text-2xl">gavel</span>
+                </div>
+                <h3 class="font-headline-h3 text-xl text-primary">
+                  Lease Structuring &amp; Tax
+                </h3>
+                <p class="font-body-md text-sm text-on-surface-variant">
+                  Long-term indexed commercial lease contracts, rent-free
+                  fit-out periods, capital expenditure credits, and cross-border
+                  purchase protocols.
+                </p>
+              </div>
+              <span
+                class="font-label-md text-xs uppercase tracking-wider text-secondary mt-6 flex items-center gap-1"
+              >
+                Stage 04 • Closing
+              </span>
+            </div>
+          </div>
+        </section>
+        <!-- Interactive Commercial Inquiry Form & Consultation Booker -->
+        <section
+          class="w-full max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop py-16"
+          id="inquiry"
+        >
+          <div
+            class="bg-surface-container-lowest rounded-2xl shadow-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12"
+          >
+            <!-- Left Column: Context & Direct Contact -->
+            <div
+              class="lg:col-span-5 bg-surface-container p-8 md:p-12 flex flex-col justify-between gap-8"
+            >
+              <div class="flex flex-col gap-4">
+                <span
+                  class="font-label-md text-xs uppercase tracking-widest text-tertiary-container font-semibold"
+                  >Private Advisory Desk</span
+                >
+                <h2 class="font-headline-h2 text-headline-h2 text-primary">
+                  Schedule a Confidential Site Assessment
+                </h2>
+                <p
+                  class="font-body-md text-body-md text-on-surface-variant text-sm"
+                >
+                  Whether evaluating an off-market historic palazzo or acquiring
+                  prime core &amp; shell retail footage, connect directly with
+                  our Senior Commercial Partner.
+                </p>
+              </div>
+              <div class="flex flex-col gap-6">
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0"
+                  >
+                    <span class="material-symbols-outlined">badge</span>
+                  </div>
+                  <div>
+                    <p class="font-label-md text-primary font-semibold">
+                      Tariq Haddad
+                    </p>
+                    <p class="font-body-md text-xs text-on-surface-variant">
+                      Managing Director • Commercial Real Estate Practice
+                    </p>
+                    <p class="font-body-md text-xs text-secondary mt-0.5">
+                      Direct: commercial@diyari.com
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="p-4 rounded-xl bg-surface-container-high/60 flex items-start gap-3"
+                >
+                  <span class="material-symbols-outlined text-primary mt-0.5"
+                    >verified_user</span
+                  >
+                  <p class="font-body-md text-xs text-on-surface-variant">
+                    <strong>Strict Confidentiality:</strong> NDAs are executed
+                    prior to sharing financial prospectuses or tenant covenants
+                    for all prime properties.
+                  </p>
+                </div>
+              </div>
+              <!-- Geographic Coverage Badges -->
+              <div class="pt-4 border-t-0 flex flex-wrap gap-2">
+                <span
+                  class="px-2.5 py-1 rounded bg-surface font-label-md text-xs text-secondary"
+                  >Beirut • Central &amp; Ashrafieh</span
+                >
+                <span
+                  class="px-2.5 py-1 rounded bg-surface font-label-md text-xs text-secondary"
+                  >Amman • 1st-4th Circles &amp; Abdali</span
+                >
+                <span
+                  class="px-2.5 py-1 rounded bg-surface font-label-md text-xs text-secondary"
+                  >Dubai • DIFC &amp; Al Quoz</span
+                >
+              </div>
+            </div>
+            <!-- Right Column: Interactive RFP / Booking Form -->
+            <div class="lg:col-span-7 p-8 md:p-12 flex flex-col justify-center">
+              <form
+                class="flex flex-col gap-6"
+                id="commercialInquiryForm"
+                onsubmit="
+                  event.preventDefault();
+                  handleFormSubmit();
+                "
+              >
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div class="flex flex-col gap-2">
+                    <label
+                      class="font-label-md text-xs uppercase tracking-wider text-on-surface-variant font-medium"
+                      for="fullName"
+                    >
+                      Full Name *
+                    </label>
+                    <input
+                      class="w-full px-4 py-3 rounded-lg bg-surface-container-low font-body-md text-on-surface placeholder:text-secondary/60 outline-none focus:bg-surface-bright shadow-sm transition-all"
+                      id="fullName"
+                      placeholder="e.g. Layla Al-Khatib"
+                      required=""
+                      type="text"
+                    />
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <label
+                      class="font-label-md text-xs uppercase tracking-wider text-on-surface-variant font-medium"
+                      for="corpName"
+                    >
+                      Enterprise or Studio Name *
+                    </label>
+                    <input
+                      class="w-full px-4 py-3 rounded-lg bg-surface-container-low font-body-md text-on-surface placeholder:text-secondary/60 outline-none focus:bg-surface-bright shadow-sm transition-all"
+                      id="corpName"
+                      placeholder="e.g. Atelier Levant Architects"
+                      required=""
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div class="flex flex-col gap-2">
+                    <label
+                      class="font-label-md text-xs uppercase tracking-wider text-on-surface-variant font-medium"
+                      for="email"
+                    >
+                      Corporate Email Address *
+                    </label>
+                    <input
+                      class="w-full px-4 py-3 rounded-lg bg-surface-container-low font-body-md text-on-surface placeholder:text-secondary/60 outline-none focus:bg-surface-bright shadow-sm transition-all"
+                      id="email"
+                      placeholder="layla@atelierlevant.com"
+                      required=""
+                      type="email"
+                    />
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <label
+                      class="font-label-md text-xs uppercase tracking-wider text-on-surface-variant font-medium"
+                      for="phone"
+                    >
+                      Direct Telephone / WhatsApp *
+                    </label>
+                    <input
+                      class="w-full px-4 py-3 rounded-lg bg-surface-container-low font-body-md text-on-surface placeholder:text-secondary/60 outline-none focus:bg-surface-bright shadow-sm transition-all"
+                      id="phone"
+                      placeholder="+961 or +962 or +971"
+                      required=""
+                      type="tel"
+                    />
+                  </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div class="flex flex-col gap-2">
+                    <label
+                      class="font-label-md text-xs uppercase tracking-wider text-on-surface-variant font-medium"
+                      for="propInterest"
+                    >
+                      Specific Property of Interest
+                    </label>
+                    <select
+                      class="w-full px-4 py-3 rounded-lg bg-surface-container-low font-body-md text-on-surface outline-none focus:bg-surface-bright shadow-sm cursor-pointer transition-all"
+                      id="propInterest"
+                    >
+                      <option value="general">
+                        General Commercial Advisory Mandate
+                      </option>
+                      <option value="limestone">
+                        The Limestone Atelier (Amman)
+                      </option>
+                      <option value="tijara">
+                        Beit Al-Tijara (Sursock, Beirut)
+                      </option>
+                      <option value="foundry">
+                        The Foundry Creative Hub (Dubai)
+                      </option>
+                      <option value="rainbow">
+                        Rainbow Street Flagship Space (Amman)
+                      </option>
+                      <option value="marina">
+                        Marina Terrace Executive Suites (Dubai)
+                      </option>
+                      <option value="verdun">
+                        Verdun Med &amp; Wellness Sanctuary (Beirut)
+                      </option>
+                    </select>
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <label
+                      class="font-label-md text-xs uppercase tracking-wider text-on-surface-variant font-medium"
+                      for="targetTimeline"
+                    >
+                      Occupancy Horizon
+                    </label>
+                    <select
+                      class="w-full px-4 py-3 rounded-lg bg-surface-container-low font-body-md text-on-surface outline-none focus:bg-surface-bright shadow-sm cursor-pointer transition-all"
+                      id="targetTimeline"
+                    >
+                      <option>Immediate / Within 60 Days</option>
+                      <option>Q3/Q4 2024</option>
+                      <option>2025 Strategic Relocation</option>
+                      <option>Investment / Asset Acquisition Only</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label
+                    class="font-label-md text-xs uppercase tracking-wider text-on-surface-variant font-medium"
+                    for="notes"
+                  >
+                    Brief Space Specifications or Program Needs
+                  </label>
+                  <textarea
+                    class="w-full px-4 py-3 rounded-lg bg-surface-container-low font-body-md text-on-surface placeholder:text-secondary/60 outline-none focus:bg-surface-bright shadow-sm transition-all"
+                    id="notes"
+                    placeholder="Detail preferred area range (sq.ft), parking requirements, acoustic specifications, or specialized licenses required..."
+                    rows="3"
+                  ></textarea>
+                </div>
+                <div
+                  class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2"
+                >
+                  <label
+                    class="flex items-center gap-2 cursor-pointer select-none"
+                  >
+                    <input
+                      checked=""
+                      class="rounded text-primary focus:ring-0 w-4 h-4"
+                      type="checkbox"
+                    />
+                    <span class="font-body-md text-xs text-on-surface-variant"
+                      >Request standard bilateral non-disclosure agreement</span
+                    >
+                  </label>
+                  <button
+                    class="w-full sm:w-auto px-8 py-3.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-button text-button shadow-sm hover:shadow-md transition-all active:scale-[0.98] flex items-center justify-center gap-2"
+                    type="submit"
+                  >
+                    <span>Transmit Assessment Request</span>
+                    <span class="material-symbols-outlined text-sm"
+                      >north_east</span
+                    >
+                  </button>
+                </div>
+                <!-- Success Alert Placeholder (Dynamic via JS) -->
+                <div
+                  class="hidden p-4 rounded-xl bg-primary-fixed text-on-primary-fixed flex items-center gap-3"
+                  id="formSuccessMessage"
+                >
+                  <span class="material-symbols-outlined text-xl"
+                    >check_circle</span
+                  >
+                  <p class="font-body-md text-sm">
+                    Thank you. Your commercial dossier request has been assigned
+                    to Tariq Haddad. Our corporate advisory desk will contact
+                    you within 4 business hours.
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+        <!-- Client-side Interactive Filter & Form Script -->
+        <script>
+          // Property Filtering Logic
+          const filterButtons = document.querySelectorAll(
+            "#categoryFilterBar .filter-chip",
+          );
+          const propertyCards = document.querySelectorAll(
+            "#propertiesGrid .property-item",
+          );
+
+          filterButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+              // Toggle Active State styles
+              filterButtons.forEach((btn) => {
+                btn.classList.remove("bg-primary", "text-on-primary", "active");
+                btn.classList.add("bg-surface", "text-on-surface");
+              });
+              button.classList.add("bg-primary", "text-on-primary", "active");
+              button.classList.remove("bg-surface", "text-on-surface");
+
+              const selectedCategory = button.getAttribute("data-category");
+
+              propertyCards.forEach((card) => {
+                const cardCategories = card.getAttribute("data-category") || "";
+                if (
+                  selectedCategory === "all" ||
+                  cardCategories.includes(selectedCategory)
+                ) {
+                  card.style.display = "flex";
+                  card.style.opacity = "0";
+                  setTimeout(() => {
+                    card.style.transition = "opacity 300ms ease";
+                    card.style.opacity = "1";
+                  }, 10);
+                } else {
+                  card.style.display = "none";
+                }
+              });
+            });
+          });
+
+          // Form Handling Simulation
+          function handleFormSubmit() {
+            const form = document.getElementById("commercialInquiryForm");
+            const successMsg = document.getElementById("formSuccessMessage");
+            if (successMsg) {
+              successMsg.classList.remove("hidden");
+              form.reset();
+            }
+          }
+        </script>
+      </div>
+    </main>
+    <footer
+      class="w-full bg-surface-container-low text-on-surface mt-section-gap shadow-[0_-1px_6px_rgba(0,0,0,0.02)]"
+    >
+      <div
+        class="w-full max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop py-section-gap"
+      >
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+          <div class="md:col-span-4 flex flex-col gap-stack-sm">
+            <div class="flex items-center gap-3">
+              <img
+                alt="Diyari Real Estate"
+                class="h-8 w-auto object-contain"
+                src="https://lh3.googleusercontent.com/aida/ALJJyrDMrlKBAQ8SG5l9mv6_OwvXLK-bi8XQ3IIamu-c9mVOWsxzDEu0htb9RFT9-7EnYI2CdUQalm9-pxfqgoR9TwTZWCn9d2MzZiQquYVjIeTGipRLG8qFlUAM1niN1qBIqOA0HWenjOYAQ-ven1QPMOmSx1R2FZkQ183MkCEHbWyHb3LriBSRF3vsCgNxvP-9PgYqsnxc9H8IvobLsF3auhR1N45fujAM75XgGRy4CdTJHw"
+              /><span class="font-headline-h3 text-headline-h3 text-primary"
+                >Diyari</span
+              >
+            </div>
+            <p
+              class="font-body-md text-body-md text-on-surface-variant max-w-sm mt-stack-xs"
+            >
+              A curated editorial marketplace celebrating Levantine
+              architectural heritage, modernist craft, and exceptional living
+              environments.
+            </p>
+            <div class="flex items-center gap-stack-sm mt-stack-sm">
+              <span class="w-2 h-2 rounded-full bg-tertiary-container"></span
+              ><span class="font-label-md text-label-md text-on-surface-variant"
+                >Beirut • Amman • Dubai</span
+              >
+            </div>
+          </div>
+          <div class="md:col-span-3 md:col-start-6 flex flex-col gap-stack-sm">
+            <span
+              class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-semibold"
+              >Property Types</span
+            >
+            <div class="flex flex-col gap-stack-xs mt-1">
+              <a
+                class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-150"
+                data-path="property-types"
+                href="#"
+                >Villas</a
+              ><a
+                class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-150"
+                data-path="property-types"
+                href="#"
+                >Apartments</a
+              ><a
+                class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-150"
+                data-path="property-types"
+                href="#"
+                >Commercial</a
+              ><a
+                class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-150"
+                data-path="property-types"
+                href="#"
+                >Penthouse</a
+              >
+            </div>
+          </div>
+          <div class="md:col-span-2 flex flex-col gap-stack-sm">
+            <span
+              class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-semibold"
+              >Company</span
+            >
+            <div class="flex flex-col gap-stack-xs mt-1">
+              <a
+                class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-150"
+                data-path="about"
+                href="#"
+                >Our Story</a
+              ><a
+                class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-150"
+                data-path="about"
+                href="#"
+                >Team</a
+              ><a
+                class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-150"
+                data-path="about"
+                href="#"
+                >Partners</a
+              ><a
+                class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-150"
+                data-path="about"
+                href="#"
+                >Careers</a
+              >
+            </div>
+          </div>
+          <div class="md:col-span-2 flex flex-col gap-stack-sm">
+            <span
+              class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-semibold"
+              >Contact</span
+            >
+            <div class="flex flex-col gap-stack-xs mt-1">
+              <span class="font-body-md text-body-md text-on-surface-variant"
+                >concierge@diyari.com</span
+              ><span class="font-body-md text-body-md text-on-surface-variant"
+                >+961 1 980 200</span
+              ><a
+                class="font-body-md text-body-md text-primary font-medium hover:text-on-surface transition-colors duration-150 mt-stack-xs"
+                data-path="contact"
+                href="#"
+                >Schedule an Appointment →</a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-section-gap pt-stack-lg flex flex-col sm:flex-row items-center justify-between gap-stack-sm shadow-[0_-1px_0_rgba(115,120,116,0.12)]"
+        >
+          <p class="font-body-md text-body-md text-secondary">
+            © 2024 Diyari Real Estate. All rights reserved.
+          </p>
+          <div class="flex items-center gap-stack-md">
+            <span class="font-label-md text-label-md text-secondary"
+              >Privacy Policy</span
+            ><span class="font-label-md text-label-md text-secondary"
+              >Terms of Service</span
+            ><span class="font-label-md text-label-md text-secondary"
+              >Editorial Code</span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
