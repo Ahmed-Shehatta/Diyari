@@ -1,0 +1,967 @@
+<!doctype html>
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <title>Diyari | Luxury Real Estate</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container": "#f0eded",
+              "on-background": "#1c1b1b",
+              "inverse-surface": "#313030",
+              "primary-container": "#2c3b32",
+              tertiary: "#421300",
+              "on-primary-container": "#94a599",
+              "secondary-container": "#e5e2dd",
+              "tertiary-fixed": "#ffdbce",
+              "surface-container-highest": "#e5e2e1",
+              "surface-container-low": "#f6f3f2",
+              error: "#ba1a1a",
+              primary: "#17251d",
+              "tertiary-fixed-dim": "#ffb599",
+              surface: "#fcf9f8",
+              "outline-variant": "#c3c8c2",
+              "on-surface-variant": "#434844",
+              "on-error-container": "#93000a",
+              "surface-container-high": "#eae7e7",
+              secondary: "#5f5e5b",
+              outline: "#737874",
+              "primary-fixed-dim": "#bacbbe",
+              "on-tertiary": "#ffffff",
+              "on-secondary-fixed-variant": "#474743",
+              "surface-dim": "#dcd9d9",
+              "on-tertiary-fixed": "#370e00",
+              "surface-bright": "#fcf9f8",
+              "on-primary-fixed-variant": "#3b4a41",
+              "on-primary-fixed": "#101f17",
+              "on-primary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-container": "#662100",
+              "on-error": "#ffffff",
+              "primary-fixed": "#d5e7da",
+              background: "#fcf9f8",
+              "surface-variant": "#e5e2e1",
+              "surface-tint": "#526258",
+              "on-secondary-container": "#656461",
+              "secondary-fixed": "#e5e2dd",
+              "inverse-primary": "#bacbbe",
+              "on-secondary": "#ffffff",
+              "on-tertiary-container": "#f5814f",
+              "on-tertiary-fixed-variant": "#7f2b00",
+              "on-surface": "#1c1b1b",
+              "on-secondary-fixed": "#1c1c19",
+              "inverse-on-surface": "#f3f0ef",
+              "secondary-fixed-dim": "#c8c6c2",
+              "error-container": "#ffdad6",
+              terracotta: "#c65d3b" /* Custom accent for CTA as per guidance */,
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "8px",
+              xl: "12px",
+              full: "9999px",
+            },
+            spacing: {
+              gutter: "24px",
+              "stack-sm": "8px",
+              "stack-md": "16px",
+              "stack-xs": "4px",
+              "margin-desktop": "64px",
+              "container-max": "1280px",
+              "stack-lg": "32px",
+              "margin-mobile": "20px",
+              "section-gap": "120px",
+            },
+            fontFamily: {
+              "label-md": ["Work Sans"],
+              "display-hero": ["Fraunces"],
+              "headline-h1": ["Fraunces"],
+              "headline-h2": ["Fraunces"],
+              "headline-h3": ["Fraunces"],
+              "body-md": ["Work Sans"],
+              "body-lg": ["Work Sans"],
+              button: ["Work Sans"],
+            },
+            fontSize: {
+              "label-md": [
+                "14px",
+                {
+                  lineHeight: "1.2",
+                  letterSpacing: "0.05em",
+                  fontWeight: "500",
+                },
+              ],
+              "display-hero": [
+                "72px",
+                {
+                  lineHeight: "1.1",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-h1": [
+                "56px",
+                {
+                  lineHeight: "1.2",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "600",
+                },
+              ],
+              "headline-h2": ["36px", { lineHeight: "1.3", fontWeight: "600" }],
+              "headline-h3": ["24px", { lineHeight: "1.4", fontWeight: "600" }],
+              "body-md": ["16px", { lineHeight: "1.7", fontWeight: "400" }],
+              "body-lg": ["18px", { lineHeight: "1.7", fontWeight: "400" }],
+              button: ["16px", { lineHeight: "1", fontWeight: "500" }],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 300,
+          "GRAD" 0,
+          "opsz" 24;
+        vertical-align: middle;
+      }
+
+      .scroll-reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .reveal-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .stagger-1 {
+        transition-delay: 0.1s;
+      }
+      .stagger-2 {
+        transition-delay: 0.2s;
+      }
+      .stagger-3 {
+        transition-delay: 0.3s;
+      }
+
+      .property-card:hover img {
+        transform: scale(1.05);
+      }
+
+      .nav-scrolled {
+        background-color: #f6f3ee !important;
+        border-bottom: 0.5px solid #e5e1d8;
+      }
+
+      /* Testimonial Dot Style */
+      .dot-active {
+        background-color: #fcf9f8;
+      }
+      .dot-inactive {
+        background-color: rgba(252, 249, 248, 0.3);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-surface text-on-surface font-body-md selection:bg-[#c05634] selection:text-white"
+  >
+    <!-- TopNavBar -->
+    <nav
+      class="fixed top-0 w-full z-50 transition-all duration-300 bg-transparent"
+      id="top-nav"
+    >
+      <div
+        class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto"
+      >
+        <a
+          href="index.html"
+          class="flex items-center space-x-3 group cursor-pointer"
+          ><img
+            src="https://lh3.googleusercontent.com/aida/ALJJyrDMrlKBAQ8SG5l9mv6_OwvXLK-bi8XQ3IIamu-c9mVOWsxzDEu0htb9RFT9-7EnYI2CdUQalm9-pxfqgoR9TwTZWCn9d2MzZiQquYVjIeTGipRLG8qFlUAM1niN1qBIqOA0HWenjOYAQ-ven1QPMOmSx1R2FZkQ183MkCEHbWyHb3LriBSRF3vsCgNxvP-9PgYqsnxc9H8IvobLsF3auhR1N45fujAM75XgGRy4CdTJHw"
+            alt="Diyari Real Estate Logo"
+            class="h-10 w-10 object-contain rounded-md"
+          /><span
+            class="font-headline-h2 text-headline-h2 text-primary tracking-tight"
+            >Diyari</span
+          ></a
+        >
+        <div class="hidden md:flex items-center space-x-8">
+          <a
+            class="text-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md"
+            href="index.html"
+            >Home</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md"
+            href="properties.html"
+            >Properties</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md"
+            href="about.html"
+            >About</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md"
+            href="contact.html"
+            >Contact</a
+          >
+        </div>
+        <a
+          href="contact.html"
+          class="bg-primary text-on-primary px-6 py-3 rounded-lg font-button text-button hover:scale-95 transition-transform duration-150 inline-block text-center"
+          >List your property</a
+        >
+      </div>
+    </nav>
+    <main>
+      <!-- Section 1: Hero -->
+      <section class="h-screen flex flex-col md:flex-row items-center pt-24">
+        <div
+          class="w-full md:w-[60%] px-margin-desktop flex flex-col justify-center h-full"
+        >
+          <h1
+            class="font-headline-h1 text-headline-h1 mb-6 scroll-reveal reveal-visible stagger-1 max-w-xl"
+          >
+            Find a home you'll never want to leave
+          </h1>
+          <p
+            class="font-body-lg text-body-lg text-on-surface-variant mb-12 scroll-reveal reveal-visible stagger-2 max-w-lg"
+          >
+            Curated residential and commercial listings across the region, where
+            luxury meets architectural heritage.
+          </p>
+          <!-- Horizontal Search Bar -->
+          <div
+            class="bg-surface-container-lowest p-2 rounded-xl border border-outline-variant shadow-lg flex items-center w-full max-w-3xl scroll-reveal reveal-visible stagger-3"
+          >
+            <div
+              class="flex-1 px-4 flex flex-col border-r border-outline-variant"
+            >
+              <span
+                class="font-label-md text-[10px] uppercase text-on-surface-variant tracking-widest"
+                >Location</span
+              >
+              <input
+                class="border-none p-0 focus:ring-0 text-on-background font-medium bg-transparent"
+                placeholder="Dubai Marina, UAE"
+                type="text"
+              />
+            </div>
+            <div
+              class="flex-1 px-4 flex flex-col border-r border-outline-variant"
+            >
+              <span
+                class="font-label-md text-[10px] uppercase text-on-surface-variant tracking-widest"
+                >Property Type</span
+              >
+              <select
+                class="border-none p-0 focus:ring-0 text-on-background font-medium bg-transparent"
+              >
+                <option>Villa</option>
+                <option>Apartment</option>
+                <option>Commercial</option>
+              </select>
+            </div>
+            <div class="flex-1 px-4 flex flex-col">
+              <span
+                class="font-label-md text-[10px] uppercase text-on-surface-variant tracking-widest"
+                >Price</span
+              >
+              <input
+                class="border-none p-0 focus:ring-0 text-on-background font-medium bg-transparent"
+                placeholder="Any Price"
+                type="text"
+              />
+            </div>
+            <button
+              class="bg-terracotta text-white px-8 py-4 rounded-lg font-button hover:bg-terracotta/90 transition-all ml-2 flex items-center space-x-2"
+            >
+              <span class="material-symbols-outlined">search</span>
+              <span>Search</span>
+            </button>
+          </div>
+        </div>
+        <div
+          class="w-full md:w-[40%] h-full relative pr-margin-desktop py-12 md:py-24"
+        >
+          <div
+            class="w-full h-full rounded-xl overflow-hidden shadow-2xl scroll-reveal reveal-visible"
+          >
+            <div
+              class="w-full h-full bg-cover bg-center"
+              data-alt="A grand modernist desert villa at golden hour, featuring sleek concrete lines, expansive floor-to-ceiling glass walls reflecting a warm orange sunset, and lush palm trees. The lighting is soft and architectural, emphasizing the premium cream-colored masonry. The scene is serene, capturing the height of luxury Middle Eastern residential design in a warm minimalist style."
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDwGXdCRVJid6LlyJAaZh5e6dswYmK95bJ00U8YE5S1h-_PrGScQgO-t5cOpG_fpHI3rIZKTyZNO6EI_o848Z94cngoovI4C6EO5kWdSqnPTGQjHNxGdpaoNlugXaaO3d6XgnJrjoWhookvVq_GZMnCV62w_Uk6PB_N2bhNsypXCpnuV-_NgW-wYgnD69KB1GAqxJsA1GojHRcN4Um7UArPxl_6et8H101CYw0ugaa4xnFNKS9zGBMgZw&quot;);
+              "
+            ></div>
+          </div>
+        </div>
+      </section>
+      <!-- Section 2: Featured Stats -->
+      <section
+        class="bg-surface-container-low py-24 scroll-reveal reveal-visible"
+      >
+        <div
+          class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-2 md:grid-cols-4 gap-gutter text-center"
+        >
+          <div>
+            <div
+              class="font-headline-h2 text-headline-h2 text-primary count-up"
+              data-target="2400"
+            >
+              2,400+
+            </div>
+            <p
+              class="font-label-md text-on-surface-variant uppercase tracking-widest mt-2"
+            >
+              2,400+ listings
+            </p>
+          </div>
+          <div>
+            <div
+              class="font-headline-h2 text-headline-h2 text-primary count-up"
+              data-target="18"
+            >
+              18
+            </div>
+            <p
+              class="font-label-md text-on-surface-variant uppercase tracking-widest mt-2"
+            >
+              18 cities
+            </p>
+          </div>
+          <div>
+            <div
+              class="font-headline-h2 text-headline-h2 text-primary count-up"
+              data-target="1200"
+            >
+              1,200+
+            </div>
+            <p
+              class="font-label-md text-on-surface-variant uppercase tracking-widest mt-2"
+            >
+              1,200+ happy owners
+            </p>
+          </div>
+          <div>
+            <div
+              class="font-headline-h2 text-headline-h2 text-primary count-up"
+              data-target="12"
+            >
+              12
+            </div>
+            <p
+              class="font-label-md text-on-surface-variant uppercase tracking-widest mt-2"
+            >
+              12 years of trust
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Section 3: Featured Properties -->
+      <section
+        class="py-24 max-w-container-max mx-auto px-margin-desktop scroll-reveal reveal-visible"
+      >
+        <div class="flex justify-between items-end mb-12">
+          <h2 class="font-headline-h2 text-headline-h2">Featured Properties</h2>
+          <a
+            class="text-terracotta font-button flex items-center hover:translate-x-1 transition-transform"
+            href="#"
+          >
+            View all properties
+            <span class="material-symbols-outlined ml-2">arrow_forward</span>
+          </a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+          <!-- Card 1 -->
+          <div
+            class="property-card bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden group transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+          >
+            <div class="relative aspect-[16/10] overflow-hidden">
+              <div
+                class="w-full h-full bg-cover bg-center transition-transform duration-700"
+                data-alt="A luxury contemporary apartment interior with a high-end minimalist design. Floor-to-ceiling windows overlook a prestigious skyline at dusk. The room features forest green velvet accents, premium cream furniture, and marble surfaces. The lighting is warm, moody, and highly editorial, showcasing an exclusive residential space."
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCuLcc-92-zN_QPd7aXFOpt1w9l6bFDjBzgVoYKi__hEg9MmUx1iCpqRrq_Ood-xsn_y6rRO3ab-sReP4eZg0EVTKqJ2OIn7ezpLsJuo8_jeLLjQ5ZfosIrjSqxvm-OeeUiAzKn-IJXIi4OINlgnDYS4w81xlwJBy6wA2BpqXe6JEzCqWphp4HaDRy_i5k7MwhgZCnuvhR4AkzYiU3W-ixO3nT6QL8ETT2W3tb_6MNY0bhzBQt-2VBaUQ&quot;);
+                "
+              ></div>
+              <div
+                class="absolute top-4 left-4 bg-terracotta text-white px-3 py-1 text-xs font-label-md rounded uppercase tracking-widest"
+              >
+                New
+              </div>
+              <button
+                class="absolute top-4 right-4 text-white hover:text-terracotta transition-colors"
+              >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: &quot;FILL&quot; 0"
+                  >favorite</span
+                >
+              </button>
+            </div>
+            <div class="p-6">
+              <h3 class="font-headline-h3 text-headline-h3 mb-1 text-primary">
+                $1,250,000
+              </h3>
+              <p class="font-body-md text-on-surface-variant mb-6">
+                The Onyx Heights, DIFC, Dubai
+              </p>
+              <div
+                class="flex items-center space-x-6 text-on-surface-variant font-label-md"
+              >
+                <div class="flex items-center space-x-2">
+                  <span class="material-symbols-outlined text-[20px]">bed</span>
+                  <span>3 Beds</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <span class="material-symbols-outlined text-[20px]"
+                    >bathtub</span
+                  >
+                  <span>4 Baths</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <span class="material-symbols-outlined text-[20px]"
+                    >square_foot</span
+                  >
+                  <span>2,400 sqft</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div
+            class="property-card bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden group transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+          >
+            <div class="relative aspect-[16/10] overflow-hidden">
+              <div
+                class="w-full h-full bg-cover bg-center transition-transform duration-700"
+                data-alt="An expansive beachfront villa with private infinity pool. Modern architectural style with heavy use of white plaster and natural light wood. Sunlight spills across a limestone terrace. High-end lifestyle photography, bright, clear, and aspirational."
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDRU9yd8udHip4C06y2af1rdg0Wxxl_gNkIQlp_xSXd4ACO3aLeFrAmJw3WWj4TwQeyQkhyj8-bjttdjtmzAr4Y90r5QaC89PN4wFYfmHTRU5ksMv2NHqJq2ShLkVhmOgEMsMDBXISGgYe6unpMGZCd_gKSWUQ_bu6B_ii4IMmgY-tDi7inyBPlNSaXU7vLTRlE9SHsfynWPpfCU3_mXrVCKYhuaBKLuErPLyql40gjUxmWOM-Cj_0Pdw&quot;);
+                "
+              ></div>
+              <div
+                class="absolute top-4 left-4 bg-terracotta text-white px-3 py-1 text-xs font-label-md rounded uppercase tracking-widest"
+              >
+                Featured
+              </div>
+              <button
+                class="absolute top-4 right-4 text-white hover:text-terracotta transition-colors"
+              >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >favorite</span
+                >
+              </button>
+            </div>
+            <div class="p-6">
+              <h3 class="font-headline-h3 text-headline-h3 mb-1 text-primary">
+                $4,800,000
+              </h3>
+              <p class="font-body-md text-on-surface-variant mb-6">
+                Azure Bay Estate, Palm Jumeirah
+              </p>
+              <div
+                class="flex items-center space-x-6 text-on-surface-variant font-label-md"
+              >
+                <div class="flex items-center space-x-2">
+                  <span class="material-symbols-outlined text-[20px]">bed</span>
+                  <span>5 Beds</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <span class="material-symbols-outlined text-[20px]"
+                    >bathtub</span
+                  >
+                  <span>6 Baths</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <span class="material-symbols-outlined text-[20px]"
+                    >square_foot</span
+                  >
+                  <span>5,200 sqft</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div
+            class="property-card bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden group transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+          >
+            <div class="relative aspect-[16/10] overflow-hidden">
+              <div
+                class="w-full h-full bg-cover bg-center transition-transform duration-700"
+                data-alt="A modern penthouse with a terrace garden. Nighttime view of a bustling city skyline through large windows. The interior is decorated with dark wood and warm ambient strip lighting. Luxury magazine style."
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuC4B6bhSp7b38sscQi1dvF0iDOhyiRvIrYI7epE0ns_THseBb52KLBVCMBogukUoGDLNDYGeRdC6mlAY3e1pw6FH00mlxUpjsOUWFYTVOALAMUmIjtF6p74_iHYfxDn6iV1Yy4OpoYydPURasar7E_3m6jDuJEy3-wRasnPqpFMtvdRXJrlzkSWV2xVCy6N5fNIFo0w6g8FOKitFH7zjhtlOzlIaApXPhC-VVUXghdk-USUntAbqRn8Tw&quot;);
+                "
+              ></div>
+              <div
+                class="absolute top-4 left-4 bg-terracotta text-white px-3 py-1 text-xs font-label-md rounded uppercase tracking-widest"
+              >
+                New
+              </div>
+              <button
+                class="absolute top-4 right-4 text-white hover:text-terracotta transition-colors"
+              >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: &quot;FILL&quot; 0"
+                  >favorite</span
+                >
+              </button>
+            </div>
+            <div class="p-6">
+              <h3 class="font-headline-h3 text-headline-h3 mb-1 text-primary">
+                $2,100,000
+              </h3>
+              <p class="font-body-md text-on-surface-variant mb-6">
+                Skyline Loft, Downtown Doha
+              </p>
+              <div
+                class="flex items-center space-x-6 text-on-surface-variant font-label-md"
+              >
+                <div class="flex items-center space-x-2">
+                  <span class="material-symbols-outlined text-[20px]">bed</span>
+                  <span>2 Beds</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <span class="material-symbols-outlined text-[20px]"
+                    >bathtub</span
+                  >
+                  <span>2 Baths</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <span class="material-symbols-outlined text-[20px]"
+                    >square_foot</span
+                  >
+                  <span>1,850 sqft</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card 4, 5, 6 omitted for brevity in code but implied in grid -->
+        </div>
+      </section>
+      <!-- Section 4: Browse by Category -->
+      <section
+        class="py-24 max-w-container-max mx-auto px-margin-desktop scroll-reveal reveal-visible"
+      >
+        <h2 class="font-headline-h2 text-headline-h2 mb-12">
+          Browse by Category
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter h-[400px]">
+          <div class="relative group cursor-pointer overflow-hidden rounded-xl">
+            <div
+              class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+              data-alt="Architectural detail of a luxury villa entrance with stone walls and desert flora."
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCOgcu81dHLlBd3Q00SgObbFq5GJuoi9pULKBfd8zWA4qyh8TCrBj-AwIsPHaPKPM_RxBjdSQgrFZm2Fda0DSQzwcmzb226dCab_zqUCjMKET1q61CRttle6VtJ5y3WYUAew4qsXMA4ziE1mPS-GYJ2XZj0AyKUM9rwHQFu2g-zoK2yBB30dwudqE3ZIw1joukqKY_NzJGeU02Sr6K-ybuX6-M8QpsgdkbXYHAmz4zmOJwpUhcoR7mtSg&quot;);
+              "
+            ></div>
+            <div
+              class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors"
+            ></div>
+            <span class="absolute bottom-6 left-6 text-white font-headline-h3"
+              >Villas</span
+            >
+            <span
+              class="material-symbols-outlined absolute top-6 right-6 text-white bg-terracotta p-2 rounded-full transform group-hover:translate-x-2 transition-transform"
+              >arrow_forward</span
+            >
+          </div>
+          <div class="relative group cursor-pointer overflow-hidden rounded-xl">
+            <div
+              class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+              data-alt="High-rise apartment building facade during the blue hour with glowing windows."
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBgIso8N7GNOuT9Vh5sffWem3TT6s-U54dwYuzQmc_x4sl8NCKmV6RWjAboiS15hdYpE1y1TJ4NABqllCh62kSHqxKrJWflPns09-6XZiqprkyKohl9cWBruMx3dBmlo6dRReFaKgADIyVouLpT4R2EmjnysszntolQBLvfA1c2P0QPFkvRpZLrOBg67S3Xl7e3aOcRzSuPa3mQ4aAwj8VC6beVmv9X8pPxzfbHpAsw23zmpmbonGsPyQ&quot;);
+              "
+            ></div>
+            <div
+              class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors"
+            ></div>
+            <span class="absolute bottom-6 left-6 text-white font-headline-h3"
+              >Apartments</span
+            >
+            <span
+              class="material-symbols-outlined absolute top-6 right-6 text-white bg-terracotta p-2 rounded-full transform group-hover:translate-x-2 transition-transform"
+              >arrow_forward</span
+            >
+          </div>
+          <div class="relative group cursor-pointer overflow-hidden rounded-xl">
+            <div
+              class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+              data-alt="Modern glass office lobby with minimalist furniture and high ceilings."
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDO_tsvZGtALhRzI7jgObRjV6EGURkrrViuuK9XhYHiPnEqccTXpQ56k4g8osZVvMlJVFNaiiC46GncjEx2_hVls9hIe51xrJYoEfv2DxcTRmjLex588TxbRqakomIA5qnrJa6JP3pETMlLCK8PH3je318zzJee1DQvkEW4OFuZx-hSJnfGHmPAIvaajaOz4BLVERt9RLoyjn7-IPjYIKnHo1FHrA_lMFzaNAzhvShDzhanC7jU4vI8ug&quot;);
+              "
+            ></div>
+            <div
+              class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors"
+            ></div>
+            <span class="absolute bottom-6 left-6 text-white font-headline-h3"
+              >Commercial</span
+            >
+            <span
+              class="material-symbols-outlined absolute top-6 right-6 text-white bg-terracotta p-2 rounded-full transform group-hover:translate-x-2 transition-transform"
+              >arrow_forward</span
+            >
+          </div>
+          <div class="relative group cursor-pointer overflow-hidden rounded-xl">
+            <div
+              class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+              data-alt="A wide drone shot of a beautiful empty land plot overlooking a valley at sunrise."
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDuoFXkr0wiYIPChaUx2GXnrJtZqQfp_j7Oe_s92oQ_Gb4idzBT3kawLny0mJLsWI9S2FqQRahiTa-FShk8NFvfyvB0ZJ71hj5-PPBGUP62GPXbpygstEGICCsbKxqOqJJ_95C9xRMNKqdoUw6MZTZkgHaDQkwdCQNx0z3JkXB2C2Uoe_Kqb9siwWu6IQLxfaKHZPcGSfLNSYiT0a3KDFobybMxjugTXHNh5sfgB4DH35As1KTF1pxQ6A&quot;);
+              "
+            ></div>
+            <div
+              class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors"
+            ></div>
+            <span class="absolute bottom-6 left-6 text-white font-headline-h3"
+              >Land</span
+            >
+            <span
+              class="material-symbols-outlined absolute top-6 right-6 text-white bg-terracotta p-2 rounded-full transform group-hover:translate-x-2 transition-transform"
+              >arrow_forward</span
+            >
+          </div>
+        </div>
+      </section>
+      <!-- Section 5: Why Diyari -->
+      <section
+        class="bg-surface-container-low py-24 scroll-reveal reveal-visible"
+      >
+        <div
+          class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-16 text-center"
+        >
+          <div class="flex flex-col items-center">
+            <div
+              class="w-16 h-16 bg-terracotta/10 rounded-full flex items-center justify-center text-terracotta mb-6"
+            >
+              <span class="material-symbols-outlined text-[32px]"
+                >verified</span
+              >
+            </div>
+            <h3 class="font-headline-h3 text-headline-h3 mb-4">
+              Verified listings
+            </h3>
+            <p class="text-on-surface-variant max-w-xs">
+              Every property on our platform is physically inspected and
+              verified by our team for total transparency.
+            </p>
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="w-16 h-16 bg-terracotta/10 rounded-full flex items-center justify-center text-terracotta mb-6"
+            >
+              <span class="material-symbols-outlined text-[32px]"
+                >support_agent</span
+              >
+            </div>
+            <h3 class="font-headline-h3 text-headline-h3 mb-4">
+              Trusted agents
+            </h3>
+            <p class="text-on-surface-variant max-w-xs">
+              Work with certified real estate experts who specialize in the
+              local market and luxury segment.
+            </p>
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="w-16 h-16 bg-terracotta/10 rounded-full flex items-center justify-center text-terracotta mb-6"
+            >
+              <span class="material-symbols-outlined text-[32px]"
+                >handshake</span
+              >
+            </div>
+            <h3 class="font-headline-h3 text-headline-h3 mb-4">
+              End-to-end support
+            </h3>
+            <p class="text-on-surface-variant max-w-xs">
+              From viewing to legal paperwork and mortgage assistance, we guide
+              you through every step of the journey.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Section 6: Testimonials -->
+      <section class="bg-primary-container py-24">
+        <div
+          class="max-w-container-max mx-auto px-margin-desktop scroll-reveal reveal-visible"
+        >
+          <div class="overflow-hidden" id="testimonial-slider">
+            <div
+              class="flex transition-transform duration-700 ease-in-out"
+              style="transform: translateX(0%)"
+            >
+              <!-- Slide 1 -->
+              <div
+                class="w-full flex-shrink-0 flex flex-col items-center text-center"
+              >
+                <span
+                  class="material-symbols-outlined text-on-primary-container text-[64px] mb-8"
+                  >format_quote</span
+                >
+                <blockquote
+                  class="font-headline-h2 italic text-surface leading-relaxed max-w-3xl mb-12"
+                >
+                  "The level of professionalism and attention to detail at
+                  Diyari is unmatched. They didn't just find us a house; they
+                  found us a piece of architecture that we now call home."
+                </blockquote>
+                <div class="flex items-center space-x-4">
+                  <div
+                    class="w-12 h-12 rounded-full overflow-hidden bg-surface-container-highest"
+                  >
+                    <img
+                      class="w-full h-full object-cover"
+                      data-alt="Headshot of a sophisticated businessman in a tailored suit, looking directly at the camera with a confident smile. Soft lighting, professional studio background."
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuAti4CmrLxtoa_ppCZl1VdBhuR18AIev0A9fI5wj2s8DUUJBzh1sX-J8jt9DFQeau3IlzORuMIsk47v5Yf9oRnXt2Unh1-THWGwyBa7ghr-MfKQ6vPdTmH47CQwPIG5H1LH5xXfthGeLvN6apLfVHXC0n5F-KIIrcLB0gCJHoqHL1gCkXuGa_N3_7cvkMKQhMlEn_BcEGASkTzpOw5CFNUo-x-UdGk0VTPjtK0ZCrDFH86Aec_5XGjThw"
+                    />
+                  </div>
+                  <div class="text-left">
+                    <p class="text-surface font-bold">Alexander Vance</p>
+                    <p class="text-on-primary-container text-sm">
+                      Investment Portfolio Manager
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-center mt-12 space-x-2">
+            <button class="w-2 h-2 rounded-full dot-active"></button>
+            <button class="w-2 h-2 rounded-full dot-inactive"></button>
+            <button class="w-2 h-2 rounded-full dot-inactive"></button>
+          </div>
+        </div>
+      </section>
+      <!-- Section 7: Final CTA -->
+      <section
+        class="py-24 bg-surface scroll-reveal text-center reveal-visible"
+      >
+        <div class="max-w-container-max mx-auto px-margin-desktop">
+          <h2 class="font-headline-h2 text-headline-h2 mb-4">
+            Ready to find your next home?
+          </h2>
+          <p
+            class="text-on-surface-variant font-body-lg mb-12 max-w-lg mx-auto"
+          >
+            Join the exclusive community of homeowners who found their sanctuary
+            through Diyari's curated portfolio.
+          </p>
+          <div
+            class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-6"
+          >
+            <button
+              class="bg-terracotta text-white px-10 py-4 rounded-lg font-button hover:bg-terracotta/90 transition-all min-w-[200px]"
+            >
+              Browse properties
+            </button>
+            <button
+              class="border border-primary-container text-primary-container px-10 py-4 rounded-lg font-button hover:bg-primary-container hover:text-white transition-all min-w-[200px]"
+            >
+              Talk to an agent
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="bg-primary-container text-on-primary-container py-section-gap w-full"
+    >
+      <div
+        class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter"
+      >
+        <div class="flex flex-col space-y-6">
+          <div
+            class="font-headline-h2 text-headline-h2 text-on-primary-container"
+          >
+            Diyari
+          </div>
+          <p class="text-sm leading-relaxed opacity-80">
+            A premium real estate experience bridging heritage and luxury.
+            Curating exceptional spaces across the region for over a decade.
+          </p>
+        </div>
+        <div class="flex flex-col space-y-4">
+          <h4
+            class="font-headline-h3 text-headline-h3 text-on-primary-container"
+          >
+            About
+          </h4>
+          <a
+            class="opacity-80 hover:text-on-tertiary-container transition-colors"
+            href="our-story.html"
+            >Our Story</a
+          >
+          <a
+            class="opacity-80 hover:text-on-tertiary-container transition-colors"
+            href="the-team.html"
+            >The Team</a
+          >
+          <a
+            class="opacity-80 hover:text-on-tertiary-container transition-colors"
+            href="partners.html"
+            >Partners</a
+          >
+          <a
+            class="opacity-80 hover:text-on-tertiary-container transition-colors"
+            href="careers.html"
+            >Careers</a
+          >
+        </div>
+        <div class="flex flex-col space-y-4">
+          <h4
+            class="font-headline-h3 text-headline-h3 text-on-primary-container"
+          >
+            Property types
+          </h4>
+          <a
+            class="opacity-80 hover:text-on-tertiary-container transition-colors"
+            href="villas-collection.html"
+            >Villas</a
+          >
+          <a
+            class="opacity-80 hover:text-on-tertiary-container transition-colors"
+            href="apartments-collection.html"
+            >Apartments</a
+          >
+          <a
+            class="opacity-80 hover:text-on-tertiary-container transition-colors"
+            href="commercial-properties.html"
+            >Commercial</a
+          >
+          <a
+            class="opacity-80 hover:text-on-tertiary-container transition-colors"
+            href="penthouse-collection.html"
+            >Penthouse</a
+          >
+        </div>
+        <div class="flex flex-col space-y-4">
+          <h4
+            class="font-headline-h3 text-headline-h3 text-on-primary-container"
+          >
+            Contact
+          </h4>
+          <p class="opacity-80">124 Luxury Tower, Burj District, Dubai, UAE</p>
+          <a
+            class="opacity-80 hover:text-on-tertiary-container transition-colors block"
+            href="mailto:contact@diyari.com"
+            >contact@diyari.com</a
+          >
+          <div class="flex space-x-4 pt-4">
+            <span
+              class="material-symbols-outlined cursor-pointer hover:text-on-tertiary-container transition-colors"
+              >share</span
+            >
+            <span
+              class="material-symbols-outlined cursor-pointer hover:text-on-tertiary-container transition-colors"
+              >public</span
+            >
+            <span
+              class="material-symbols-outlined cursor-pointer hover:text-on-tertiary-container transition-colors"
+              >alternate_email</span
+            >
+          </div>
+        </div>
+      </div>
+      <div
+        class="max-w-container-max mx-auto px-margin-desktop mt-24 pt-8 border-t border-on-primary-container/20 text-center opacity-60 text-xs"
+      >
+        © 2024 Diyari Real Estate. All rights reserved.
+      </div>
+    </footer>
+    <script>
+      // Scroll Reveal Implementation
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("reveal-visible");
+            // Start count-up if it's the stats section
+            if (entry.target.contains(document.querySelector(".count-up"))) {
+              animateCounters();
+            }
+          }
+        });
+      }, observerOptions);
+
+      document
+        .querySelectorAll(".scroll-reveal")
+        .forEach((el) => observer.observe(el));
+
+      // Count-up animation
+      function animateCounters() {
+        document.querySelectorAll(".count-up").forEach((counter) => {
+          const target = +counter.getAttribute("data-target");
+          const count = +counter.innerText.replace(",", "");
+          const increment = target / 100;
+
+          if (count < target) {
+            const newValue = Math.ceil(count + increment);
+            counter.innerText = newValue.toLocaleString();
+            setTimeout(animateCounters, 20);
+          } else {
+            counter.innerText =
+              target.toLocaleString() + (target > 100 ? "+" : "");
+          }
+        });
+      }
+
+      // Sticky Nav logic
+      window.addEventListener("scroll", () => {
+        const nav = document.getElementById("top-nav");
+        if (window.scrollY > 40) {
+          nav.classList.add("nav-scrolled");
+        } else {
+          nav.classList.remove("nav-scrolled");
+        }
+      });
+
+      // Simple testimonial interaction
+      const dots = document.querySelectorAll(".dot-inactive, .dot-active");
+      dots.forEach((dot, idx) => {
+        dot.addEventListener("click", () => {
+          dots.forEach((d) => {
+            d.classList.remove("dot-active");
+            d.classList.add("dot-inactive");
+          });
+          dot.classList.add("dot-active");
+          dot.classList.remove("dot-inactive");
+          // Normally would slide the container here
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1590 @@
+<!doctype html>
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="favicon.png" rel="icon" type="image/png" />
+    <title>Diyari | Luxury Real Estate</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container": "#f0eded",
+              "on-background": "#1c1b1b",
+              "inverse-surface": "#313030",
+              "primary-container": "#2c3b32",
+              tertiary: "#421300",
+              "on-primary-container": "#94a599",
+              "secondary-container": "#e5e2dd",
+              "tertiary-fixed": "#ffdbce",
+              "surface-container-highest": "#e5e2e1",
+              "surface-container-low": "#f6f3f2",
+              error: "#ba1a1a",
+              primary: "#17251d",
+              "tertiary-fixed-dim": "#ffb599",
+              surface: "#fcf9f8",
+              "outline-variant": "#c3c8c2",
+              "on-surface-variant": "#434844",
+              "on-error-container": "#93000a",
+              "surface-container-high": "#eae7e7",
+              secondary: "#5f5e5b",
+              outline: "#737874",
+              "primary-fixed-dim": "#bacbbe",
+              "on-tertiary": "#ffffff",
+              "on-secondary-fixed-variant": "#474743",
+              "surface-dim": "#dcd9d9",
+              "on-tertiary-fixed": "#370e00",
+              "surface-bright": "#fcf9f8",
+              "on-primary-fixed-variant": "#3b4a41",
+              "on-primary-fixed": "#101f17",
+              "on-primary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-container": "#662100",
+              "on-error": "#ffffff",
+              "primary-fixed": "#d5e7da",
+              background: "#fcf9f8",
+              "surface-variant": "#e5e2e1",
+              "surface-tint": "#526258",
+              "on-secondary-container": "#656461",
+              "secondary-fixed": "#e5e2dd",
+              "inverse-primary": "#bacbbe",
+              "on-secondary": "#ffffff",
+              "on-tertiary-container": "#f5814f",
+              "on-tertiary-fixed-variant": "#7f2b00",
+              "on-surface": "#1c1b1b",
+              "on-secondary-fixed": "#1c1c19",
+              "inverse-on-surface": "#f3f0ef",
+              "secondary-fixed-dim": "#c8c6c2",
+              "error-container": "#ffdad6",
+              terracotta: "#c65d3b" /* Custom accent for CTA as per guidance */,
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "8px",
+              xl: "12px",
+              full: "9999px",
+            },
+            spacing: {
+              gutter: "24px",
+              "stack-sm": "8px",
+              "stack-md": "16px",
+              "stack-xs": "4px",
+              "margin-desktop": "64px",
+              "container-max": "1280px",
+              "stack-lg": "32px",
+              "margin-mobile": "20px",
+              "section-gap": "120px",
+            },
+            fontFamily: {
+              "label-md": ["Work Sans"],
+              "display-hero": ["Fraunces"],
+              "headline-h1": ["Fraunces"],
+              "headline-h2": ["Fraunces"],
+              "headline-h3": ["Fraunces"],
+              "body-md": ["Work Sans"],
+              "body-lg": ["Work Sans"],
+              button: ["Work Sans"],
+            },
+            fontSize: {
+              "label-md": [
+                "14px",
+                {
+                  lineHeight: "1.2",
+                  letterSpacing: "0.05em",
+                  fontWeight: "500",
+                },
+              ],
+              "display-hero": [
+                "72px",
+                {
+                  lineHeight: "1.1",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-h1": [
+                "56px",
+                {
+                  lineHeight: "1.2",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "600",
+                },
+              ],
+              "headline-h2": ["36px", { lineHeight: "1.3", fontWeight: "600" }],
+              "headline-h3": ["24px", { lineHeight: "1.4", fontWeight: "600" }],
+              "body-md": ["16px", { lineHeight: "1.7", fontWeight: "400" }],
+              "body-lg": ["18px", { lineHeight: "1.7", fontWeight: "400" }],
+              button: ["16px", { lineHeight: "1", fontWeight: "500" }],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 300,
+          "GRAD" 0,
+          "opsz" 24;
+        vertical-align: middle;
+      }
+
+      .scroll-reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .reveal-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .stagger-1 {
+        transition-delay: 0.1s;
+      }
+      .stagger-2 {
+        transition-delay: 0.2s;
+      }
+      .stagger-3 {
+        transition-delay: 0.3s;
+      }
+
+      .property-card:hover img {
+        transform: scale(1.05);
+      }
+
+      .nav-scrolled {
+        background-color: #f6f3ee !important;
+        border-bottom: 0.5px solid #e5e1d8;
+      }
+
+      /* Testimonial Dot Style */
+      .dot-active {
+        background-color: #fcf9f8;
+      }
+      .dot-inactive {
+        background-color: rgba(252, 249, 248, 0.3);
+      }
+    </style>
+    <meta content="web_standard" name="shell-type" />
+  </head>
+  <body class="bg-surface text-on-surface font-body-md">
+    <!-- TopNavBar -->
+    <nav
+      class="fixed top-0 w-full z-50 transition-all duration-300 bg-transparent"
+      id="top-nav"
+    >
+      <div
+        class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto"
+      >
+        <a class="flex items-center space-x-3 group cursor-pointer" href="#"
+          ><img
+            alt="Diyari Real Estate Logo"
+            class="h-10 w-10 object-contain rounded-md"
+            src="https://lh3.googleusercontent.com/aida/ALJJyrDMrlKBAQ8SG5l9mv6_OwvXLK-bi8XQ3IIamu-c9mVOWsxzDEu0htb9RFT9-7EnYI2CdUQalm9-pxfqgoR9TwTZWCn9d2MzZiQquYVjIeTGipRLG8qFlUAM1niN1qBIqOA0HWenjOYAQ-ven1QPMOmSx1R2FZkQ183MkCEHbWyHb3LriBSRF3vsCgNxvP-9PgYqsnxc9H8IvobLsF3auhR1N45fujAM75XgGRy4CdTJHw"
+          /><span
+            class="font-headline-h2 text-headline-h2 text-primary tracking-tight"
+            >Diyari</span
+          ></a
+        >
+        <div class="hidden md:flex items-center space-x-8">
+          <a
+            class="text-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md"
+            href="#"
+            >Home</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md"
+            href="#"
+            >Properties</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md"
+            href="#"
+            >About</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md"
+            href="#"
+            >Contact</a
+          >
+        </div>
+        <button
+          class="bg-primary text-on-primary px-6 py-3 rounded-lg font-button text-button hover:scale-95 transition-transform duration-150"
+        >
+          List your property
+        </button>
+      </div>
+    </nav>
+    <main>
+      <div class="flex flex-col w-full">
+        <!-- Hero Section -->
+        <section
+          class="relative w-full pt-28 pb-20 px-margin-mobile md:px-margin-desktop bg-surface overflow-hidden"
+        >
+          <div class="max-w-container-max mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-end">
+              <div class="lg:col-span-8 flex flex-col space-y-6">
+                <div class="inline-flex items-center gap-3">
+                  <span class="w-8 h-[1px] bg-terracotta"></span>
+                  <span
+                    class="font-label-md text-label-md uppercase text-terracotta tracking-widest"
+                    >Collaborative Ecosystem &amp; Alliances</span
+                  >
+                </div>
+                <h1
+                  class="font-headline-h1 text-headline-h1 text-primary leading-tight"
+                >
+                  United with Visionary Studios, Artisans, and Institutions
+                </h1>
+                <p
+                  class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed"
+                >
+                  Our network connects leading architectural studios, heritage
+                  conservation bodies, master craftsmen, and private
+                  institutional developers across the Mediterranean and Gulf.
+                </p>
+              </div>
+              <div
+                class="lg:col-span-4 flex flex-col justify-between items-start lg:items-end space-y-4 pt-4 lg:pt-0"
+              >
+                <div
+                  class="bg-surface-container-low p-6 rounded-xl w-full max-w-xs shadow-sm"
+                >
+                  <div class="flex items-baseline gap-2">
+                    <span
+                      class="font-display-hero text-headline-h2 text-primary"
+                      >48</span
+                    >
+                    <span
+                      class="font-body-md text-body-md text-on-surface-variant"
+                      >Active Alliances</span
+                    >
+                  </div>
+                  <p class="font-label-md text-label-md text-secondary mt-1">
+                    Across 7 Levant &amp; Gulf Territories
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Hero Architectural Photographic Composition -->
+            <div
+              class="mt-16 grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch"
+            >
+              <div
+                class="lg:col-span-8 rounded-xl overflow-hidden shadow-md group relative min-h-[380px]"
+              >
+                <div
+                  class="w-full h-full min-h-[380px] bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                  data-alt="Expansive architectural interior of a sunlit courtyard in a renovated Levantine palace, showcasing pale Jerusalem limestone walls, soaring slender arches, bespoke deep forest green furniture, and terracotta vessels filled with native olive branches bathed in afternoon Mediterranean sunlight."
+                  style="
+                    background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCWsalX4v-SQLzGZbw387qU0Iuko5phrD-i4Exdq3WTl2440icjk9azYAnAzy3qDOtRElucBYj0n5_iX-NL3R30HRhzfNRCdii42QJUUJozsrZduLilMRWkklH0jz_8zCyhywBG3pPkgeVIHWNa9BITGP4cq9LI-XiqoFml2uGGUXyXcWwvCs482VJXjoKWErUlcd-bwfROlsoHotIT_G6U_TWdVx9p8e97OzgbQRYB&quot;);
+                  "
+                ></div>
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent flex flex-col justify-end p-8 text-on-primary"
+                >
+                  <span
+                    class="font-label-md text-label-md uppercase tracking-wider text-tertiary-fixed-dim"
+                    >Collaborative Milestone</span
+                  >
+                  <h3
+                    class="font-headline-h3 text-headline-h3 text-surface mt-1"
+                  >
+                    Sovereign Craft Meets Contemporary Space
+                  </h3>
+                </div>
+              </div>
+              <div class="lg:col-span-4 flex flex-col gap-6">
+                <div
+                  class="rounded-xl overflow-hidden shadow-sm flex-1 min-h-[180px] group relative"
+                >
+                  <div
+                    class="w-full h-full min-h-[180px] bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                    data-alt="Close-up detail shot of artisan hands chiseling fluted texture into warm ochre architectural sandstone inside a sun-drenched heritage restoration studio in Beirut."
+                    style="
+                      background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCO32sXs3sVBEHG7TbODZc98wAOZFaBS2J77PRjbiqGN3Z8uTGXCRlqcfLnhnVAx5ZL5G-H8IH3v6eWkVUCqLSB9uP_8hdjXs5D9MYV_l6kJum5d-EDutZ5Nz-HMGZ-Ud50lbpCbepFVMel5YCheflfRZWPfi4kEssMSd_aeEtz1Q31-8qo1X6zfufJd-Ms5nTRGxDdB5AE77UMfw9o35qmIeDoyh_SZ_X9fN-CB4rK&quot;);
+                    "
+                  ></div>
+                  <div
+                    class="absolute inset-0 bg-primary/30 p-6 flex items-end"
+                  >
+                    <span class="font-headline-h3 text-surface text-lg"
+                      >Guild Conservation Ateliers</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="bg-primary-container text-on-primary-container p-8 rounded-xl flex flex-col justify-between"
+                >
+                  <span
+                    class="material-symbols-outlined text-4xl text-on-tertiary-container"
+                    >balance</span
+                  >
+                  <div class="mt-6">
+                    <div class="font-headline-h3 text-headline-h3 text-surface">
+                      Unified Standards
+                    </div>
+                    <p
+                      class="font-body-md text-body-md text-on-primary-container/80 mt-2 text-sm"
+                    >
+                      Every accredited ally adheres to zero-compromise regional
+                      conservation and low-carbon thermal masonry protocols.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Partner Categories Filterable Matrix -->
+        <section
+          class="w-full py-20 px-margin-mobile md:px-margin-desktop bg-surface-container-low"
+          id="partners-directory"
+        >
+          <div class="max-w-container-max mx-auto">
+            <div
+              class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6"
+            >
+              <div>
+                <span
+                  class="font-label-md text-label-md uppercase text-terracotta tracking-wider"
+                  >Curated Spectrum</span
+                >
+                <h2 class="font-headline-h2 text-headline-h2 text-primary mt-2">
+                  Disciplines &amp; Collectives
+                </h2>
+              </div>
+              <!-- Category Tab Buttons -->
+              <div class="flex flex-wrap gap-2" role="tablist">
+                <button
+                  class="category-tab active px-5 py-2.5 rounded-full font-label-md text-label-md transition-all duration-200 bg-primary text-on-primary shadow-sm"
+                  onclick="filterCategory('all', this)"
+                >
+                  All Disciplines
+                </button>
+                <button
+                  class="category-tab px-5 py-2.5 rounded-full font-label-md text-label-md transition-all duration-200 bg-surface-container text-on-surface-variant hover:bg-surface-variant"
+                  onclick="filterCategory('studios', this)"
+                >
+                  Architecture Studios
+                </button>
+                <button
+                  class="category-tab px-5 py-2.5 rounded-full font-label-md text-label-md transition-all duration-200 bg-surface-container text-on-surface-variant hover:bg-surface-variant"
+                  onclick="filterCategory('guilds', this)"
+                >
+                  Heritage Guilds
+                </button>
+                <button
+                  class="category-tab px-5 py-2.5 rounded-full font-label-md text-label-md transition-all duration-200 bg-surface-container text-on-surface-variant hover:bg-surface-variant"
+                  onclick="filterCategory('institutions', this)"
+                >
+                  Institutional Trusts
+                </button>
+                <button
+                  class="category-tab px-5 py-2.5 rounded-full font-label-md text-label-md transition-all duration-200 bg-surface-container text-on-surface-variant hover:bg-surface-variant"
+                  onclick="filterCategory('conservation', this)"
+                >
+                  Cultural Alliances
+                </button>
+              </div>
+            </div>
+            <!-- Directory Grid -->
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+              id="directory-grid"
+            >
+              <!-- Category 1: Architecture -->
+              <div
+                class="partner-card bg-surface rounded-xl p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300"
+                data-cat="studios"
+              >
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <span
+                      class="font-label-md text-xs uppercase tracking-widest text-terracotta bg-tertiary-fixed/30 px-3 py-1 rounded-full"
+                      >Architectural Studio</span
+                    >
+                    <span class="font-label-md text-xs text-secondary"
+                      >Beirut • Marseille</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-h3 text-headline-h3 text-primary mb-2"
+                  >
+                    Bureau d'Architecture Méditerranéenne
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant text-sm mb-6"
+                  >
+                    Pioneers in bioclimatic limestone facades, cross-ventilation
+                    courtyards, and contextual urban residential typologies.
+                  </p>
+                </div>
+                <div
+                  class="pt-4 flex items-center justify-between text-primary text-sm font-medium"
+                >
+                  <span>4 Joint Projects</span>
+                  <span class="material-symbols-outlined text-base"
+                    >north_east</span
+                  >
+                </div>
+              </div>
+              <div
+                class="partner-card bg-surface rounded-xl p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300"
+                data-cat="studios"
+              >
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <span
+                      class="font-label-md text-xs uppercase tracking-widest text-terracotta bg-tertiary-fixed/30 px-3 py-1 rounded-full"
+                      >Architectural Studio</span
+                    >
+                    <span class="font-label-md text-xs text-secondary"
+                      >Amman</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-h3 text-headline-h3 text-primary mb-2"
+                  >
+                    Studio Hajar Amman
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant text-sm mb-6"
+                  >
+                    Master practitioners of volcanic basalt accents,
+                    contemporary rammed-earth pavilions, and hillside
+                    topographical integration.
+                  </p>
+                </div>
+                <div
+                  class="pt-4 flex items-center justify-between text-primary text-sm font-medium"
+                >
+                  <span>6 Joint Projects</span>
+                  <span class="material-symbols-outlined text-base"
+                    >north_east</span
+                  >
+                </div>
+              </div>
+              <div
+                class="partner-card bg-surface rounded-xl p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300"
+                data-cat="studios"
+              >
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <span
+                      class="font-label-md text-xs uppercase tracking-widest text-terracotta bg-tertiary-fixed/30 px-3 py-1 rounded-full"
+                      >Architectural Studio</span
+                    >
+                    <span class="font-label-md text-xs text-secondary"
+                      >Dubai</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-h3 text-headline-h3 text-primary mb-2"
+                  >
+                    Al Quoz Design Labs
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant text-sm mb-6"
+                  >
+                    Parametric masonry and generative mashrabiya screening
+                    frameworks adapting vernacular privacy elements for
+                    ultra-luxury penthouses.
+                  </p>
+                </div>
+                <div
+                  class="pt-4 flex items-center justify-between text-primary text-sm font-medium"
+                >
+                  <span>3 Joint Projects</span>
+                  <span class="material-symbols-outlined text-base"
+                    >north_east</span
+                  >
+                </div>
+              </div>
+              <div
+                class="partner-card bg-surface rounded-xl p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300"
+                data-cat="studios"
+              >
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <span
+                      class="font-label-md text-xs uppercase tracking-widest text-terracotta bg-tertiary-fixed/30 px-3 py-1 rounded-full"
+                      >Architectural Studio</span
+                    >
+                    <span class="font-label-md text-xs text-secondary"
+                      >Beirut • Athens</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-h3 text-headline-h3 text-primary mb-2"
+                  >
+                    K-Studio Beirut • Levant
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant text-sm mb-6"
+                  >
+                    Celebrated for tactile timber pergolas, open colonnades, and
+                    coastal estates honoring historical port city lines.
+                  </p>
+                </div>
+                <div
+                  class="pt-4 flex items-center justify-between text-primary text-sm font-medium"
+                >
+                  <span>5 Joint Projects</span>
+                  <span class="material-symbols-outlined text-base"
+                    >north_east</span
+                  >
+                </div>
+              </div>
+              <!-- Category 2: Heritage Guilds -->
+              <div
+                class="partner-card bg-surface rounded-xl p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300"
+                data-cat="guilds"
+              >
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <span
+                      class="font-label-md text-xs uppercase tracking-widest text-primary-container bg-primary-fixed/50 px-3 py-1 rounded-full"
+                      >Heritage Guild</span
+                    >
+                    <span class="font-label-md text-xs text-secondary"
+                      >Tripoli • Aleppo</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-h3 text-headline-h3 text-primary mb-2"
+                  >
+                    Historic Quarters Stonemasons Guild
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant text-sm mb-6"
+                  >
+                    Multi-generational stone carvers restoring dry-joint
+                    voussoirs, corbels, and hand-dressed Ma'an limestone
+                    facades.
+                  </p>
+                </div>
+                <div
+                  class="pt-4 flex items-center justify-between text-primary text-sm font-medium"
+                >
+                  <span>11 Heritage Sites</span>
+                  <span class="material-symbols-outlined text-base"
+                    >north_east</span
+                  >
+                </div>
+              </div>
+              <div
+                class="partner-card bg-surface rounded-xl p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300"
+                data-cat="guilds"
+              >
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <span
+                      class="font-label-md text-xs uppercase tracking-widest text-primary-container bg-primary-fixed/50 px-3 py-1 rounded-full"
+                      >Heritage Guild</span
+                    >
+                    <span class="font-label-md text-xs text-secondary"
+                      >Damascus • Amman</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-h3 text-headline-h3 text-primary mb-2"
+                  >
+                    Atelier Qaysari Woodcraft
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant text-sm mb-6"
+                  >
+                    Master cedar and walnut joinery artisans specializing in
+                    geometric parquetry, intarsia paneling, and courtyard
+                    screens.
+                  </p>
+                </div>
+                <div
+                  class="pt-4 flex items-center justify-between text-primary text-sm font-medium"
+                >
+                  <span>8 Joint Restorations</span>
+                  <span class="material-symbols-outlined text-base"
+                    >north_east</span
+                  >
+                </div>
+              </div>
+              <div
+                class="partner-card bg-surface rounded-xl p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300"
+                data-cat="guilds"
+              >
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <span
+                      class="font-label-md text-xs uppercase tracking-widest text-primary-container bg-primary-fixed/50 px-3 py-1 rounded-full"
+                      >Heritage Guild</span
+                    >
+                    <span class="font-label-md text-xs text-secondary"
+                      >Jaffa • Nablus</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-h3 text-headline-h3 text-primary mb-2"
+                  >
+                    Levantine Terrazzo &amp; Encaustic Guild
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant text-sm mb-6"
+                  >
+                    Custodians of hydraulic cement press tiles, brass aggregate
+                    inlays, and customized marble dust tesserae for grand halls.
+                  </p>
+                </div>
+                <div
+                  class="pt-4 flex items-center justify-between text-primary text-sm font-medium"
+                >
+                  <span>14 Luxury Residences</span>
+                  <span class="material-symbols-outlined text-base"
+                    >north_east</span
+                  >
+                </div>
+              </div>
+              <!-- Category 3: Institutional Trusts -->
+              <div
+                class="partner-card bg-surface rounded-xl p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300"
+                data-cat="institutions"
+              >
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <span
+                      class="font-label-md text-xs uppercase tracking-widest text-on-surface bg-surface-container-high px-3 py-1 rounded-full"
+                      >Institutional Trust</span
+                    >
+                    <span class="font-label-md text-xs text-secondary"
+                      >Abu Dhabi • Riyadh</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-h3 text-headline-h3 text-primary mb-2"
+                  >
+                    Al-Nour Vernacular Land Trust
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant text-sm mb-6"
+                  >
+                    Sovereign real estate fund financing low-density
+                    developments that mandate locally sourced stone and zero
+                    groundwater depletion.
+                  </p>
+                </div>
+                <div
+                  class="pt-4 flex items-center justify-between text-primary text-sm font-medium"
+                >
+                  <span>$420M Portfolio</span>
+                  <span class="material-symbols-outlined text-base"
+                    >north_east</span
+                  >
+                </div>
+              </div>
+              <div
+                class="partner-card bg-surface rounded-xl p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300"
+                data-cat="institutions"
+              >
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <span
+                      class="font-label-md text-xs uppercase tracking-widest text-on-surface bg-surface-container-high px-3 py-1 rounded-full"
+                      >Institutional Trust</span
+                    >
+                    <span class="font-label-md text-xs text-secondary"
+                      >Geneva • Dubai</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-h3 text-headline-h3 text-primary mb-2"
+                  >
+                    Helvetia-Levant Sustainable Holdings
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant text-sm mb-6"
+                  >
+                    Private endowment targeting historical palazzo acquisitions
+                    repurposed as luxury hospitality residences and foundations.
+                  </p>
+                </div>
+                <div
+                  class="pt-4 flex items-center justify-between text-primary text-sm font-medium"
+                >
+                  <span>9 Master Enclaves</span>
+                  <span class="material-symbols-outlined text-base"
+                    >north_east</span
+                  >
+                </div>
+              </div>
+              <!-- Category 4: Conservation -->
+              <div
+                class="partner-card bg-surface rounded-xl p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300"
+                data-cat="conservation"
+              >
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <span
+                      class="font-label-md text-xs uppercase tracking-widest text-terracotta bg-tertiary-fixed/30 px-3 py-1 rounded-full"
+                      >Conservation Alliance</span
+                    >
+                    <span class="font-label-md text-xs text-secondary"
+                      >Regional</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-h3 text-headline-h3 text-primary mb-2"
+                  >
+                    Levantine Architectural Heritage Society
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant text-sm mb-6"
+                  >
+                    Academic and archival entity setting documentation
+                    standards, structural laser scanning, and provenance
+                    verification.
+                  </p>
+                </div>
+                <div
+                  class="pt-4 flex items-center justify-between text-primary text-sm font-medium"
+                >
+                  <span>34 Certified Edifices</span>
+                  <span class="material-symbols-outlined text-base"
+                    >north_east</span
+                  >
+                </div>
+              </div>
+              <div
+                class="partner-card bg-surface rounded-xl p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300"
+                data-cat="conservation"
+              >
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <span
+                      class="font-label-md text-xs uppercase tracking-widest text-terracotta bg-tertiary-fixed/30 px-3 py-1 rounded-full"
+                      >Conservation Alliance</span
+                    >
+                    <span class="font-label-md text-xs text-secondary"
+                      >Cairo • Alexandria</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-h3 text-headline-h3 text-primary mb-2"
+                  >
+                    Eastern Mediterranean Urban Archives
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant text-sm mb-6"
+                  >
+                    Public-private catalog preserving original blueprints, tile
+                    molds, and colonial-era cadastral registries for authentic
+                    restoration.
+                  </p>
+                </div>
+                <div
+                  class="pt-4 flex items-center justify-between text-primary text-sm font-medium"
+                >
+                  <span>220+ Preserved Blueprints</span>
+                  <span class="material-symbols-outlined text-base"
+                    >north_east</span
+                  >
+                </div>
+              </div>
+              <div
+                class="partner-card bg-primary-container text-on-primary-container rounded-xl p-8 flex flex-col justify-between shadow-sm"
+              >
+                <div>
+                  <span
+                    class="font-label-md text-xs uppercase tracking-widest text-on-tertiary-container bg-tertiary-container px-3 py-1 rounded-full"
+                    >Ecosystem Expansion</span
+                  >
+                  <h3
+                    class="font-headline-h3 text-headline-h3 text-surface mt-4 mb-2"
+                  >
+                    Seeking Master Stonework &amp; Heritage Ateliers
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-primary-container/80 text-sm"
+                  >
+                    We continually vet regional studios with proven mastery in
+                    vernacular materials and deep cultural fluency.
+                  </p>
+                </div>
+                <a
+                  class="pt-4 inline-flex items-center gap-2 text-surface hover:text-on-tertiary-container font-label-md text-label-md transition-colors"
+                  href="#partner-inquiry"
+                >
+                  <span>Inquire for Alliance</span>
+                  <span class="material-symbols-outlined text-base"
+                    >arrow_forward</span
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Collaborative Case Studies -->
+        <section
+          class="w-full py-24 px-margin-mobile md:px-margin-desktop bg-surface"
+        >
+          <div class="max-w-container-max mx-auto">
+            <div
+              class="flex flex-col md:flex-row md:items-end justify-between mb-16"
+            >
+              <div>
+                <span
+                  class="font-label-md text-label-md uppercase text-terracotta tracking-wider"
+                  >Joint Endeavors</span
+                >
+                <h2 class="font-headline-h2 text-headline-h2 text-primary mt-2">
+                  Highlighted Case Studies
+                </h2>
+              </div>
+              <p
+                class="font-body-md text-body-md text-on-surface-variant max-w-md mt-4 md:mt-0"
+              >
+                Transforming regional heritage through multilateral co-creation
+                between Diyari, master artisans, and academic curators.
+              </p>
+            </div>
+            <!-- Case 1: Beit Al-Tijara -->
+            <div
+              class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-24 bg-surface-container-low rounded-xl p-6 lg:p-12 shadow-sm"
+            >
+              <div
+                class="lg:col-span-7 rounded-xl overflow-hidden shadow-md group"
+              >
+                <div
+                  class="w-full h-[440px] bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                  data-alt="Architectural photograph of Beit Al-Tijara, an opulent 1890s stone palace converted into modern creative headquarters, featuring triple-arched Venetian-Gothic windows, preserved lime plaster walls, restored brass pendant lanterns, and contemporary dark oak minimalist desks."
+                  style="
+                    background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAlvzASkmMf6nZP1sxdAg_-vk9RBMwAXa3wHkfmn2lZedC8TMa8AF8jRFFMLw1svpch4lehjWbFa317pU2O2T4Kd_LqUqJ_MHzNAj7R4cC8aiBooJI4TtdLv4uSBpYq-MAKBgVxFvxQI6pMZ4IHxGvBt4u6LCe30QnttMSWetEnsOrZRzZBEkcCsh0tmRhD19_QztsOYeWm720afhGKytqRCAirla_SyDA2oeXftfOc&quot;);
+                  "
+                ></div>
+              </div>
+              <div class="lg:col-span-5 flex flex-col space-y-6">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-terracotta"
+                    >save_as</span
+                  >
+                  <span
+                    class="font-label-md text-label-md uppercase tracking-wider text-secondary"
+                    >Adaptive Reuse • 1890 Edifice</span
+                  >
+                </div>
+                <h3 class="font-headline-h2 text-headline-h2 text-primary">
+                  Beit Al-Tijara Restoration
+                </h3>
+                <p
+                  class="font-body-md text-body-md text-on-surface-variant leading-relaxed"
+                >
+                  A three-way joint venture between Diyari, Atelier Levant
+                  Architecture, and the Historic Quarters Guild. Together we
+                  preserved an 1890s arched palace into a modern creative
+                  headquarters—retaining 94% of original limestone fabric while
+                  integrating discrete fiber-optic micro-channelling.
+                </p>
+                <div
+                  class="bg-surface p-4 rounded-lg flex items-center justify-between"
+                >
+                  <div>
+                    <div class="font-headline-h3 text-headline-h3 text-primary">
+                      3,800 m²
+                    </div>
+                    <div
+                      class="font-label-md text-label-md text-secondary text-xs uppercase"
+                    >
+                      Restored Surface
+                    </div>
+                  </div>
+                  <div class="h-8 w-[1px] bg-surface-variant"></div>
+                  <div>
+                    <div class="font-headline-h3 text-headline-h3 text-primary">
+                      18 Months
+                    </div>
+                    <div
+                      class="font-label-md text-label-md text-secondary text-xs uppercase"
+                    >
+                      Conservation Timeline
+                    </div>
+                  </div>
+                  <div class="h-8 w-[1px] bg-surface-variant"></div>
+                  <div>
+                    <div class="font-headline-h3 text-headline-h3 text-primary">
+                      Zero
+                    </div>
+                    <div
+                      class="font-label-md text-label-md text-secondary text-xs uppercase"
+                    >
+                      Quarry Waste
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center gap-4 text-xs font-label-md text-secondary"
+                >
+                  <span>Partners: Atelier Levant Architecture</span>
+                  <span>•</span>
+                  <span>Historic Quarters Guild</span>
+                </div>
+              </div>
+            </div>
+            <!-- Case 2: The Abdoun Bioclimatic Sanctuary -->
+            <div
+              class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-surface-container-low rounded-xl p-6 lg:p-12 shadow-sm"
+            >
+              <div
+                class="lg:col-span-5 flex flex-col space-y-6 order-2 lg:order-1"
+              >
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-terracotta"
+                    >wb_sunny</span
+                  >
+                  <span
+                    class="font-label-md text-label-md uppercase tracking-wider text-secondary"
+                    >Bioclimatic Engineering • Modern Enclave</span
+                  >
+                </div>
+                <h3 class="font-headline-h2 text-headline-h2 text-primary">
+                  The Abdoun Bioclimatic Sanctuary
+                </h3>
+                <p
+                  class="font-body-md text-body-md text-on-surface-variant leading-relaxed"
+                >
+                  A collaborative masterstroke combining ancient thermal mass
+                  engineering with invisible solar integration and native
+                  xeriscaping. Co-engineered with Studio Hajar and Al-Nour Land
+                  Trust, the sanctuary operates at 68% lower cooling demand than
+                  regional baselines.
+                </p>
+                <div
+                  class="bg-surface p-4 rounded-lg flex items-center justify-between"
+                >
+                  <div>
+                    <div class="font-headline-h3 text-headline-h3 text-primary">
+                      -68%
+                    </div>
+                    <div
+                      class="font-label-md text-label-md text-secondary text-xs uppercase"
+                    >
+                      Energy Intensity
+                    </div>
+                  </div>
+                  <div class="h-8 w-[1px] bg-surface-variant"></div>
+                  <div>
+                    <div class="font-headline-h3 text-headline-h3 text-primary">
+                      100%
+                    </div>
+                    <div
+                      class="font-label-md text-label-md text-secondary text-xs uppercase"
+                    >
+                      Local Sandstone
+                    </div>
+                  </div>
+                  <div class="h-8 w-[1px] bg-surface-variant"></div>
+                  <div>
+                    <div class="font-headline-h3 text-headline-h3 text-primary">
+                      Net Zero
+                    </div>
+                    <div
+                      class="font-label-md text-label-md text-secondary text-xs uppercase"
+                    >
+                      Irrigation Grid
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center gap-4 text-xs font-label-md text-secondary"
+                >
+                  <span>Partners: Studio Hajar Amman</span>
+                  <span>•</span>
+                  <span>Al-Nour Vernacular Land Trust</span>
+                </div>
+              </div>
+              <div
+                class="lg:col-span-7 rounded-xl overflow-hidden shadow-md group order-1 lg:order-2"
+              >
+                <div
+                  class="w-full h-[440px] bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                  data-alt="Modern architectural villa nestled into rugged hillside terrain in Abdoun, constructed with thick monolithic sand-toned stone walls, cantilevered wooden brise-soleil screens, cascading wild rosemary and olive tree terraces under a crisp blue Levant sky."
+                  style="
+                    background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDVF4WHVTIndTHTldgBfuoeXO9DSAtP49ZrUJWUQvg9CDGfjqVsvqzWVS7uK-jHPKOYx4fQLofDqT44AY4grn8JCayGBrKDFK2uJzKWIm87XI_A8AS8gwk_vQBFcPlNRshdJ02ovoNVHElEZDBp0M7V_5dwDXfroGtPfCh6c_YJ_zog71_2wcBgNsz0Pe8zFmuER7Lx52_La-eGvZmwQUVrMAzVT-TzI7AMXPFsJHqu&quot;);
+                  "
+                ></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Metric & Ecosystem Proof Ribbon -->
+        <section
+          class="w-full py-16 px-margin-mobile md:px-margin-desktop bg-primary text-on-primary"
+        >
+          <div
+            class="max-w-container-max mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left"
+          >
+            <div class="flex flex-col border-none">
+              <span
+                class="font-display-hero text-headline-h1 text-tertiary-fixed-dim"
+                >94%</span
+              >
+              <span class="font-headline-h3 text-headline-h3 text-surface mt-1"
+                >Material Provenance</span
+              >
+              <p class="font-body-md text-on-primary-container text-xs mt-2">
+                All materials extracted and cut within 300km radius.
+              </p>
+            </div>
+            <div class="flex flex-col border-none">
+              <span
+                class="font-display-hero text-headline-h1 text-tertiary-fixed-dim"
+                >120+</span
+              >
+              <span class="font-headline-h3 text-headline-h3 text-surface mt-1"
+                >Guild Artisans</span
+              >
+              <p class="font-body-md text-on-primary-container text-xs mt-2">
+                Employed full-time across active preservation projects.
+              </p>
+            </div>
+            <div class="flex flex-col border-none">
+              <span
+                class="font-display-hero text-headline-h1 text-tertiary-fixed-dim"
+                >16</span
+              >
+              <span class="font-headline-h3 text-headline-h3 text-surface mt-1"
+                >Civic Accreditations</span
+              >
+              <p class="font-body-md text-on-primary-container text-xs mt-2">
+                Recognized by national heritage ministries &amp; UNESCO bodies.
+              </p>
+            </div>
+            <div class="flex flex-col border-none">
+              <span
+                class="font-display-hero text-headline-h1 text-tertiary-fixed-dim"
+                >100%</span
+              >
+              <span class="font-headline-h3 text-headline-h3 text-surface mt-1"
+                >Open Archival Code</span
+              >
+              <p class="font-body-md text-on-primary-container text-xs mt-2">
+                Restoration records deposited in public municipal vaults.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- Partnership Inquiry & Onboarding Form Section -->
+        <section
+          class="w-full py-24 px-margin-mobile md:px-margin-desktop bg-surface-container"
+          id="partner-inquiry"
+        >
+          <div class="max-w-container-max mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+              <!-- Left Column: Criteria & Values -->
+              <div class="lg:col-span-5 flex flex-col justify-between">
+                <div>
+                  <div class="inline-flex items-center gap-3 mb-4">
+                    <span class="w-8 h-[1px] bg-terracotta"></span>
+                    <span
+                      class="font-label-md text-label-md uppercase text-terracotta tracking-widest"
+                      >Formal Accreditation</span
+                    >
+                  </div>
+                  <h2
+                    class="font-headline-h1 text-headline-h2 text-primary leading-tight"
+                  >
+                    Partner with Diyari
+                  </h2>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant mt-4 leading-relaxed"
+                  >
+                    We curate relationships with exceptional intentionality.
+                    Whether an established architectural atelier or an
+                    independent guild of master stone dressers, our network is
+                    anchored by strict foundational criteria.
+                  </p>
+                  <!-- Pillar Badges -->
+                  <div class="mt-8 space-y-4">
+                    <div
+                      class="flex items-start gap-4 p-4 rounded-xl bg-surface shadow-sm"
+                    >
+                      <div
+                        class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary flex-shrink-0"
+                      >
+                        <span class="material-symbols-outlined text-xl"
+                          >architecture</span
+                        >
+                      </div>
+                      <div>
+                        <h4 class="font-headline-h3 text-base text-primary">
+                          Architectural Rigor
+                        </h4>
+                        <p
+                          class="font-body-md text-xs text-on-surface-variant mt-1 leading-normal"
+                        >
+                          Deep understanding of thermal mass, passive solar
+                          shading, and non-generic regional vernaculars.
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="flex items-start gap-4 p-4 rounded-xl bg-surface shadow-sm"
+                    >
+                      <div
+                        class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary flex-shrink-0"
+                      >
+                        <span class="material-symbols-outlined text-xl"
+                          >construction</span
+                        >
+                      </div>
+                      <div>
+                        <h4 class="font-headline-h3 text-base text-primary">
+                          Material Integrity
+                        </h4>
+                        <p
+                          class="font-body-md text-xs text-on-surface-variant mt-1 leading-normal"
+                        >
+                          Exclusive use of authentic local limestones, non-toxic
+                          lime mortars, untreated noble hardwoods, and
+                          hand-forged metals.
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="flex items-start gap-4 p-4 rounded-xl bg-surface shadow-sm"
+                    >
+                      <div
+                        class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary flex-shrink-0"
+                      >
+                        <span class="material-symbols-outlined text-xl"
+                          >museum</span
+                        >
+                      </div>
+                      <div>
+                        <h4 class="font-headline-h3 text-base text-primary">
+                          Commitment to Preservation
+                        </h4>
+                        <p
+                          class="font-body-md text-xs text-on-surface-variant mt-1 leading-normal"
+                        >
+                          Respecting local artisanal lineages, continuous
+                          apprentice training, and complete documentation
+                          transparency.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-8 p-6 rounded-xl bg-surface-container-high">
+                  <span
+                    class="font-label-md text-xs text-secondary uppercase tracking-widest"
+                    >Confidential Alliances Desk</span
+                  >
+                  <p class="font-body-md text-sm text-primary mt-1 font-medium">
+                    alliances@diyari.com • +971 4 482 9900
+                  </p>
+                </div>
+              </div>
+              <!-- Right Column: Interactive Qualification Form -->
+              <div
+                class="lg:col-span-7 bg-surface p-8 lg:p-12 rounded-xl shadow-md"
+              >
+                <h3 class="font-headline-h3 text-headline-h3 text-primary mb-2">
+                  Submit Alliance Dossier
+                </h3>
+                <p
+                  class="font-body-md text-body-md text-on-surface-variant text-sm mb-8"
+                >
+                  Share your studio details, representative work, or civic
+                  mandate. Our curator committee convenes bi-weekly.
+                </p>
+                <form
+                  class="space-y-6"
+                  id="alliance-form"
+                  onsubmit="handleAllianceSubmit(event)"
+                >
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label
+                        class="block font-label-md text-label-md uppercase text-on-surface-variant mb-2"
+                        for="entityName"
+                        >Studio / Organization Name</label
+                      >
+                      <input
+                        class="w-full bg-surface-container-lowest px-4 py-3 rounded-lg text-primary font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary shadow-sm"
+                        id="entityName"
+                        placeholder="e.g. Atelier Levant"
+                        required=""
+                        type="text"
+                      />
+                    </div>
+                    <div>
+                      <label
+                        class="block font-label-md text-label-md uppercase text-on-surface-variant mb-2"
+                        for="entityType"
+                        >Discipline Category</label
+                      >
+                      <select
+                        class="w-full bg-surface-container-lowest px-4 py-3 rounded-lg text-primary font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary shadow-sm"
+                        id="entityType"
+                        required=""
+                      >
+                        <option disabled="" selected="" value="">
+                          Select Primary Practice
+                        </option>
+                        <option value="architectural">
+                          Architectural &amp; Design Studio
+                        </option>
+                        <option value="guild">
+                          Heritage Guild / Stonemasonry
+                        </option>
+                        <option value="developer">
+                          Institutional Developer / Trust
+                        </option>
+                        <option value="conservation">
+                          Conservation / Cultural Archive
+                        </option>
+                        <option value="artisan">
+                          Artisan Atelier / Wood / Metal
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label
+                        class="block font-label-md text-label-md uppercase text-on-surface-variant mb-2"
+                        for="representativeName"
+                        >Principal / Representative</label
+                      >
+                      <input
+                        class="w-full bg-surface-container-lowest px-4 py-3 rounded-lg text-primary font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary shadow-sm"
+                        id="representativeName"
+                        placeholder="e.g. Tariq Al-Khatib"
+                        required=""
+                        type="text"
+                      />
+                    </div>
+                    <div>
+                      <label
+                        class="block font-label-md text-label-md uppercase text-on-surface-variant mb-2"
+                        for="contactEmail"
+                        >Official Email Address</label
+                      >
+                      <input
+                        class="w-full bg-surface-container-lowest px-4 py-3 rounded-lg text-primary font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary shadow-sm"
+                        id="contactEmail"
+                        placeholder="principal@atelierlevant.com"
+                        required=""
+                        type="email"
+                      />
+                    </div>
+                  </div>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label
+                        class="block font-label-md text-label-md uppercase text-on-surface-variant mb-2"
+                        for="locationHQ"
+                        >Primary City &amp; Country</label
+                      >
+                      <input
+                        class="w-full bg-surface-container-lowest px-4 py-3 rounded-lg text-primary font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary shadow-sm"
+                        id="locationHQ"
+                        placeholder="e.g. Amman, Jordan"
+                        required=""
+                        type="text"
+                      />
+                    </div>
+                    <div>
+                      <label
+                        class="block font-label-md text-label-md uppercase text-on-surface-variant mb-2"
+                        for="portfolioUrl"
+                        >Portfolio / Monograph URL</label
+                      >
+                      <input
+                        class="w-full bg-surface-container-lowest px-4 py-3 rounded-lg text-primary font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary shadow-sm"
+                        id="portfolioUrl"
+                        placeholder="https://..."
+                        type="url"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label
+                      class="block font-label-md text-label-md uppercase text-on-surface-variant mb-2"
+                      for="inquiryMessage"
+                      >Collaboration Statement &amp; Material Focus</label
+                    >
+                    <textarea
+                      class="w-full bg-surface-container-lowest px-4 py-3 rounded-lg text-primary font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary shadow-sm"
+                      id="inquiryMessage"
+                      placeholder="Outline your studio's ethos, notable historical or vernacular projects, and the specific synergies you envision with Diyari..."
+                      required=""
+                      rows="4"
+                    ></textarea>
+                  </div>
+                  <div
+                    class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4"
+                  >
+                    <span class="text-xs text-secondary font-label-md"
+                      >NDA &amp; accreditation packet dispatched upon
+                      review.</span
+                    >
+                    <button
+                      class="w-full sm:w-auto bg-terracotta text-on-primary px-8 py-4 rounded-lg font-button text-button hover:opacity-90 active:scale-95 transition-all shadow-md flex items-center justify-center gap-2"
+                      type="submit"
+                    >
+                      <span>Submit Studio Portfolio</span>
+                      <span class="material-symbols-outlined text-sm"
+                        >arrow_forward</span
+                      >
+                    </button>
+                  </div>
+                  <div
+                    class="hidden p-4 rounded-lg bg-primary-fixed text-primary font-body-md text-sm"
+                    id="form-success"
+                  >
+                    Your dossier has been transmitted to our curatorial board.
+                    We will review your monograph within five business days.
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <script>
+        function filterCategory(category, button) {
+          // Update button states
+          const tabs = document.querySelectorAll(".category-tab");
+          tabs.forEach((tab) => {
+            tab.classList.remove("bg-primary", "text-on-primary");
+            tab.classList.add(
+              "bg-surface-container",
+              "text-on-surface-variant",
+            );
+          });
+          button.classList.remove(
+            "bg-surface-container",
+            "text-on-surface-variant",
+          );
+          button.classList.add("bg-primary", "text-on-primary");
+
+          // Filter cards
+          const cards = document.querySelectorAll(".partner-card");
+          cards.forEach((card) => {
+            if (
+              category === "all" ||
+              card.getAttribute("data-cat") === category ||
+              !card.getAttribute("data-cat")
+            ) {
+              card.style.display = "flex";
+            } else {
+              card.style.display = "none";
+            }
+          });
+        }
+
+        function handleAllianceSubmit(e) {
+          e.preventDefault();
+          const successBox = document.getElementById("form-success");
+          successBox.classList.remove("hidden");
+          document.getElementById("alliance-form").reset();
+          setTimeout(() => {
+            successBox.scrollIntoView({ behavior: "smooth", block: "nearest" });
+          }, 100);
+        }
+      </script>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="bg-primary-container text-on-primary-container py-section-gap w-full"
+    >
+      <div
+        class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter"
+      >
+        <div class="flex flex-col space-y-6">
+          <div
+            class="font-headline-h2 text-headline-h2 text-on-primary-container"
+          >
+            Diyari
+          </div>
+          <p class="text-sm leading-relaxed opacity-80">
+            A premium real estate experience bridging heritage and luxury.
+            Curating exceptional spaces across the region for over a decade.
+          </p>
+        </div>
+        <div class="flex flex-col space-y-4">
+          <h4
+            class="font-headline-h3 text-headline-h3 text-on-primary-container"
+          >
+            About
+          </h4>
+          <a
+            class="opacity-80 hover:text-on-tertiary-container transition-colors"
+            href="our-story.html"
+            >Our Story</a
+          >
+          <a
+            class="opacity-80 hover:text-on-tertiary-container transition-colors"
+            href="the-team.html"
+            >The Team</a
+          >
+          <a
+            class="opacity-80 hover:text-on-tertiary-container transition-colors"
+            href="partners.html"
+            >Partners</a
+          >
+          <a
+            class="opacity-80 hover:text-on-tertiary-container transition-colors"
+            href="careers.html"
+            >Careers</a
+          >
+        </div>
+        <div class="flex flex-col space-y-4">
+          <h4
+            class="font-headline-h3 text-headline-h3 text-on-primary-container"
+          >
+            <a
+              class="hover:text-on-tertiary-container transition-colors"
+              href="property-types.html"
+              >Property types</a
+            >
+          </h4>
+          <a
+            class="opacity-80 hover:text-on-tertiary-container transition-colors"
+            href="villas-collection.html"
+            >Villas</a
+          >
+          <a
+            class="opacity-80 hover:text-on-tertiary-container transition-colors"
+            href="apartments-collection.html"
+            >Apartments</a
+          >
+          <a
+            class="opacity-80 hover:text-on-tertiary-container transition-colors"
+            href="commercial-properties.html"
+            >Commercial</a
+          >
+          <a
+            class="opacity-80 hover:text-on-tertiary-container transition-colors"
+            href="penthouse-collection.html"
+            >Penthouse</a
+          >
+        </div>
+        <div class="flex flex-col space-y-4">
+          <h4
+            class="font-headline-h3 text-headline-h3 text-on-primary-container"
+          >
+            Contact
+          </h4>
+          <p class="opacity-80">124 Luxury Tower, Burj District, Dubai, UAE</p>
+          <p class="opacity-80">contact@diyari.com</p>
+          <div class="flex space-x-4 pt-4">
+            <span
+              class="material-symbols-outlined cursor-pointer hover:text-on-tertiary-container transition-colors"
+              >share</span
+            >
+            <span
+              class="material-symbols-outlined cursor-pointer hover:text-on-tertiary-container transition-colors"
+              >public</span
+            >
+            <span
+              class="material-symbols-outlined cursor-pointer hover:text-on-tertiary-container transition-colors"
+              >alternate_email</span
+            >
+          </div>
+        </div>
+      </div>
+      <div
+        class="max-w-container-max mx-auto px-margin-desktop mt-24 pt-8 border-t border-on-primary-container/20 text-center opacity-60 text-xs"
+      >
+        © 2024 Diyari Real Estate. All rights reserved.
+      </div>
+    </footer>
+    <script>
+      // Scroll Reveal Implementation
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("reveal-visible");
+            // Start count-up if it's the stats section
+            if (entry.target.contains(document.querySelector(".count-up"))) {
+              animateCounters();
+            }
+          }
+        });
+      }, observerOptions);
+
+      document
+        .querySelectorAll(".scroll-reveal")
+        .forEach((el) => observer.observe(el));
+
+      // Count-up animation
+      function animateCounters() {
+        document.querySelectorAll(".count-up").forEach((counter) => {
+          const target = +counter.getAttribute("data-target");
+          const count = +counter.innerText.replace(",", "");
+          const increment = target / 100;
+
+          if (count < target) {
+            const newValue = Math.ceil(count + increment);
+            counter.innerText = newValue.toLocaleString();
+            setTimeout(animateCounters, 20);
+          } else {
+            counter.innerText =
+              target.toLocaleString() + (target > 100 ? "+" : "");
+          }
+        });
+      }
+
+      // Sticky Nav logic
+      window.addEventListener("scroll", () => {
+        const nav = document.getElementById("top-nav");
+        if (window.scrollY > 40) {
+          nav.classList.add("nav-scrolled");
+        } else {
+          nav.classList.remove("nav-scrolled");
+        }
+      });
+
+      // Simple testimonial interaction
+      const dots = document.querySelectorAll(".dot-inactive, .dot-active");
+      dots.forEach((dot, idx) => {
+        dot.addEventListener("click", () => {
+          dots.forEach((d) => {
+            d.classList.remove("dot-active");
+            d.classList.add("dot-inactive");
+          });
+          dot.classList.add("dot-active");
+          dot.classList.remove("dot-inactive");
+          // Normally would slide the container here
+        });
+      });
+    </script>
+  </body>
+</html>
